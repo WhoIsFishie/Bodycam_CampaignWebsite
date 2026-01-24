@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="dv" dir="rtl" class="i18n-loading">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,64 +11,32 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thaana:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/faruma" rel="stylesheet">
-  <style>
-    :root{
-      --ink:#0b0b0b;
-      --paper:#ffffff;
-      --muted:#6b7280;
-      --line:#e5e7eb;
-    }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background-color: var(--paper);
-      transition: opacity .12s ease;
-    }
-    html.i18n-loading body { opacity: 0; }
-    html[lang="dv"] body {
-      font-family: "Faruma", "Noto Sans Thaana", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-    }
-    a { text-underline-offset: 3px; }
-    ::selection { background: #0b0b0b; color: white; }
-
-    /* Small RTL helpers for flex layouts */
-    html[dir="rtl"] .rtl-row { flex-direction: row-reverse; }
-    html[dir="rtl"] .rtl-text { text-align: right; }
-    html[dir="rtl"] .rtl-ml { margin-left: 0 !important; margin-right: 1.25rem !important; }
-
-    /* Keep emails/phones readable in RTL */
-    .ltr { direction: ltr; unicode-bidi: plaintext; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
-    /* Ensure LTR inputs use system font */
-    input[dir="ltr"], textarea[dir="ltr"] {
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-    }
-
-    /* Force default font for language toggle button (so EN shows in system font on Dhivehi pages) */
-    .font-system { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif !important; }
-
-    /* Force Thaana font for the Dhivehi switch label when on English (so it doesn't look broken) */
-    .font-thaana { font-family: "Faruma", "Noto Sans Thaana", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif !important; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-white text-[color:var(--ink)]">
   <!-- Navigation -->
   <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-[color:var(--line)]">
     <div class="mx-auto max-w-4xl px-6 py-4 flex items-center justify-between rtl-row">
       <div class="flex items-center gap-3 rtl-row">
         <a href="#home" class="font-semibold tracking-tight text-lg" data-i18n="brand">Hingaa Male'</a>
-        <button id="langToggle" type="button" class="text-xs font-medium underline font-system" onclick="toggleLanguage()" aria-label="ބަސް ބަދަލު">EN</button>
+        <button id="langToggle" type="button" class="text-xs font-medium underline font-system"
+          onclick="toggleLanguage()" aria-label="ބަސް ބަދަލު">EN</button>
       </div>
 
       <div class="hidden md:flex items-center gap-6 text-sm rtl-row">
         <a class="hover:underline" href="#platform" data-i18n="nav_pledges">ވައްދުތައް</a>
         <a class="hover:underline" href="#manifesto" data-i18n="nav_manifesto">މެނިފެސްޓޯ</a>
         <a class="hover:underline" href="#about" data-i18n="nav_about">އަހަރެން ކޮންބައި؟</a>
+        <a class="hover:underline" href="ledger.html" data-i18n="nav_ledger">ލެޖަރ</a>
         <a class="hover:underline" href="#get-involved" data-i18n="nav_get_involved">ހިމެނޭ</a>
         <a class="hover:underline" href="#contact" data-i18n="nav_contact">ކޮންޓާކްޓް</a>
-        <a class="inline-flex items-center justify-center border border-[color:var(--ink)] px-3 py-1.5 font-medium hover:bg-[color:var(--ink)] hover:text-white transition" href="#signup" data-i18n="nav_volunteer">ވޮލަންޓިއަރ</a>
+        <a class="inline-flex items-center justify-center border border-[color:var(--ink)] px-3 py-1.5 font-medium hover:bg-[color:var(--ink)] hover:text-white transition"
+          href="#signup" data-i18n="nav_volunteer">ވޮލަންޓިއަރ</a>
       </div>
 
-      <button class="md:hidden border border-[color:var(--line)] px-3 py-2" aria-controls="mobileMenu" aria-expanded="false" onclick="toggleMobileMenu()">
+      <button class="md:hidden border border-[color:var(--line)] px-3 py-2" aria-controls="mobileMenu"
+        aria-expanded="false" onclick="toggleMobileMenu()">
         <span class="sr-only">Open menu</span>
         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -80,9 +49,11 @@
         <a class="hover:underline" href="#platform" data-i18n="nav_pledges">Pledges</a>
         <a class="hover:underline" href="#manifesto" data-i18n="nav_manifesto">Manifesto</a>
         <a class="hover:underline" href="#about" data-i18n="nav_about">Who am I?</a>
+        <a class="hover:underline" href="ledger.html" data-i18n="nav_ledger">Ledger</a>
         <a class="hover:underline" href="#get-involved" data-i18n="nav_get_involved">Get involved</a>
         <a class="hover:underline" href="#contact" data-i18n="nav_contact">Contact</a>
-        <a class="inline-flex items-center justify-center border border-[color:var(--ink)] px-3 py-2 font-medium hover:bg-[color:var(--ink)] hover:text-white transition" href="#signup" data-i18n="nav_volunteer">Volunteer</a>
+        <a class="inline-flex items-center justify-center border border-[color:var(--ink)] px-3 py-2 font-medium hover:bg-[color:var(--ink)] hover:text-white transition"
+          href="#signup" data-i18n="nav_volunteer">Volunteer</a>
       </div>
     </div>
   </nav>
@@ -92,22 +63,30 @@
     <div class="mx-auto max-w-4xl px-6">
       <div class="grid md:grid-cols-12 gap-10 items-start">
         <div class="md:col-span-7 rtl-text">
-          <p class="text-sm uppercase tracking-widest text-gray-600" data-i18n="hero_kicker">Mayor of Male' City, Maldives</p>
+          <p class="text-sm uppercase tracking-widest text-gray-600" data-i18n="hero_kicker">Mayor of Male' City,
+            Maldives</p>
           <h1 class="mt-4 text-4xl md:text-6xl font-semibold leading-[1.05] tracking-tight" data-i18n="hero_title">
             A practical plan for a cleaner, safer, more affordable Male'.
           </h1>
           <p class="mt-6 text-lg md:text-xl text-gray-700 leading-relaxed" data-i18n="hero_subtitle">
-            Focused on everyday services: waste management, public spaces, safe streets, transparent budgeting, and jobs.
+            Focused on everyday services: waste management, public spaces, safe streets, transparent budgeting, and
+            jobs.
           </p>
 
           <div class="mt-8 flex flex-col sm:flex-row gap-3 rtl-row">
-            <a href="#signup" class="inline-flex items-center justify-center border border-[color:var(--ink)] bg-[color:var(--ink)] text-white px-5 py-3 font-medium hover:bg-black transition" data-i18n="cta_volunteer">
+            <a href="#signup"
+              class="inline-flex items-center justify-center border border-[color:var(--ink)] bg-[color:var(--ink)] text-white px-5 py-3 font-medium hover:bg-black transition"
+              data-i18n="cta_volunteer">
               Volunteer
             </a>
-            <a href="#manifesto" class="inline-flex items-center justify-center border border-[color:var(--ink)] px-5 py-3 font-medium hover:bg-gray-50 transition" data-i18n="cta_manifesto">
+            <a href="#manifesto"
+              class="inline-flex items-center justify-center border border-[color:var(--ink)] px-5 py-3 font-medium hover:bg-gray-50 transition"
+              data-i18n="cta_manifesto">
               Read the living manifesto
             </a>
-            <a href="#get-involved" class="inline-flex items-center justify-center border border-[color:var(--ink)] px-5 py-3 font-medium hover:bg-gray-50 transition" data-i18n="cta_get_involved">
+            <a href="#get-involved"
+              class="inline-flex items-center justify-center border border-[color:var(--ink)] px-5 py-3 font-medium hover:bg-gray-50 transition"
+              data-i18n="cta_get_involved">
               Get involved!
             </a>
           </div>
@@ -115,15 +94,18 @@
           <div class="mt-8 border-t border-[color:var(--line)] pt-6 grid gap-6 text-sm sm:grid-cols-3">
             <div class="min-w-0">
               <p class="text-gray-600" data-i18n="contact_campaign_email">Campaign email</p>
-              <a class="font-medium underline break-words ltr" href="mailto:campaign@mayormale.mv">campaign@mayormale.mv</a>
+              <a class="font-medium underline break-words ltr"
+                href="mailto:campaign@mayormale.mv">campaign@mayormale.mv</a>
             </div>
             <div class="min-w-0">
               <p class="text-gray-600" data-i18n="contact_whatsapp">WhatsApp</p>
-              <a class="font-medium underline break-words ltr" href="https://wa.me/9600000000" target="_blank" rel="noreferrer">+960 XXXX-XXXX</a>
+              <a class="font-medium underline break-words ltr" href="https://wa.me/9600000000" target="_blank"
+                rel="noreferrer">+960 XXXX-XXXX</a>
             </div>
             <div class="min-w-0">
               <p class="text-gray-600" data-i18n="contact_instagram">Instagram</p>
-              <a class="font-medium underline break-words ltr" href="https://www.instagram.com/hingaamale/" target="_blank" rel="noreferrer">@hingaamale</a>
+              <a class="font-medium underline break-words ltr" href="https://www.instagram.com/hingaamale/"
+                target="_blank" rel="noreferrer">@hingaamale</a>
             </div>
           </div>
         </div>
@@ -131,19 +113,17 @@
         <div class="md:col-span-5">
           <div class="border border-[color:var(--ink)] bg-white p-3">
             <div class="aspect-[4/5] bg-gray-100 overflow-hidden">
-              <img
-                id="candidatePhoto"
-                alt="Candidate photo"
-                class="w-full h-full object-cover grayscale"
+              <img id="candidatePhoto" alt="Candidate photo" class="w-full h-full object-cover grayscale"
                 loading="eager"
-                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='800'%20height='1000'%20viewBox='0%200%20800%201000'%3E%3Crect%20width='800'%20height='1000'%20fill='%23f3f4f6'/%3E%3Cg%20fill='none'%20stroke='%239ca3af'%20stroke-width='10'%3E%3Ccircle%20cx='400'%20cy='360'%20r='130'/%3E%3Cpath%20d='M170%20930%20c35-220%20155-320%20230-340%2035-10%2070-10%20105%200%2075%2020%20195%20120%20230%20340'/%3E%3C/g%3E%3Ctext%20x='50%25'%20y='70%25'%20text-anchor='middle'%20font-family='ui-sans-serif,%20system-ui'%20font-size='28'%20fill='%236b7280'%3EAdd%20your%20photo%3C/text%3E%3C/svg%3E"
-              />
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='800'%20height='1000'%20viewBox='0%200%20800%201000'%3E%3Crect%20width='800'%20height='1000'%20fill='%23f3f4f6'/%3E%3Cg%20fill='none'%20stroke='%239ca3af'%20stroke-width='10'%3E%3Ccircle%20cx='400'%20cy='360'%20r='130'/%3E%3Cpath%20d='M170%20930%20c35-220%20155-320%20230-340%2035-10%2070-10%20105%200%2075%2020%20195%20120%20230%20340'/%3E%3C/g%3E%3Ctext%20x='50%25'%20y='70%25'%20text-anchor='middle'%20font-family='ui-sans-serif,%20system-ui'%20font-size='28'%20fill='%236b7280'%3EAdd%20your%20photo%3C/text%3E%3C/svg%3E" />
             </div>
             <div class="mt-3 flex items-center justify-between gap-4 rtl-row">
               <p class="text-xs text-gray-600" data-i18n="photo_label">Landing photo</p>
               <div class="flex items-center gap-3 rtl-row">
-                <button class="text-xs font-medium underline" onclick="triggerPhotoUpload()" type="button" data-i18n="photo_upload">Upload</button>
-                <button class="text-xs text-gray-600 underline" onclick="clearPhoto()" type="button" data-i18n="photo_clear">Clear</button>
+                <button class="text-xs font-medium underline" onclick="triggerPhotoUpload()" type="button"
+                  data-i18n="photo_upload">Upload</button>
+                <button class="text-xs text-gray-600 underline" onclick="clearPhoto()" type="button"
+                  data-i18n="photo_clear">Clear</button>
               </div>
               <input id="photoInput" type="file" accept="image/*" class="hidden" onchange="handlePhotoUpload(event)" />
             </div>
@@ -173,7 +153,8 @@
       <div class="mt-10 border border-[color:var(--line)] p-6 rtl-text">
         <p class="text-sm text-gray-700">
           <span data-i18n="pledges_pdf">Want the full plan as a PDF?</span>
-          <a class="underline font-medium" href="#" onclick="event.preventDefault(); toast(t('toast_pdf_tip'));" data-i18n="pledges_add_download">Add download link</a>.
+          <a class="underline font-medium" href="#" onclick="event.preventDefault(); toast(t('toast_pdf_tip'));"
+            data-i18n="pledges_add_download">Add download link</a>.
         </p>
       </div>
     </div>
@@ -184,23 +165,32 @@
     <div class="mx-auto max-w-4xl px-6">
       <div class="grid md:grid-cols-12 gap-10 items-start">
         <div class="md:col-span-8 rtl-text">
-          <h2 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="manifesto_title">Living manifesto</h2>
+          <h2 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="manifesto_title">Living manifesto
+          </h2>
           <p class="mt-4 text-gray-700 leading-relaxed" data-i18n="manifesto_intro">
             This is a working document: updated in public as we listen, measure results, and adjust.
             It’s short on slogans and long on delivery.
           </p>
 
           <div class="mt-8 space-y-4 text-gray-700 leading-relaxed">
-            <p data-i18n-html="manifesto_p1"><span class="font-medium text-[color:var(--ink)]">How we’ll govern:</span> publish plans, publish budgets, publish progress.</p>
-            <p data-i18n-html="manifesto_p2"><span class="font-medium text-[color:var(--ink)]">How you’ll participate:</span> neighborhood visits, open office hours, and a simple issue tracker anyone can follow.</p>
-            <p data-i18n-html="manifesto_p3"><span class="font-medium text-[color:var(--ink)]">How we’ll be judged:</span> clear targets for cleanliness, safety, response times, and affordability.</p>
+            <p data-i18n-html="manifesto_p1"><span class="font-medium text-[color:var(--ink)]">How we’ll govern:</span>
+              publish plans, publish budgets, publish progress.</p>
+            <p data-i18n-html="manifesto_p2"><span class="font-medium text-[color:var(--ink)]">How you’ll
+                participate:</span> neighborhood visits, open office hours, and a simple issue tracker anyone can
+              follow.</p>
+            <p data-i18n-html="manifesto_p3"><span class="font-medium text-[color:var(--ink)]">How we’ll be
+                judged:</span> clear targets for cleanliness, safety, response times, and affordability.</p>
           </div>
 
           <div class="mt-8 flex flex-col sm:flex-row gap-3 rtl-row">
-            <a href="#platform" class="inline-flex items-center justify-center border border-[color:var(--ink)] px-5 py-3 font-medium hover:bg-gray-50 transition" data-i18n="manifesto_cta_pledges">
+            <a href="#platform"
+              class="inline-flex items-center justify-center border border-[color:var(--ink)] px-5 py-3 font-medium hover:bg-gray-50 transition"
+              data-i18n="manifesto_cta_pledges">
               See pledges
             </a>
-            <a href="#get-involved" class="inline-flex items-center justify-center border border-[color:var(--ink)] bg-[color:var(--ink)] text-white px-5 py-3 font-medium hover:bg-black transition" data-i18n="manifesto_cta_involved">
+            <a href="#get-involved"
+              class="inline-flex items-center justify-center border border-[color:var(--ink)] bg-[color:var(--ink)] text-white px-5 py-3 font-medium hover:bg-black transition"
+              data-i18n="manifesto_cta_involved">
               Get involved
             </a>
           </div>
@@ -209,23 +199,30 @@
         <div class="md:col-span-4">
           <div class="border border-[color:var(--line)] p-6 rtl-text">
             <h3 class="font-semibold" data-i18n="version_title">Version</h3>
-            <p class="mt-2 text-sm text-gray-700" data-i18n="version_value">v0.1 (template) — replace with your current draft date.</p>
+            <p class="mt-2 text-sm text-gray-700" data-i18n="version_value">v0.1 (template) — replace with your current
+              draft date.</p>
 
             <div class="mt-5 border-t border-[color:var(--line)] pt-5 text-sm text-gray-700">
               <p class="font-medium" data-i18n="addendum_title">Addendum PDF</p>
-              <p class="mt-2" data-i18n="addendum_desc">Add a PDF addendum (e.g., “How to use the living manifesto”). Saved locally in your browser.</p>
+              <p class="mt-2" data-i18n="addendum_desc">Add a PDF addendum (e.g., “How to use the living manifesto”).
+                Saved locally in your browser.</p>
 
               <div class="mt-4 flex flex-wrap items-center gap-3 rtl-row">
-                <a id="addendumLink" class="hidden underline font-medium ltr" href="#" target="_blank" rel="noreferrer" data-i18n="addendum_view">View / download addendum</a>
-                <button class="text-sm font-medium underline" type="button" onclick="triggerAddendumUpload()" data-i18n="addendum_upload">Upload PDF</button>
-                <button class="text-sm text-gray-600 underline" type="button" onclick="clearAddendumPdf()" data-i18n="addendum_clear">Clear</button>
-                <input id="addendumInput" type="file" accept="application/pdf" class="hidden" onchange="handleAddendumUpload(event)" />
+                <a id="addendumLink" class="hidden underline font-medium ltr" href="#" target="_blank" rel="noreferrer"
+                  data-i18n="addendum_view">View / download addendum</a>
+                <button class="text-sm font-medium underline" type="button" onclick="triggerAddendumUpload()"
+                  data-i18n="addendum_upload">Upload PDF</button>
+                <button class="text-sm text-gray-600 underline" type="button" onclick="clearAddendumPdf()"
+                  data-i18n="addendum_clear">Clear</button>
+                <input id="addendumInput" type="file" accept="application/pdf" class="hidden"
+                  onchange="handleAddendumUpload(event)" />
               </div>
 
               <p id="addendumMeta" class="mt-3 text-xs text-gray-600 ltr"></p>
 
               <div class="mt-5 border-t border-[color:var(--line)] pt-5 text-sm text-gray-700">
-                <p data-i18n-html="version_tip"><span class="font-medium">Tip:</span> Add a PDF download link and a changelog.</p>
+                <p data-i18n-html="version_tip"><span class="font-medium">Tip:</span> Add a PDF download link and a
+                  changelog.</p>
               </div>
             </div>
           </div>
@@ -241,14 +238,18 @@
         <div class="md:col-span-7 rtl-text">
           <h2 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="about_title">Who am I?</h2>
           <div class="mt-6 space-y-4 text-gray-700 leading-relaxed">
-            <p data-i18n="about_p1">Replace this section with your bio: your work, your record, and what you’ve delivered for people in Male'.</p>
-            <p data-i18n="about_p2">Keep it specific and grounded — what you’ve done, what you’ll do in the first 100 days, and how people can hold you accountable.</p>
+            <p data-i18n="about_p1">Replace this section with your bio: your work, your record, and what you’ve
+              delivered for people in Male'.</p>
+            <p data-i18n="about_p2">Keep it specific and grounded — what you’ve done, what you’ll do in the first 100
+              days, and how people can hold you accountable.</p>
             <p data-i18n="about_p3">Add language options (Dhivehi/English) if needed.</p>
           </div>
 
           <div class="mt-8 flex flex-col sm:flex-row gap-3 rtl-row">
-            <a class="inline-flex items-center justify-center border border-[color:var(--ink)] px-5 py-3 font-medium hover:bg-gray-50 transition" href="#contact" data-i18n="about_cta_contact">Contact the campaign</a>
-            <a class="inline-flex items-center justify-center border border-[color:var(--ink)] bg-[color:var(--ink)] text-white px-5 py-3 font-medium hover:bg-black transition" href="#signup" data-i18n="about_cta_join">Join the team</a>
+            <a class="inline-flex items-center justify-center border border-[color:var(--ink)] px-5 py-3 font-medium hover:bg-gray-50 transition"
+              href="#contact" data-i18n="about_cta_contact">Contact the campaign</a>
+            <a class="inline-flex items-center justify-center border border-[color:var(--ink)] bg-[color:var(--ink)] text-white px-5 py-3 font-medium hover:bg-black transition"
+              href="#signup" data-i18n="about_cta_join">Join the team</a>
           </div>
         </div>
         <div class="md:col-span-5">
@@ -269,7 +270,8 @@
               </div>
             </dl>
             <div class="mt-6 border-t border-[color:var(--line)] pt-5 text-sm text-gray-700">
-              <p data-i18n-html="qf_tip"><span class="font-medium">Tip:</span> Add endorsements here as plain text with links.</p>
+              <p data-i18n-html="qf_tip"><span class="font-medium">Tip:</span> Add endorsements here as plain text with
+                links.</p>
             </div>
           </div>
         </div>
@@ -282,30 +284,38 @@
     <div class="mx-auto max-w-4xl px-6">
       <div class="max-w-2xl rtl-text">
         <h2 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="involved_title">Get involved</h2>
-        <p class="mt-4 text-gray-700 leading-relaxed" data-i18n="involved_intro">This campaign is built block-by-block. Choose one simple way to help this week.</p>
+        <p class="mt-4 text-gray-700 leading-relaxed" data-i18n="involved_intro">This campaign is built block-by-block.
+          Choose one simple way to help this week.</p>
       </div>
 
       <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <div class="border border-[color:var(--line)] p-6 rtl-text">
           <h3 class="font-semibold" data-i18n="card_volunteer_title">Volunteer shift</h3>
-          <p class="mt-2 text-sm text-gray-700" data-i18n="card_volunteer_body">Door-to-door, outreach, logistics, and community events.</p>
-          <a href="#signup" class="mt-4 inline-flex text-sm font-medium underline" data-i18n="card_volunteer_link">Sign up</a>
+          <p class="mt-2 text-sm text-gray-700" data-i18n="card_volunteer_body">Door-to-door, outreach, logistics, and
+            community events.</p>
+          <a href="#signup" class="mt-4 inline-flex text-sm font-medium underline" data-i18n="card_volunteer_link">Sign
+            up</a>
         </div>
         <div class="border border-[color:var(--line)] p-6 rtl-text">
           <h3 class="font-semibold" data-i18n="card_host_title">Host a small meeting</h3>
-          <p class="mt-2 text-sm text-gray-700" data-i18n="card_host_body">Bring neighbors together. We’ll show up and listen.</p>
-          <a href="#signup" class="mt-4 inline-flex text-sm font-medium underline" data-i18n="card_host_link">Request a visit</a>
+          <p class="mt-2 text-sm text-gray-700" data-i18n="card_host_body">Bring neighbors together. We’ll show up and
+            listen.</p>
+          <a href="#signup" class="mt-4 inline-flex text-sm font-medium underline" data-i18n="card_host_link">Request a
+            visit</a>
         </div>
         <div class="border border-[color:var(--line)] p-6 rtl-text">
           <h3 class="font-semibold" data-i18n="card_issue_title">Share an issue</h3>
-          <p class="mt-2 text-sm text-gray-700" data-i18n="card_issue_body">Report a local concern: waste, safety, access, or affordability.</p>
-          <a href="#contact" class="mt-4 inline-flex text-sm font-medium underline" data-i18n="card_issue_link">Contact</a>
+          <p class="mt-2 text-sm text-gray-700" data-i18n="card_issue_body">Report a local concern: waste, safety,
+            access, or affordability.</p>
+          <a href="#contact" class="mt-4 inline-flex text-sm font-medium underline"
+            data-i18n="card_issue_link">Contact</a>
         </div>
       </div>
 
       <div class="mt-10 border border-[color:var(--line)] p-6 text-sm text-gray-700 rtl-text">
         <p class="font-medium" data-i18n="brief_title">Want a simple one-page brief?</p>
-        <p class="mt-2" data-i18n="brief_body">Add a link here to your manifesto PDF, a linktree, or a donation/volunteer platform.</p>
+        <p class="mt-2" data-i18n="brief_body">Add a link here to your manifesto PDF, a linktree, or a
+          donation/volunteer platform.</p>
       </div>
     </div>
   </section>
@@ -317,36 +327,48 @@
       <div class="grid md:grid-cols-12 gap-10">
         <div class="md:col-span-6 rtl-text">
           <h2 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="contact_title">Contact</h2>
-          <p class="mt-4 text-gray-700 leading-relaxed" data-i18n="contact_intro">For volunteering, endorsements, media, or community issues.</p>
+          <p class="mt-4 text-gray-700 leading-relaxed" data-i18n="contact_intro">For volunteering, endorsements, media,
+            or community issues.</p>
 
           <div class="mt-6 space-y-3 text-sm">
-            <p><span class="text-gray-600" data-i18n="contact_email_label">Email:</span> <a class="underline font-medium ltr" href="mailto:campaign@mayormale.mv">campaign@mayormale.mv</a></p>
-            <p><span class="text-gray-600" data-i18n="contact_phone_label">Phone/WhatsApp:</span> <span class="font-medium ltr">+960 XXXX-XXXX</span></p>
-            <p><span class="text-gray-600" data-i18n="contact_ig_label">Instagram:</span> <a class="underline font-medium ltr" href="https://www.instagram.com/hingaamale/" target="_blank" rel="noreferrer">@hingaamale</a></p>
+            <p><span class="text-gray-600" data-i18n="contact_email_label">Email:</span> <a
+                class="underline font-medium ltr" href="mailto:campaign@mayormale.mv">campaign@mayormale.mv</a></p>
+            <p><span class="text-gray-600" data-i18n="contact_phone_label">Phone/WhatsApp:</span> <span
+                class="font-medium ltr">+960 XXXX-XXXX</span></p>
+            <p><span class="text-gray-600" data-i18n="contact_ig_label">Instagram:</span> <a
+                class="underline font-medium ltr" href="https://www.instagram.com/hingaamale/" target="_blank"
+                rel="noreferrer">@hingaamale</a></p>
           </div>
 
           <div class="mt-8 border border-[color:var(--line)] p-6">
-            <p class="text-sm text-gray-700" data-i18n="compliance_note">Replace these with real campaign addresses and compliance text ("Paid for by…") as required.</p>
+            <p class="text-sm text-gray-700" data-i18n="compliance_note">Replace these with real campaign addresses and
+              compliance text ("Paid for by…") as required.</p>
           </div>
         </div>
 
         <div class="md:col-span-6" id="signup">
           <div class="border border-[color:var(--ink)] p-6 md:p-8 rtl-text">
             <h3 class="text-xl font-semibold tracking-tight" data-i18n="signup_title">Sign up</h3>
-            <p class="mt-2 text-sm text-gray-700" data-i18n="signup_intro">Get updates. Volunteer. Host a small meeting. Keep it local.</p>
+            <p class="mt-2 text-sm text-gray-700" data-i18n="signup_intro">Get updates. Volunteer. Host a small meeting.
+              Keep it local.</p>
 
             <form class="mt-6 space-y-3" onsubmit="handleSubscribe(event)">
               <label class="block">
                 <span class="text-sm text-gray-700" data-i18n="form_name">Name</span>
-                <input name="name" required class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black" placeholder="Your name" data-i18n-placeholder="ph_name" />
+                <input name="name" required
+                  class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+                  placeholder="Your name" data-i18n-placeholder="ph_name" />
               </label>
               <label class="block">
                 <span class="text-sm text-gray-700" data-i18n="form_email">Email</span>
-                <input dir="ltr" name="email" type="email" required class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black" placeholder="you@example.com" data-i18n-placeholder="ph_email" />
+                <input dir="ltr" name="email" type="email" required
+                  class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+                  placeholder="you@example.com" data-i18n-placeholder="ph_email" />
               </label>
               <label class="block">
                 <span class="text-sm text-gray-700" data-i18n="form_interest">How would you like to help?</span>
-                <select name="interest" class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-black">
+                <select name="interest"
+                  class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-black">
                   <option data-i18n="opt_volunteer">Volunteer</option>
                   <option data-i18n="opt_host">Host a meeting</option>
                   <option data-i18n="opt_issue">Community issue</option>
@@ -354,11 +376,14 @@
                 </select>
               </label>
 
-              <button type="submit" class="w-full inline-flex items-center justify-center border border-[color:var(--ink)] bg-[color:var(--ink)] text-white px-5 py-3 font-medium hover:bg-black transition" data-i18n="form_submit">
+              <button type="submit"
+                class="w-full inline-flex items-center justify-center border border-[color:var(--ink)] bg-[color:var(--ink)] text-white px-5 py-3 font-medium hover:bg-black transition"
+                data-i18n="form_submit">
                 Submit
               </button>
 
-              <p class="text-xs text-gray-600" data-i18n="privacy_note">By submitting, you agree to receive campaign updates. (Replace with your compliance/privacy statement.)</p>
+              <p class="text-xs text-gray-600" data-i18n="privacy_note">By submitting, you agree to receive campaign
+                updates. (Replace with your compliance/privacy statement.)</p>
             </form>
           </div>
         </div>
@@ -370,7 +395,8 @@
   <footer class="border-t border-[color:var(--line)] py-10">
     <div class="mx-auto max-w-4xl px-6">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 rtl-row rtl-text">
-        <p class="text-sm text-gray-700">© <span id="year"></span> <span data-i18n="footer_brand">Hingaa Male' (Template)</span></p>
+        <p class="text-sm text-gray-700">© <span id="year"></span> <span data-i18n="footer_brand">Hingaa Male'
+            (Template)</span></p>
         <p class="text-sm text-gray-600" data-i18n="footer_paid">Paid for by the Campaign Committee (edit)</p>
       </div>
     </div>
@@ -575,6 +601,7 @@
         nav_pledges: "Pledges",
         nav_manifesto: "Manifesto",
         nav_about: "Who am I?",
+        nav_ledger: "Ledger",
         nav_get_involved: "Get involved",
         nav_contact: "Contact",
         nav_volunteer: "Volunteer",
@@ -695,6 +722,7 @@
         nav_pledges: "ވައްދުތައް",
         nav_manifesto: "މެނިފެސްޓޯ",
         nav_about: "އަހަރެން ކޮންބައި؟",
+        nav_ledger: "ލެޖަރ",
         nav_get_involved: "ހިމެނޭ",
         nav_contact: "ކޮންޓާކްޓް",
         nav_volunteer: "ވޮލަންޓިއަރ",
@@ -1042,4 +1070,5 @@
     loadLanguage();
   </script>
 </body>
+
 </html>

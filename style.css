@@ -1,0 +1,169 @@
+:root {
+    --ink: #0b0b0b;
+    --paper: #ffffff;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    background-color: var(--paper);
+    transition: opacity .12s ease;
+}
+
+html.i18n-loading body {
+    opacity: 0;
+}
+
+html[lang="dv"] body {
+    font-family: "Noto Sans Thaana", "Faruma", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+a {
+    text-underline-offset: 3px;
+}
+
+::selection {
+    background: #0b0b0b;
+    color: white;
+}
+
+/* Small RTL helpers for flex layouts */
+html[dir="rtl"] .rtl-row {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .rtl-text {
+    text-align: right;
+}
+
+html[dir="rtl"] .rtl-ml {
+    margin-left: 0 !important;
+    margin-right: 1.25rem !important;
+}
+
+/* Keep emails/phones readable in RTL */
+.ltr {
+    direction: ltr;
+    unicode-bidi: plaintext;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Ensure LTR inputs use system font */
+input[dir="ltr"],
+textarea[dir="ltr"] {
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Currency formatting */
+.currency {
+    font-variant-numeric: tabular-nums;
+    font-family: ui-sans-serif, system-ui, -apple-system, monospace;
+}
+
+/* Force default font for language toggle button (so EN shows in system font on Dhivehi pages) */
+.font-system {
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+/* Force Thaana font for the Dhivehi switch label when on English (so it doesn't look broken) */
+.font-thaana {
+    font-family: "Noto Sans Thaana", "Faruma", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+/* Mobile Card View for Ledger */
+/* Mobile Card View for Ledger */
+@media (max-width: 768px) {
+    #expenseTable thead {
+        display: none;
+    }
+
+    /* Card Container */
+    #expenseTable tr {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 0.25rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 0.75rem;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    /* Reset Cell Styles */
+    #expenseTable td {
+        display: block;
+        width: auto;
+        padding: 0;
+        border: none;
+        text-align: start;
+    }
+
+    /* Remove Labels */
+    #expenseTable td::before {
+        content: none;
+    }
+
+    /* --- Section 1: Details & Date --- */
+
+    /* Details (Child 2) */
+    #expenseTable td:nth-child(2) {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        font-weight: 600;
+        font-size: 1rem;
+        color: var(--ink);
+        margin-bottom: 0.25rem;
+        line-height: 1.4;
+    }
+
+    /* Date (Child 1) */
+    #expenseTable td:nth-child(1) {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        font-size: 0.8rem;
+        color: var(--muted);
+        padding-bottom: 0.75rem;
+        border-bottom: 1px dashed var(--line);
+        margin-bottom: 0.75rem;
+    }
+
+    /* --- Section 2: Amount & Total --- */
+
+    /* Amount (Child 3) */
+    #expenseTable td:nth-child(3) {
+        grid-column: 1;
+        grid-row: 3;
+        font-weight: 600;
+        font-size: 1rem;
+        align-self: end;
+    }
+
+    /* Total (Child 4) */
+    #expenseTable td:nth-child(4) {
+        grid-column: 2;
+        grid-row: 3;
+        font-size: 0.85rem;
+        color: var(--muted);
+        align-self: end;
+        text-align: end;
+    }
+
+    /* RTL Support */
+    html[dir="rtl"] #expenseTable tr {
+        text-align: right;
+    }
+
+    html[dir="rtl"] #expenseTable td {
+        text-align: right;
+    }
+
+    html[dir="rtl"] #expenseTable td:nth-child(4) {
+        text-align: left;
+    }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="dv" dir="rtl" class="i18n-loading">
+<html lang="en" dir="ltr" class="i18n-loading">
 
 <head>
   <meta charset="UTF-8" />
@@ -11,73 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thaana:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/faruma" rel="stylesheet">
-  <style>
-    :root {
-      --ink: #0b0b0b;
-      --paper: #ffffff;
-      --muted: #6b7280;
-      --line: #e5e7eb;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background-color: var(--paper);
-      transition: opacity .12s ease;
-    }
-
-    html.i18n-loading body {
-      opacity: 0;
-    }
-
-    html[lang="dv"] body {
-      font-family: "Faruma", "Noto Sans Thaana", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-    }
-
-    a {
-      text-underline-offset: 3px;
-    }
-
-    ::selection {
-      background: #0b0b0b;
-      color: white;
-    }
-
-    /* Small RTL helpers for flex layouts */
-    html[dir="rtl"] .rtl-row {
-      flex-direction: row-reverse;
-    }
-
-    html[dir="rtl"] .rtl-text {
-      text-align: right;
-    }
-
-    html[dir="rtl"] .rtl-ml {
-      margin-left: 0 !important;
-      margin-right: 1.25rem !important;
-    }
-
-    /* Keep emails/phones readable in RTL */
-    .ltr {
-      direction: ltr;
-      unicode-bidi: plaintext;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-    }
-
-    /* Currency formatting */
-    .currency {
-      font-variant-numeric: tabular-nums;
-      font-family: ui-sans-serif, system-ui, -apple-system, monospace;
-    }
-
-    /* Force default font for language toggle button */
-    .font-system {
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif !important;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-white text-[color:var(--ink)]">
@@ -95,6 +29,8 @@
         <a class="hover:underline" href="index.html#manifesto" data-i18n="nav_manifesto">މެނިފެސްޓޯ</a>
         <a class="hover:underline" href="index.html#about" data-i18n="nav_about">އަހަރެން ކޮންބައި؟</a>
         <a class="hover:underline font-bold text-[color:var(--ink)]" href="ledger.html" data-i18n="nav_ledger">ލެޖަރ</a>
+        <a class="hover:underline" href="index.html#get-involved" data-i18n="nav_get_involved">ހިމެނޭ</a>
+        <a class="hover:underline" href="index.html#contact" data-i18n="nav_contact">ކޮންޓާކްޓް</a>
         <a class="inline-flex items-center justify-center border border-[color:var(--ink)] px-3 py-1.5 font-medium hover:bg-[color:var(--ink)] hover:text-white transition"
           href="index.html#signup" data-i18n="nav_volunteer">ވޮލަންޓިއަރ</a>
       </div>
@@ -115,6 +51,8 @@
         <a class="hover:underline" href="index.html#manifesto" data-i18n="nav_manifesto">Manifesto</a>
         <a class="hover:underline" href="index.html#about" data-i18n="nav_about">Who am I?</a>
         <a class="hover:underline font-bold" href="ledger.html" data-i18n="nav_ledger">Ledger</a>
+        <a class="hover:underline" href="index.html#get-involved" data-i18n="nav_get_involved">Get involved</a>
+        <a class="hover:underline" href="index.html#contact" data-i18n="nav_contact">Contact</a>
         <a class="inline-flex items-center justify-center border border-[color:var(--ink)] px-3 py-2 font-medium hover:bg-[color:var(--ink)] hover:text-white transition"
           href="index.html#signup" data-i18n="nav_volunteer">Volunteer</a>
       </div>
@@ -137,7 +75,21 @@
   <!-- Main Content -->
   <main class="pb-20">
     <div class="mx-auto max-w-4xl px-6">
-      <div class="border border-[color:var(--line)] bg-white overflow-hidden rounded-sm">
+      <!-- Summary Cards -->
+      <div class="grid grid-cols-2 gap-3 mb-6">
+        <div class="p-5 border border-[color:var(--line)] rounded-sm bg-white shadow-sm">
+          <div class="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1" data-i18n="summary_income">
+            Total Income</div>
+          <div class="text-2xl font-bold text-gray-900 ltr" id="totalIncome">...</div>
+        </div>
+        <div class="p-5 border border-[color:var(--line)] rounded-sm bg-white shadow-sm">
+          <div class="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1" data-i18n="summary_outgoing">
+            Total Outgoing</div>
+          <div class="text-2xl font-bold text-red-600 ltr" id="totalOutgoing">...</div>
+        </div>
+      </div>
+
+      <div class="md:border md:border-[color:var(--line)] md:bg-white md:overflow-hidden md:rounded-sm">
         <div class="overflow-x-auto">
           <table id="expenseTable" class="w-full text-sm text-left rtl-text">
             <thead class="bg-gray-50 text-gray-600 font-medium border-b border-[color:var(--line)]">
@@ -148,7 +100,7 @@
                 <th class="px-6 py-4 text-right ltr" data-i18n="th_total">Running Total</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-[color:var(--line)]" id="ledgerBody">
+            <tbody class="md:divide-y md:divide-[color:var(--line)]" id="ledgerBody">
               <tr>
                 <td colspan="4" class="px-6 py-8 text-center text-gray-500" data-i18n="loading">Loading data...</td>
               </tr>
@@ -167,10 +119,9 @@
   <footer class="border-t border-[color:var(--line)] py-10">
     <div class="mx-auto max-w-4xl px-6">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 rtl-row rtl-text">
-        <p class="text-sm text-gray-700">© <span id="year"></span> <span data-i18n="footer_brand">Hingaa Male'</span>
-        </p>
-        <a href="index.html" class="text-sm underline text-gray-600 hover:text-black" data-i18n="footer_back">Back to
-          Home</a>
+        <p class="text-sm text-gray-700">© <span id="year"></span> <span data-i18n="footer_brand">Hingaa Male'
+            (Template)</span></p>
+        <p class="text-sm text-gray-600" data-i18n="footer_paid">Paid for by the Campaign Committee (edit)</p>
       </div>
     </div>
   </footer>
@@ -201,12 +152,19 @@
         tbody.innerHTML = ''; // Clear loading state
 
         let runningTotal = 0;
+        let totalIncome = 0;
+        let totalOutgoing = 0;
 
         rows.forEach(row => {
           const date = row.c[0] ? row.c[0].v : '';
           const details = row.c[1] ? row.c[1].v : '-';
           const amount = row.c[2] ? parseFloat(row.c[2].v) : 0;
           runningTotal += amount;
+          if (amount >= 0) {
+            totalIncome += amount;
+          } else {
+            totalOutgoing += amount;
+          }
 
           // Format Date (assuming string or standard date format)
           // Simple formatting if it's a date string, or leave as is
@@ -218,15 +176,24 @@
           const tr = document.createElement('tr');
           tr.className = "hover:bg-gray-50 transition-colors";
 
-          const createCell = (text, isCurrency = false, isRtl = false) => {
+          const columnKeys = ['th_date', 'th_details', 'th_amount', 'th_total'];
+
+          const createCell = (text, index, isCurrency = false, isRtl = false) => {
             const td = document.createElement('td');
-            let colorClass = "text-gray-900"; // Default currency color
+            let colorClass = "text-gray-900";
 
             if (isCurrency && typeof text === 'number' && text < 0) {
               colorClass = "text-red-600";
             }
 
             td.className = "px-6 py-4" + (isCurrency ? ` text-right font-medium currency ltr ${colorClass}` : " text-gray-700");
+
+            // Mobile Card View Labels
+            const labelKey = columnKeys[index];
+            if (labelKey) {
+              td.setAttribute('data-label', translations[currentLang][labelKey] || '');
+              td.setAttribute('data-i18n-label', labelKey);
+            }
 
             if (isCurrency) {
               td.textContent = text.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -236,16 +203,21 @@
             return td;
           }
 
-          tr.appendChild(createCell(displayDate));
-          tr.appendChild(createCell(details));
+          tr.appendChild(createCell(displayDate, 0));
+          tr.appendChild(createCell(details, 1));
 
           // Color code amount: positive (income) vs negative (expense) could be added if needed, 
           // but for now just black text consistent with minimal style
-          tr.appendChild(createCell(amount, true));
-          tr.appendChild(createCell(runningTotal, true));
+          tr.appendChild(createCell(amount, 2, true));
+          tr.appendChild(createCell(runningTotal, 3, true));
 
           tbody.appendChild(tr);
         });
+
+        document.getElementById('totalIncome').textContent = totalIncome.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        // Display absolute value for outgoing since the label implies direction, or keep negative. 
+        // Showing negative fits the table style.
+        document.getElementById('totalOutgoing').textContent = totalOutgoing.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
       })
       .catch(err => {
         console.error('Error fetching sheet:', err);
@@ -255,10 +227,10 @@
 
     // ------- i18n Logic (Shared simplified) -------
     const LANG_KEY = 'campaign_lang_v1';
-    let currentLang = 'dv';
+    let currentLang = 'en';
 
     document.documentElement.lang = currentLang;
-    document.documentElement.dir = 'rtl';
+    document.documentElement.dir = 'ltr';
     document.documentElement.classList.remove('i18n-loading');
 
     const toggleBtn = document.getElementById('langToggle');
@@ -285,6 +257,14 @@
           el.textContent = translations[currentLang][key];
         }
       });
+
+      // Update dynamic table labels for mobile view
+      document.querySelectorAll('[data-i18n-label]').forEach(el => {
+        const key = el.getAttribute('data-i18n-label');
+        if (translations[currentLang][key]) {
+          el.setAttribute('data-label', translations[currentLang][key]);
+        }
+      });
     }
 
     // Translations specific to Ledger + Basic Nav
@@ -295,12 +275,17 @@
         nav_manifesto: "Manifesto",
         nav_about: "Who am I?",
         nav_ledger: "Ledger",
+        nav_get_involved: "Get involved",
+        nav_contact: "Contact",
         nav_volunteer: "Volunteer",
         nav_contact: "Contact",
 
         ledger_subtitle: "Transparency & Integrity",
         ledger_title: "Campaign Public Ledger",
         ledger_intro: "We believe in complete transparency. Every Rufiyaa donated and every Rufiyaa spent is tracked here in real-time.",
+
+        summary_income: "Total Income",
+        summary_outgoing: "Total Outgoing",
 
         th_date: "Date",
         th_details: "Details",
@@ -309,8 +294,8 @@
         loading: "Loading data...",
         ledger_note: "These records are pulled directly from our campaign finance spreadsheet.",
 
-        footer_brand: "Hingaa Male'",
-        footer_back: "Back to Home"
+        footer_brand: "Hingaa Male' (Template)",
+        footer_paid: "Paid for by the Campaign Committee (edit)"
       },
       dv: {
         brand: "ހިންގާ މާލެ",
@@ -318,12 +303,17 @@
         nav_manifesto: "މެނިފެސްޓޯ",
         nav_about: "އަހަރެން ކޮންބައި؟",
         nav_ledger: "ލެޖަރ",
+        nav_get_involved: "ހިމެނޭ",
+        nav_contact: "ކޮންޓާކްޓް",
         nav_volunteer: "ވޮލަންޓިއަރ",
         nav_contact: "ކޮންޓާކްޓް",
 
         ledger_subtitle: "ފާޅުކަން & އަމާނާތްތެރިކަން",
         ledger_title: "ކެމްޕޭން ޕަބްލިކް ލެޖަރ",
         ledger_intro: "އަޅުގަނޑުމެން ގަބޫލުކުރަނީ ފުރިހަމަ ފާޅުކަން. ލިބޭ ކޮންމެ ރުފިޔާއެއް އަދި ހޭދަކުރާ ކޮންމެ ރުފިޔާއެއް މިތަނުން ވަގުތުން ފެންނާނެ.",
+
+        summary_income: "ޖުމްލަ އާމްދަނީ",
+        summary_outgoing: "ޖުމްލަ ޚަރަދު",
 
         th_date: "ތާރީޚް",
         th_details: "ތަފްސީލް",
@@ -332,8 +322,8 @@
         loading: "ޑޭޓާ ލޯޑުކުރަނީ...",
         ledger_note: "މި ހިސާބުތަކަކީ އަޅުގަނޑުމެންގެ ކެމްޕޭން ފައިނޭންސް ޝީޓުން ސީދާ ނަގާ އެއްޗެހި.",
 
-        footer_brand: "ހިންގާ މާލެ",
-        footer_back: "އެނބުރި ގެއަށް"
+        footer_brand: "ހިންގާ މާލެ (ޓެމްޕްލޭޓް)",
+        footer_paid: "ކެމްޕޭން ކޮމިޓީއަށް ފައިސާ ދެއްކި (ބަދަލުކޮށްލާ)"
       }
     };
 
