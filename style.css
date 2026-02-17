@@ -75,7 +75,19 @@ textarea[dir="ltr"] {
     font-family: "Noto Sans Thaana", "Faruma", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif !important;
 }
 
-/* Mobile Card View for Ledger */
+/* Inline LTR spans for numbers/Latin text in RTL context (hero H1 etc.) */
+.ltr-inline {
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* RTL list margin fix */
+html[dir="rtl"] ol.list-decimal {
+    margin-left: 0;
+    margin-right: 1.25rem;
+}
+
 /* Mobile Card View for Ledger */
 @media (max-width: 768px) {
     #expenseTable thead {

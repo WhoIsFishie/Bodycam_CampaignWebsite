@@ -5,7 +5,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ހިންގާ މާލެ — މޭޔަރ ކެމްޕޭން</title>
-  <meta name="description" content="މާލެ ސިޓީގެ މޭޔަރ ކެމްޕޭނަށް މިނިމަލިސްޓިކް ވެބްސައިޓެއް." />
+  <meta name="description" content="97,000 per km². 3.5× Manhattan. Malé deserves a mayor who works for residents, not a party." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hingaamale.mv/" />
+  <meta property="og:title" content="Hingaa Male' — Mayor Campaign" />
+  <meta property="og:description" content="97,000 per km². 3.5× Manhattan. Malé deserves a mayor who works for residents, not a party." />
+  <meta property="og:image" content="[FILL IN - og-image.jpg]" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hingaa Male' — Mayor Campaign" />
+  <meta name="twitter:description" content="97,000 per km². 3.5× Manhattan. Malé deserves a mayor who works for residents, not a party." />
+
+  <link rel="canonical" href="https://hingaamale.mv/" />
+
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,10 +37,12 @@
         <a href="#home" class="font-semibold tracking-tight text-lg" data-i18n="brand">Hingaa Male'</a>
         <button id="langToggle" type="button" class="text-xs font-medium underline font-system"
           onclick="toggleLanguage()" aria-label="ބަސް ބަދަލު">EN</button>
+        <span class="text-[10px] uppercase tracking-widest text-gray-500 border border-[color:var(--line)] px-2 py-0.5" data-i18n="phase_label">Phase 1: Listening</span>
       </div>
 
       <div class="hidden md:flex items-center gap-6 text-sm rtl-row">
         <a class="hover:underline" href="#platform" data-i18n="nav_pledges">ވައްދުތައް</a>
+        <a class="hover:underline" href="#issues" data-i18n="nav_issues">މައްސަލަތައް</a>
         <a class="hover:underline" href="#manifesto" data-i18n="nav_manifesto">މެނިފެސްޓޯ</a>
         <a class="hover:underline" href="#about" data-i18n="nav_about">އަހަރެން ކޮންބައި؟</a>
         <a class="hover:underline" href="ledger.html" data-i18n="nav_ledger">ލެޖަރ</a>
@@ -47,6 +64,7 @@
     <div id="mobileMenu" class="hidden md:hidden border-t border-[color:var(--line)] bg-white">
       <div class="mx-auto max-w-4xl px-6 py-3 flex flex-col gap-3 text-sm">
         <a class="hover:underline" href="#platform" data-i18n="nav_pledges">Pledges</a>
+        <a class="hover:underline" href="#issues" data-i18n="nav_issues">Issues</a>
         <a class="hover:underline" href="#manifesto" data-i18n="nav_manifesto">Manifesto</a>
         <a class="hover:underline" href="#about" data-i18n="nav_about">Who am I?</a>
         <a class="hover:underline" href="ledger.html" data-i18n="nav_ledger">Ledger</a>
@@ -65,33 +83,32 @@
         <div class="md:col-span-7 rtl-text">
           <p class="text-sm uppercase tracking-widest text-gray-600" data-i18n="hero_kicker">Mayor of Male' City,
             Maldives</p>
-          <h1 class="mt-4 text-4xl md:text-6xl font-semibold leading-[1.05] tracking-tight" data-i18n="hero_title">
-            A practical plan for a cleaner, safer, more affordable Male'.
+          <h1 class="mt-4 text-4xl md:text-6xl font-semibold leading-[1.05] tracking-tight" data-i18n-html="hero_title">
+            <span class="ltr-inline">97,000</span> per km². <span class="ltr-inline">3.5</span>× Manhattan. This is your city.
           </h1>
           <p class="mt-6 text-lg md:text-xl text-gray-700 leading-relaxed" data-i18n="hero_subtitle">
-            Focused on everyday services: waste management, public spaces, safe streets, transparent budgeting, and
-            jobs.
+            Malé deserves a mayor who works for residents, not a party. Focused on everyday services: waste, public spaces, safe streets, transparent budgets, and local jobs.
           </p>
 
           <div class="mt-8 flex flex-col sm:flex-row gap-3 rtl-row">
             <a href="#signup"
               class="inline-flex items-center justify-center border border-[color:var(--ink)] bg-[color:var(--ink)] text-white px-5 py-3 font-medium hover:bg-black transition"
               data-i18n="cta_volunteer">
-              Volunteer
+              Join 100 founding volunteers
             </a>
             <a href="#manifesto"
               class="inline-flex items-center justify-center border border-[color:var(--ink)] px-5 py-3 font-medium hover:bg-gray-50 transition"
               data-i18n="cta_manifesto">
-              Read the living manifesto
+              Read the plan
             </a>
             <a href="#get-involved"
               class="inline-flex items-center justify-center border border-[color:var(--ink)] px-5 py-3 font-medium hover:bg-gray-50 transition"
               data-i18n="cta_get_involved">
-              Get involved!
+              Find your ward
             </a>
           </div>
 
-          <div class="mt-8 border-t border-[color:var(--line)] pt-6 grid gap-6 text-sm sm:grid-cols-3">
+          <div class="mt-8 border-t border-[color:var(--line)] pt-6 grid gap-6 text-sm sm:grid-cols-2 md:grid-cols-4">
             <div class="min-w-0">
               <p class="text-gray-600" data-i18n="contact_campaign_email">Campaign email</p>
               <a class="font-medium underline break-words ltr"
@@ -99,8 +116,13 @@
             </div>
             <div class="min-w-0">
               <p class="text-gray-600" data-i18n="contact_whatsapp">WhatsApp</p>
-              <a class="font-medium underline break-words ltr" href="https://wa.me/9600000000" target="_blank"
-                rel="noreferrer">+960 XXXX-XXXX</a>
+              <a class="font-medium underline break-words ltr" href="https://wa.me/960XXXXXXX" target="_blank"
+                rel="noreferrer">[FILL IN]</a>
+            </div>
+            <div class="min-w-0">
+              <p class="text-gray-600" data-i18n="contact_viber">Viber</p>
+              <a class="font-medium underline break-words ltr" href="viber://chat?number=960XXXXXXX" target="_blank"
+                rel="noreferrer">[FILL IN]</a>
             </div>
             <div class="min-w-0">
               <p class="text-gray-600" data-i18n="contact_instagram">Instagram</p>
@@ -115,7 +137,7 @@
             <div class="aspect-[4/5] bg-gray-100 overflow-hidden">
               <img id="candidatePhoto" alt="Candidate photo" class="w-full h-full object-cover grayscale"
                 loading="eager"
-                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='800'%20height='1000'%20viewBox='0%200%20800%201000'%3E%3Crect%20width='800'%20height='1000'%20fill='%23f3f4f6'/%3E%3Cg%20fill='none'%20stroke='%239ca3af'%20stroke-width='10'%3E%3Ccircle%20cx='400'%20cy='360'%20r='130'/%3E%3Cpath%20d='M170%20930%20c35-220%20155-320%20230-340%2035-10%2070-10%20105%200%2075%2020%20195%20120%20230%20340'/%3E%3C/g%3E%3Ctext%20x='50%25'%20y='70%25'%20text-anchor='middle'%20font-family='ui-sans-serif,%20system-ui'%20font-size='28'%20fill='%236b7280'%3EAdd%20your%20photo%3C/text%3E%3C/svg%3E" />
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='800'%20height='1000'%20viewBox='0%200%20800%201000'%3E%3Crect%20width='800'%20height='1000'%20fill='%23f3f4f6'/%3E%3Cg%20fill='none'%20stroke='%239ca3af'%20stroke-width='10'%3E%3Ccircle%20cx='400'%20cy='360'%20r='130'/%3E%3Cpath%20d='M170%20930%20c35-220%20155-320%20230-340%2035-10%2070-10%20105%200%2075%2020%20195%20120%20230%20340'/%3E%3C/g%3E%3Ctext%20x='50%25'%20y='70%25'%20text-anchor='middle'%20font-family='ui-sans-serif,%20system-ui'%20font-size='28'%20fill='%236b7280'%3EFILL%20IN%20-%20upload%20candidate%20photo%3C/text%3E%3C/svg%3E" />
             </div>
             <div class="mt-3 flex items-center justify-between gap-4 rtl-row">
               <p class="text-xs text-gray-600" data-i18n="photo_label">Landing photo</p>
@@ -128,13 +150,30 @@
               <input id="photoInput" type="file" accept="image/*" class="hidden" onchange="handlePhotoUpload(event)" />
             </div>
           </div>
-          <p class="mt-3 text-xs text-gray-600 rtl-text" data-i18n="photo_tip">
-            Tip: use a simple headshot; it will be displayed in monochrome.
-          </p>
         </div>
       </div>
     </div>
   </header>
+
+  <!-- Social Proof Banner -->
+  <div class="border-t border-b border-[color:var(--line)] py-6 bg-gray-50">
+    <div class="mx-auto max-w-4xl px-6 flex flex-col sm:flex-row items-center justify-between gap-4 rtl-row rtl-text">
+      <p class="text-sm font-semibold" data-i18n="social_proof_volunteers">[FILL IN] volunteers have joined so far</p>
+      <p class="text-sm text-gray-600 italic" data-i18n="social_proof_quote">"We listen before we act. Power belongs to people, not parties."</p>
+    </div>
+  </div>
+
+  <!-- Video Embed -->
+  <section class="py-10 border-b border-[color:var(--line)]">
+    <div class="mx-auto max-w-4xl px-6">
+      <details class="group">
+        <summary class="cursor-pointer text-sm font-medium underline rtl-text" data-i18n="video_title">Watch: Why this campaign</summary>
+        <div class="mt-4 aspect-video bg-gray-100 border border-[color:var(--line)] flex items-center justify-center text-gray-500 text-sm">
+          <p data-i18n="video_placeholder">[FILL IN - add YouTube embed URL]</p>
+        </div>
+      </details>
+    </div>
+  </section>
 
   <!-- Pledges -->
   <section id="platform" class="py-14 md:py-20 border-t border-[color:var(--line)]">
@@ -142,7 +181,7 @@
       <div class="max-w-2xl rtl-text">
         <h2 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="pledges_title">Pledges</h2>
         <p class="mt-4 text-gray-700 leading-relaxed" data-i18n="pledges_intro">
-          A few priorities we can deliver with clear timelines, measurable targets, and public reporting.
+          Every promise has a number and a deadline. Here are measurable commitments we will report on publicly.
         </p>
       </div>
 
@@ -160,6 +199,87 @@
     </div>
   </section>
 
+  <!-- Issues -->
+  <section id="issues" class="py-14 md:py-20 border-t border-[color:var(--line)]">
+    <div class="mx-auto max-w-4xl px-6">
+      <div class="max-w-2xl rtl-text">
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="issues_title">Issues</h2>
+        <p class="mt-4 text-gray-700 leading-relaxed" data-i18n="issues_intro">
+          Six challenges facing Malé — with data, context, and our plan for each.
+        </p>
+      </div>
+
+      <!-- Data Visualizations -->
+      <div class="mt-10 grid sm:grid-cols-2 gap-6">
+        <!-- Density comparison -->
+        <div class="border border-[color:var(--line)] p-6">
+          <h3 class="text-sm font-semibold mb-4 rtl-text">Population Density (per km²)</h3>
+          <div class="space-y-2">
+            <div class="flex items-center gap-2 rtl-row">
+              <span class="text-xs w-20 shrink-0 ltr">Malé</span>
+              <div class="flex-1 bg-gray-100 h-5 relative"><div class="bg-[color:var(--ink)] h-5" style="width:100%"></div></div>
+              <span class="text-xs w-14 ltr text-right">97,000</span>
+            </div>
+            <div class="flex items-center gap-2 rtl-row">
+              <span class="text-xs w-20 shrink-0 ltr">Dhaka</span>
+              <div class="flex-1 bg-gray-100 h-5 relative"><div class="bg-gray-400 h-5" style="width:48%"></div></div>
+              <span class="text-xs w-14 ltr text-right">47,000</span>
+            </div>
+            <div class="flex items-center gap-2 rtl-row">
+              <span class="text-xs w-20 shrink-0 ltr">Manila</span>
+              <div class="flex-1 bg-gray-100 h-5 relative"><div class="bg-gray-400 h-5" style="width:44%"></div></div>
+              <span class="text-xs w-14 ltr text-right">43,000</span>
+            </div>
+            <div class="flex items-center gap-2 rtl-row">
+              <span class="text-xs w-20 shrink-0 ltr">Manhattan</span>
+              <div class="flex-1 bg-gray-100 h-5 relative"><div class="bg-gray-400 h-5" style="width:28%"></div></div>
+              <span class="text-xs w-14 ltr text-right">27,500</span>
+            </div>
+            <div class="flex items-center gap-2 rtl-row">
+              <span class="text-xs w-20 shrink-0 ltr">Singapore</span>
+              <div class="flex-1 bg-gray-100 h-5 relative"><div class="bg-gray-400 h-5" style="width:8%"></div></div>
+              <span class="text-xs w-14 ltr text-right">8,000</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Revenue allocation -->
+        <div class="border border-[color:var(--line)] p-6">
+          <h3 class="text-sm font-semibold mb-4 rtl-text">Revenue: Council vs National</h3>
+          <div class="flex h-8 w-full border border-[color:var(--line)] overflow-hidden">
+            <div class="bg-[color:var(--ink)] h-full flex items-center justify-center text-white text-xs font-medium" style="width:5%">5%</div>
+            <div class="bg-gray-200 h-full flex items-center justify-center text-gray-600 text-xs font-medium flex-1">95%</div>
+          </div>
+          <div class="flex justify-between mt-2 text-xs text-gray-600 rtl-row">
+            <span>City Council</span>
+            <span>National Government</span>
+          </div>
+        </div>
+
+        <!-- Housing cost -->
+        <div class="border border-[color:var(--line)] p-6 sm:col-span-2">
+          <h3 class="text-sm font-semibold mb-4 rtl-text">Housing Cost (% of income)</h3>
+          <div class="space-y-2">
+            <div class="flex items-center gap-2 rtl-row">
+              <span class="text-xs w-28 shrink-0 ltr">Malé (actual)</span>
+              <div class="flex-1 bg-gray-100 h-5 relative"><div class="bg-[color:var(--ink)] h-5" style="width:57%"></div></div>
+              <span class="text-xs w-14 ltr text-right">50-60%</span>
+            </div>
+            <div class="flex items-center gap-2 rtl-row">
+              <span class="text-xs w-28 shrink-0 ltr">WHO threshold</span>
+              <div class="flex-1 bg-gray-100 h-5 relative"><div class="bg-gray-400 h-5" style="width:30%"></div></div>
+              <span class="text-xs w-14 ltr text-right">30%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 space-y-4" id="issuesAccordions">
+        <!-- issue accordion items injected by JS -->
+      </div>
+    </div>
+  </section>
+
   <!-- Manifesto -->
   <section id="manifesto" class="py-14 md:py-20 border-t border-[color:var(--line)]">
     <div class="mx-auto max-w-4xl px-6">
@@ -169,17 +289,16 @@
           </h2>
           <p class="mt-4 text-gray-700 leading-relaxed" data-i18n="manifesto_intro">
             This is a working document: updated in public as we listen, measure results, and adjust.
-            It’s short on slogans and long on delivery.
+            It's short on slogans and long on delivery.
           </p>
 
           <div class="mt-8 space-y-4 text-gray-700 leading-relaxed">
-            <p data-i18n-html="manifesto_p1"><span class="font-medium text-[color:var(--ink)]">How we’ll govern:</span>
-              publish plans, publish budgets, publish progress.</p>
-            <p data-i18n-html="manifesto_p2"><span class="font-medium text-[color:var(--ink)]">How you’ll
-                participate:</span> neighborhood visits, open office hours, and a simple issue tracker anyone can
-              follow.</p>
-            <p data-i18n-html="manifesto_p3"><span class="font-medium text-[color:var(--ink)]">How we’ll be
-                judged:</span> clear targets for cleanliness, safety, response times, and affordability.</p>
+            <p data-i18n-html="manifesto_p1"><span class="font-medium text-[color:var(--ink)]">How we'll govern:</span>
+              publish plans, publish budgets, publish progress. The council controls just 5% of Male' revenue — we'll make every laari count.</p>
+            <p data-i18n-html="manifesto_p2"><span class="font-medium text-[color:var(--ink)]">How you'll
+                participate:</span> neighborhood visits, open office hours, and a public issue tracker you can follow at our <a href="ledger.html" class="underline">transparency ledger</a>.</p>
+            <p data-i18n-html="manifesto_p3"><span class="font-medium text-[color:var(--ink)]">How we'll be
+                judged:</span> clear targets for cleanliness, safety, response times, and affordability — serving 41% of the nation's population on this 2 km² island.</p>
           </div>
 
           <div class="mt-8 flex flex-col sm:flex-row gap-3 rtl-row">
@@ -199,13 +318,11 @@
         <div class="md:col-span-4">
           <div class="border border-[color:var(--line)] p-6 rtl-text">
             <h3 class="font-semibold" data-i18n="version_title">Version</h3>
-            <p class="mt-2 text-sm text-gray-700" data-i18n="version_value">v0.1 (template) — replace with your current
-              draft date.</p>
+            <p class="mt-2 text-sm text-gray-700" data-i18n="version_value">v1.0 — February 2026</p>
 
             <div class="mt-5 border-t border-[color:var(--line)] pt-5 text-sm text-gray-700">
               <p class="font-medium" data-i18n="addendum_title">Addendum PDF</p>
-              <p class="mt-2" data-i18n="addendum_desc">Add a PDF addendum (e.g., “How to use the living manifesto”).
-                Saved locally in your browser.</p>
+              <p class="mt-2" data-i18n="addendum_desc">Add a PDF addendum. Saved locally in your browser.</p>
 
               <div class="mt-4 flex flex-wrap items-center gap-3 rtl-row">
                 <a id="addendumLink" class="hidden underline font-medium ltr" href="#" target="_blank" rel="noreferrer"
@@ -219,11 +336,6 @@
               </div>
 
               <p id="addendumMeta" class="mt-3 text-xs text-gray-600 ltr"></p>
-
-              <div class="mt-5 border-t border-[color:var(--line)] pt-5 text-sm text-gray-700">
-                <p data-i18n-html="version_tip"><span class="font-medium">Tip:</span> Add a PDF download link and a
-                  changelog.</p>
-              </div>
             </div>
           </div>
         </div>
@@ -237,12 +349,28 @@
       <div class="grid md:grid-cols-12 gap-10 items-start">
         <div class="md:col-span-7 rtl-text">
           <h2 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="about_title">Who am I?</h2>
-          <div class="mt-6 space-y-4 text-gray-700 leading-relaxed">
-            <p data-i18n="about_p1">Replace this section with your bio: your work, your record, and what you’ve
-              delivered for people in Male'.</p>
-            <p data-i18n="about_p2">Keep it specific and grounded — what you’ve done, what you’ll do in the first 100
-              days, and how people can hold you accountable.</p>
-            <p data-i18n="about_p3">Add language options (Dhivehi/English) if needed.</p>
+
+          <div class="mt-6 space-y-6 text-gray-700 leading-relaxed">
+            <div>
+              <h3 class="font-semibold text-[color:var(--ink)]" data-i18n="about_who_heading">Who I am</h3>
+              <p class="mt-2" data-i18n="about_who">[FILL IN] A resident of Malé who has spent [X] years working on [area]. I've seen firsthand how city services fail the people who depend on them most.</p>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[color:var(--ink)]" data-i18n="about_why_heading">Why independent</h3>
+              <p class="mt-2" data-i18n="about_why">[FILL IN] Party politics has failed Malé. Decisions are made in party headquarters, not in your neighborhood. I answer to residents — not a party whip.</p>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[color:var(--ink)]" data-i18n="about_100days_heading">First 100 days</h3>
+              <ol class="mt-2 list-decimal ml-5 space-y-1 text-sm">
+                <li data-i18n="about_100days_1">Publish the full city budget in plain language online</li>
+                <li data-i18n="about_100days_2">Launch a public service request tracker with response-time targets</li>
+                <li data-i18n="about_100days_3">Hold neighborhood listening sessions in all 6 wards</li>
+              </ol>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[color:var(--ink)]" data-i18n="about_accountable_heading">How to hold me accountable</h3>
+              <p class="mt-2" data-i18n="about_accountable">Every pledge has a number and a deadline. Track progress at our public ledger. If we fail, you'll know — because the data is open.</p>
+            </div>
           </div>
 
           <div class="mt-8 flex flex-col sm:flex-row gap-3 rtl-row">
@@ -266,13 +394,9 @@
               </div>
               <div class="flex items-start justify-between gap-6 rtl-row">
                 <dt class="text-gray-600" data-i18n="qf_campaign">Campaign</dt>
-                <dd class="text-right font-medium" data-i18n="qf_campaign_value">Independent / Coalition (edit)</dd>
+                <dd class="text-right font-medium" data-i18n="qf_campaign_value">Independent</dd>
               </div>
             </dl>
-            <div class="mt-6 border-t border-[color:var(--line)] pt-5 text-sm text-gray-700">
-              <p data-i18n-html="qf_tip"><span class="font-medium">Tip:</span> Add endorsements here as plain text with
-                links.</p>
-            </div>
           </div>
         </div>
       </div>
@@ -284,21 +408,19 @@
     <div class="mx-auto max-w-4xl px-6">
       <div class="max-w-2xl rtl-text">
         <h2 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="involved_title">Get involved</h2>
-        <p class="mt-4 text-gray-700 leading-relaxed" data-i18n="involved_intro">This campaign is built block-by-block.
-          Choose one simple way to help this week.</p>
+        <p class="mt-4 text-gray-700 leading-relaxed" data-i18n="involved_intro">This campaign is built ward-by-ward across Henveiru, Galolhu, Machchangolhi, Maafannu, Hulhumalé, and Vilimalé. Choose one way to help this week.</p>
       </div>
 
-      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div class="border border-[color:var(--line)] p-6 rtl-text">
           <h3 class="font-semibold" data-i18n="card_volunteer_title">Volunteer shift</h3>
-          <p class="mt-2 text-sm text-gray-700" data-i18n="card_volunteer_body">Door-to-door, outreach, logistics, and
-            community events.</p>
+          <p class="mt-2 text-sm text-gray-700" data-i18n="card_volunteer_body">Door-to-door, outreach, logistics, and community events across 6 wards.</p>
           <a href="#signup" class="mt-4 inline-flex text-sm font-medium underline" data-i18n="card_volunteer_link">Sign
             up</a>
         </div>
         <div class="border border-[color:var(--line)] p-6 rtl-text">
           <h3 class="font-semibold" data-i18n="card_host_title">Host a small meeting</h3>
-          <p class="mt-2 text-sm text-gray-700" data-i18n="card_host_body">Bring neighbors together. We’ll show up and
+          <p class="mt-2 text-sm text-gray-700" data-i18n="card_host_body">Bring neighbors together. We'll show up and
             listen.</p>
           <a href="#signup" class="mt-4 inline-flex text-sm font-medium underline" data-i18n="card_host_link">Request a
             visit</a>
@@ -310,6 +432,51 @@
           <a href="#contact" class="mt-4 inline-flex text-sm font-medium underline"
             data-i18n="card_issue_link">Contact</a>
         </div>
+        <div class="border border-[color:var(--line)] p-6 rtl-text">
+          <h3 class="font-semibold" data-i18n="card_survey_title">Take the Perception Survey</h3>
+          <p class="mt-2 text-sm text-gray-700" data-i18n="card_survey_body">Tell us what matters most in your ward. 2-minute anonymous survey.</p>
+          <a href="#" class="mt-4 inline-flex text-sm font-medium underline" data-i18n="card_survey_link">Start survey</a>
+        </div>
+      </div>
+
+      <!-- Neighborhood Visit Request Form -->
+      <div class="mt-10">
+        <details class="border border-[color:var(--line)] group">
+          <summary class="cursor-pointer px-6 py-4 font-semibold text-sm rtl-text" data-i18n="visit_form_title">Request a neighborhood visit</summary>
+          <form class="px-6 pb-6 space-y-3" onsubmit="handleVisitRequest(event)">
+            <label class="block">
+              <span class="text-sm text-gray-700" data-i18n="visit_form_name">Your name</span>
+              <input name="visit_name" required class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black" />
+            </label>
+            <label class="block">
+              <span class="text-sm text-gray-700" data-i18n="visit_form_ward">Ward</span>
+              <select name="visit_ward" required class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-black">
+                <option value="" data-i18n="form_ward_select">Select your ward</option>
+                <option value="henveiru" data-i18n="form_ward_henveiru">Henveiru</option>
+                <option value="galolhu" data-i18n="form_ward_galolhu">Galolhu</option>
+                <option value="machchangolhi" data-i18n="form_ward_machchangolhi">Machchangolhi</option>
+                <option value="maafannu" data-i18n="form_ward_maafannu">Maafannu</option>
+                <option value="hulhumale" data-i18n="form_ward_hulhumale">Hulhumalé</option>
+                <option value="vilimale" data-i18n="form_ward_vilimale">Vilimalé</option>
+              </select>
+            </label>
+            <label class="block">
+              <span class="text-sm text-gray-700" data-i18n="visit_form_date">Preferred date</span>
+              <input name="visit_date" type="date" dir="ltr" class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black" />
+            </label>
+            <label class="block">
+              <span class="text-sm text-gray-700" data-i18n="visit_form_attendees">Expected attendees</span>
+              <input name="visit_attendees" type="number" min="1" dir="ltr" class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black" />
+            </label>
+            <label class="block">
+              <span class="text-sm text-gray-700" data-i18n="visit_form_topics">Topics to discuss</span>
+              <textarea name="visit_topics" rows="2" class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"></textarea>
+            </label>
+            <button type="submit"
+              class="w-full inline-flex items-center justify-center border border-[color:var(--ink)] bg-[color:var(--ink)] text-white px-5 py-3 font-medium hover:bg-black transition"
+              data-i18n="visit_form_submit">Submit request</button>
+          </form>
+        </details>
       </div>
 
       <div class="mt-10 border border-[color:var(--line)] p-6 text-sm text-gray-700 rtl-text">
@@ -320,6 +487,32 @@
     </div>
   </section>
 
+  <!-- Campaign Updates / Events -->
+  <section id="events" class="py-14 md:py-20 border-t border-[color:var(--line)]">
+    <div class="mx-auto max-w-4xl px-6">
+      <div class="max-w-2xl rtl-text">
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="events_title">Campaign updates</h2>
+        <p class="mt-4 text-gray-700 leading-relaxed" data-i18n="events_intro">Upcoming events and recent milestones.</p>
+      </div>
+      <div class="mt-10 space-y-4">
+        <div class="border border-[color:var(--line)] p-6 rtl-text">
+          <p class="text-xs text-gray-500 uppercase tracking-widest" data-i18n="event_1_date">[FILL IN]</p>
+          <h3 class="mt-1 font-semibold" data-i18n="event_1_title">[FILL IN - Event title]</h3>
+          <p class="mt-1 text-sm text-gray-700" data-i18n="event_1_desc">[FILL IN - Event description]</p>
+        </div>
+        <div class="border border-[color:var(--line)] p-6 rtl-text">
+          <p class="text-xs text-gray-500 uppercase tracking-widest" data-i18n="event_2_date">[FILL IN]</p>
+          <h3 class="mt-1 font-semibold" data-i18n="event_2_title">[FILL IN - Event title]</h3>
+          <p class="mt-1 text-sm text-gray-700" data-i18n="event_2_desc">[FILL IN - Event description]</p>
+        </div>
+        <div class="border border-[color:var(--line)] p-6 rtl-text">
+          <p class="text-xs text-gray-500 uppercase tracking-widest" data-i18n="event_3_date">[FILL IN]</p>
+          <h3 class="mt-1 font-semibold" data-i18n="event_3_title">[FILL IN - Event title]</h3>
+          <p class="mt-1 text-sm text-gray-700" data-i18n="event_3_desc">[FILL IN - Event description]</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Contact / Signup -->
   <section id="contact" class="py-14 md:py-20 border-t border-[color:var(--line)]">
@@ -334,23 +527,23 @@
             <p><span class="text-gray-600" data-i18n="contact_email_label">Email:</span> <a
                 class="underline font-medium ltr" href="mailto:campaign@mayormale.mv">campaign@mayormale.mv</a></p>
             <p><span class="text-gray-600" data-i18n="contact_phone_label">Phone/WhatsApp:</span> <span
-                class="font-medium ltr">+960 XXXX-XXXX</span></p>
+                class="font-medium ltr">[FILL IN]</span></p>
+            <p><span class="text-gray-600" data-i18n="contact_viber_label">Viber:</span> <span
+                class="font-medium ltr">[FILL IN]</span></p>
             <p><span class="text-gray-600" data-i18n="contact_ig_label">Instagram:</span> <a
                 class="underline font-medium ltr" href="https://www.instagram.com/hingaamale/" target="_blank"
                 rel="noreferrer">@hingaamale</a></p>
           </div>
 
           <div class="mt-8 border border-[color:var(--line)] p-6">
-            <p class="text-sm text-gray-700" data-i18n="compliance_note">Replace these with real campaign addresses and
-              compliance text ("Paid for by…") as required.</p>
+            <p class="text-sm text-gray-700" data-i18n="compliance_note">[FILL IN] Campaign compliance text ("Paid for by…") as required by law.</p>
           </div>
         </div>
 
         <div class="md:col-span-6" id="signup">
           <div class="border border-[color:var(--ink)] p-6 md:p-8 rtl-text">
-            <h3 class="text-xl font-semibold tracking-tight" data-i18n="signup_title">Sign up</h3>
-            <p class="mt-2 text-sm text-gray-700" data-i18n="signup_intro">Get updates. Volunteer. Host a small meeting.
-              Keep it local.</p>
+            <h3 class="text-xl font-semibold tracking-tight" data-i18n="signup_title">Join the campaign</h3>
+            <p class="mt-2 text-sm text-gray-700" data-i18n="signup_intro">Be part of the founding team. We listen before we act — help us hear your ward.</p>
 
             <form class="mt-6 space-y-3" onsubmit="handleSubscribe(event)">
               <label class="block">
@@ -364,6 +557,38 @@
                 <input dir="ltr" name="email" type="email" required
                   class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
                   placeholder="you@example.com" data-i18n-placeholder="ph_email" />
+              </label>
+              <label class="block">
+                <span class="text-sm text-gray-700" data-i18n="form_phone">Phone / WhatsApp</span>
+                <input dir="ltr" name="phone" type="tel" required
+                  class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+                  placeholder="+960" data-i18n-placeholder="ph_phone" />
+              </label>
+              <label class="block">
+                <span class="text-sm text-gray-700" data-i18n="form_ward">Ward</span>
+                <select name="ward" required
+                  class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-black">
+                  <option value="" data-i18n="form_ward_select">Select your ward</option>
+                  <option value="henveiru" data-i18n="form_ward_henveiru">Henveiru</option>
+                  <option value="galolhu" data-i18n="form_ward_galolhu">Galolhu</option>
+                  <option value="machchangolhi" data-i18n="form_ward_machchangolhi">Machchangolhi</option>
+                  <option value="maafannu" data-i18n="form_ward_maafannu">Maafannu</option>
+                  <option value="hulhumale" data-i18n="form_ward_hulhumale">Hulhumalé</option>
+                  <option value="vilimale" data-i18n="form_ward_vilimale">Vilimalé</option>
+                </select>
+              </label>
+              <label class="block">
+                <span class="text-sm text-gray-700" data-i18n="form_concern">What concerns you most?</span>
+                <select name="concern"
+                  class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-black">
+                  <option value="" data-i18n="form_concern_select">Select a concern</option>
+                  <option value="flooding" data-i18n="form_concern_flooding">Flooding</option>
+                  <option value="waste" data-i18n="form_concern_waste">Waste management</option>
+                  <option value="housing" data-i18n="form_concern_housing">Housing affordability</option>
+                  <option value="traffic" data-i18n="form_concern_traffic">Traffic congestion</option>
+                  <option value="green" data-i18n="form_concern_green">Green space</option>
+                  <option value="governance" data-i18n="form_concern_governance">Governance</option>
+                </select>
               </label>
               <label class="block">
                 <span class="text-sm text-gray-700" data-i18n="form_interest">How would you like to help?</span>
@@ -383,7 +608,7 @@
               </button>
 
               <p class="text-xs text-gray-600" data-i18n="privacy_note">By submitting, you agree to receive campaign
-                updates. (Replace with your compliance/privacy statement.)</p>
+                updates. Your data stays local until we set up a secure endpoint.</p>
             </form>
           </div>
         </div>
@@ -395,9 +620,8 @@
   <footer class="border-t border-[color:var(--line)] py-10">
     <div class="mx-auto max-w-4xl px-6">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 rtl-row rtl-text">
-        <p class="text-sm text-gray-700">© <span id="year"></span> <span data-i18n="footer_brand">Hingaa Male'
-            (Template)</span></p>
-        <p class="text-sm text-gray-600" data-i18n="footer_paid">Paid for by the Campaign Committee (edit)</p>
+        <p class="text-sm text-gray-700">&copy; <span id="year"></span> <span data-i18n="footer_brand">Hingaa Male'</span></p>
+        <p class="text-sm text-gray-600" data-i18n="footer_paid">[FILL IN] Paid for by [campaign committee name]</p>
       </div>
     </div>
   </footer>
@@ -411,6 +635,11 @@
 
 
   <script>
+    // ------- Campaign Constants -------
+    const CAMPAIGN_WHATSAPP = '[FILL IN]'; // e.g. '+960XXXXXXX'
+    const CAMPAIGN_VIBER = '[FILL IN]';    // e.g. '+960XXXXXXX'
+    const CAMPAIGN_EMAIL = 'campaign@mayormale.mv';
+
     // ------- Navigation -------
     function toggleMobileMenu() {
       const menu = document.getElementById('mobileMenu');
@@ -482,7 +711,6 @@
         toast(t('toast_pdf_saved'));
       };
       reader.readAsDataURL(file);
-      // allow re-uploading same file
       event.target.value = '';
     }
 
@@ -516,7 +744,6 @@
         const when = stamp && !Number.isNaN(stamp.getTime()) ? stamp.toLocaleDateString() : '';
         meta.textContent = `${payload.name || 'addendum.pdf'}${kb ? ` — ${kb} KB` : ''}${when ? ` — ${when}` : ''}`;
       } catch (e) {
-        // Corrupt data; reset
         localStorage.removeItem(MANIFESTO_ADDENDUM_KEY);
         link.classList.add('hidden');
         link.removeAttribute('href');
@@ -548,7 +775,6 @@
         toast(t('toast_photo_updated'));
       };
       reader.readAsDataURL(file);
-      // allow re-uploading same file
       event.target.value = '';
     }
 
@@ -556,7 +782,7 @@
       localStorage.removeItem(CANDIDATE_PHOTO_KEY);
       const img = document.getElementById('candidatePhoto');
       if (img) {
-        img.src = "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='800'%20height='1000'%20viewBox='0%200%20800%201000'%3E%3Crect%20width='800'%20height='1000'%20fill='%23f3f4f6'/%3E%3Cg%20fill='none'%20stroke='%239ca3af'%20stroke-width='10'%3E%3Ccircle%20cx='400'%20cy='360'%20r='130'/%3E%3Cpath%20d='M170%20930%20c35-220%20155-320%20230-340%2035-10%2070-10%20105%200%2075%2020%20195%20120%20230%20340'/%3E%3C/g%3E%3Ctext%20x='50%25'%20y='70%25'%20text-anchor='middle'%20font-family='ui-sans-serif,%20system-ui'%20font-size='28'%20fill='%236b7280'%3EAdd%20your%20photo%3C/text%3E%3C/svg%3E";
+        img.src = "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='800'%20height='1000'%20viewBox='0%200%20800%201000'%3E%3Crect%20width='800'%20height='1000'%20fill='%23f3f4f6'/%3E%3Cg%20fill='none'%20stroke='%239ca3af'%20stroke-width='10'%3E%3Ccircle%20cx='400'%20cy='360'%20r='130'/%3E%3Cpath%20d='M170%20930%20c35-220%20155-320%20230-340%2035-10%2070-10%20105%200%2075%2020%20195%20120%20230%20340'/%3E%3C/g%3E%3Ctext%20x='50%25'%20y='70%25'%20text-anchor='middle'%20font-family='ui-sans-serif,%20system-ui'%20font-size='28'%20fill='%236b7280'%3EFILL%20IN%20-%20upload%20candidate%20photo%3C/text%3E%3C/svg%3E";
       }
       toast(t('toast_photo_cleared'));
     }
@@ -574,7 +800,6 @@
       const form = event.target;
       const data = Object.fromEntries(new FormData(form).entries());
 
-      // Demo-only: store locally. Replace with Action Network / Mailchimp / custom endpoint.
       const key = 'campaign_signups_v1';
       const existing = JSON.parse(localStorage.getItem(key) || '[]');
       existing.push({ ...data, createdAt: new Date().toISOString() });
@@ -584,338 +809,192 @@
       toast(t('toast_signup_thanks'));
     }
 
+    // ------- Visit Request -------
+    function handleVisitRequest(event) {
+      event.preventDefault();
+      const form = event.target;
+      const data = Object.fromEntries(new FormData(form).entries());
+
+      const key = 'campaign_visit_requests_v1';
+      const existing = JSON.parse(localStorage.getItem(key) || '[]');
+      existing.push({ ...data, createdAt: new Date().toISOString() });
+      localStorage.setItem(key, JSON.stringify(existing));
+
+      form.reset();
+      toast(t('visit_form_saved'));
+    }
+
+    // ------- CSV Parser -------
+    function parseCSV(text) {
+      const rows = [];
+      let current = '';
+      let inQuotes = false;
+      const lines = text.split('\n');
+
+      for (let i = 0; i < lines.length; i++) {
+        if (inQuotes) {
+          current += '\n' + lines[i];
+        } else {
+          current = lines[i];
+        }
+
+        // Count unescaped quotes
+        let quoteCount = 0;
+        for (let j = 0; j < current.length; j++) {
+          if (current[j] === '"') quoteCount++;
+        }
+        inQuotes = quoteCount % 2 !== 0;
+
+        if (!inQuotes) {
+          rows.push(parseCSVRow(current));
+          current = '';
+        }
+      }
+      return rows;
+    }
+
+    function parseCSVRow(line) {
+      const fields = [];
+      let field = '';
+      let inQuotes = false;
+
+      for (let i = 0; i < line.length; i++) {
+        const ch = line[i];
+        if (inQuotes) {
+          if (ch === '"') {
+            if (i + 1 < line.length && line[i + 1] === '"') {
+              field += '"';
+              i++;
+            } else {
+              inQuotes = false;
+            }
+          } else {
+            field += ch;
+          }
+        } else {
+          if (ch === '"') {
+            inQuotes = true;
+          } else if (ch === ',') {
+            fields.push(field);
+            field = '';
+          } else if (ch !== '\r') {
+            field += ch;
+          }
+        }
+      }
+      fields.push(field);
+      return fields;
+    }
+
     // ------- i18n -------
     const LANG_KEY = 'campaign_lang_v1';
-    // Default to Dhivehi
     let currentLang = 'dv';
 
     // Ensure initial document attributes match default language immediately
     document.documentElement.lang = 'dv';
     document.documentElement.dir = 'rtl';
 
+    // Hardcoded fallback translations (used if CSV fetch fails)
     const translations = {
-      en: {
-        brand: "Hingaa Male'",
-        top_note: "This is a minimalist template — replace name, contact info, and platform details.",
-        top_get_updates: "Get updates",
-        nav_pledges: "Pledges",
-        nav_manifesto: "Manifesto",
-        nav_about: "Who am I?",
-        nav_ledger: "Ledger",
-        nav_get_involved: "Get involved",
-        nav_contact: "Contact",
-        nav_volunteer: "Volunteer",
-        mobile_language: "Language",
-        mobile_lang_toggle: "Switch to Dhivehi",
+      en: {},
+      dv: {}
+    };
 
-        hero_kicker: "Mayor of Male' City, Maldives",
-        hero_title: "A practical plan for a cleaner, safer, more affordable Male'.",
-        hero_subtitle: "Focused on everyday services: waste management, public spaces, safe-streets and  transparency across the board.",
-        cta_volunteer: "Volunteer",
-        cta_manifesto: "Read the living manifesto",
-        cta_get_involved: "Get involved!",
-        contact_campaign_email: "Campaign email",
-        contact_whatsapp: "WhatsApp",
-        contact_instagram: "Instagram",
+    // Pledge and issue data (populated from CSV or fallback)
+    let pledgeItemsByLang = { en: [], dv: [] };
+    let issueItemsByLang = { en: [], dv: [] };
 
-        photo_label: "Landing photo",
-        photo_upload: "Upload",
-        photo_clear: "Clear",
-        photo_tip: "Tip: use a simple headshot; it will be displayed in monochrome.",
+    // Load translations from CSV
+    async function loadTranslationsCSV() {
+      try {
+        const resp = await fetch('translations.csv');
+        const text = await resp.text();
+        const rows = parseCSV(text);
+        if (rows.length < 2) throw new Error('Empty CSV');
 
-        pledges_title: "Pledges",
-        pledges_intro: "A few priorities we can deliver with clear timelines, measurable targets, and public reporting.",
-        pledges_pdf: "Want the full plan as a PDF?",
-        pledges_add_download: "Add download link",
+        const headers = rows[0];
+        const enIdx = headers.indexOf('en');
+        const dvIdx = headers.indexOf('dv');
+        const keyIdx = headers.indexOf('key');
 
-        manifesto_title: "Living manifesto",
-        manifesto_intro: "This is a working document: updated in public as we listen, measure results, and adjust. It’s short on slogans and long on delivery.",
-        manifesto_p1: "<span class=\"font-medium text-[color:var(--ink)]\">How we’ll govern:</span> publish plans, publish budgets, publish progress.",
-        manifesto_p2: "<span class=\"font-medium text-[color:var(--ink)]\">How you’ll participate:</span> neighborhood visits, open office hours, and a simple issue tracker anyone can follow.",
-        manifesto_p3: "<span class=\"font-medium text-[color:var(--ink)]\">How we’ll be judged:</span> clear targets for cleanliness, safety, response times, and affordability.",
-        manifesto_cta_pledges: "See pledges",
-        manifesto_cta_involved: "Get involved",
-
-        version_title: "Version",
-        version_value: "v0.1 (template) — replace with your current draft date.",
-        version_tip: "<span class=\"font-medium\">Tip:</span> Add a PDF download link and a changelog.",
-
-        about_title: "Who am I?",
-        about_p1: "Replace this section with your bio: your work, your record, and what you’ve delivered for people in Male'.",
-        about_p2: "Keep it specific and grounded — what you’ve done, what you’ll do in the first 100 days, and how people can hold you accountable.",
-        about_p3: "Add language options (Dhivehi/English) if needed.",
-        about_cta_contact: "Contact the campaign",
-        about_cta_join: "Join the team",
-
-        quickfacts_title: "Quick facts",
-        qf_focus: "Focus",
-        qf_focus_value: "Services, transparency, affordability",
-        qf_city: "City",
-        qf_city_value: "Male' City",
-        qf_campaign: "Campaign",
-        qf_campaign_value: "Independent / Coalition (edit)",
-        qf_tip: "<span class=\"font-medium\">Tip:</span> Add endorsements here as plain text with links.",
-
-        involved_title: "Get involved",
-        involved_intro: "This campaign is built block-by-block. Choose one simple way to help this week.",
-        card_volunteer_title: "Volunteer",
-        card_volunteer_body: "Door-to-door, outreach, logistics, and community events.",
-        card_volunteer_link: "Sign up",
-        card_host_title: "Host a small meeting",
-        card_host_body: "Bring neighbors together. We’ll show up and listen.",
-        card_host_link: "Request a visit",
-        card_issue_title: "Share an issue",
-        card_issue_body: "Report a local concern: waste, safety, access, or affordability.",
-        card_issue_link: "Contact",
-        brief_title: "Want a simple one-page brief?",
-        brief_body: "Add a link here to your manifesto PDF, a linktree, or a donation/volunteer platform.",
-
-        contact_title: "Contact",
-        contact_intro: "For volunteering, endorsements, media, or community issues.",
-        contact_email_label: "Email:",
-        contact_phone_label: "Phone/WhatsApp:",
-        contact_ig_label: "Instagram:",
-        compliance_note: "Replace these with real campaign addresses and compliance text (\"Paid for by…\") as required.",
-
-        signup_title: "Sign up",
-        signup_intro: "Get updates. Volunteer. Host a small meeting. Keep it local.",
-        form_name: "Name",
-        form_email: "Email",
-        form_interest: "How would you like to help?",
-        opt_volunteer: "Volunteer",
-        opt_host: "Host a meeting",
-        opt_issue: "Community issue",
-        opt_media: "Media / press",
-        form_submit: "Submit",
-        privacy_note: "By submitting, you agree to receive campaign updates. (Replace with your compliance/privacy statement.)",
-        ph_name: "Your name",
-        ph_email: "you@example.com",
-
-        footer_brand: "Hingaa Male' (Template)",
-        footer_paid: "Paid for by the Campaign Committee (edit)",
-
-        toast_pdf_tip: "Upload your PDF and link it here.",
-        toast_pdf_only: "Please upload a PDF file.",
-        toast_pdf_read_fail: "Could not read PDF.",
-        toast_pdf_saved: "Addendum PDF saved.",
-        toast_pdf_cleared: "Addendum PDF cleared.",
-
-        toast_signup_thanks: "Thanks — you’re on the list.",
-        toast_img_only: "Please upload an image file.",
-        toast_img_read_fail: "Could not read image.",
-        toast_photo_updated: "Photo updated.",
-        toast_photo_cleared: "Photo cleared.",
-
-        addendum_title: "Addendum PDF",
-        addendum_desc: "Add a PDF addendum (e.g., “How to use the living manifesto”). Saved locally in your browser.",
-        addendum_view: "View / download addendum",
-        addendum_upload: "Upload PDF",
-        addendum_clear: "Clear",
-
-        accordion_open: "Open",
-        accordion_close: "Close"
-      },
-      dv: {
-        brand: "ހިންގާ މާލެ",
-        top_note: "މިއީ މިނިމަލިސްޓިކް ޓެމްޕްލޭޓެއް — ނަން، ކޮންޓާކްޓް، އަދި ވައްދުތައް ބަދަލުކޮށްލާ.",
-        top_get_updates: "އަޕްޑޭޓްތައް ލިބޭ",
-        nav_pledges: "ވައްދުތައް",
-        nav_manifesto: "މެނިފެސްޓޯ",
-        nav_about: "އަހަރެން ކޮންބައި؟",
-        nav_ledger: "ލެޖަރ",
-        nav_get_involved: "ހިމެނޭ",
-        nav_contact: "ކޮންޓާކްޓް",
-        nav_volunteer: "ވޮލަންޓިއަރ",
-        mobile_language: "ބަސް",
-        mobile_lang_toggle: "English އަށް ބަދަލު",
-
-        hero_kicker: "މާލެ ސިޓީ، ދިވެހިރާއްޖޭގެ މޭޔަރ",
-        hero_title: "މާލެއަށް އަރާއްދަނި، އަމާން، އަދި އަދާދު އަންގައިދޭ ކަންކަމަކަށް ކުރާ ބަޔާން.",
-        hero_subtitle: "ދުވަހުން ދުވަހަށް ޖެހޭ ޚިދުމަތްތައް: ކުނި މެނޭޖްމެންޓް، ޢާންމު ބައިތައް، އަމާން މަގުތައް، ފާޅު ބަޖެޓް، އަދި ރޮޒުން.",
-        cta_volunteer: "ވޮލަންޓިއަރ",
-        cta_manifesto: "ލިވިންގ މެނިފެސްޓޯ ކިޔާ",
-        cta_get_involved: "ހިމެނޭ!",
-        contact_campaign_email: "ކެމްޕޭން އީމެއިލް",
-        contact_whatsapp: "WhatsApp",
-        contact_instagram: "Instagram",
-
-        photo_label: "ލޭންޑިންގ ފޮޓޯ",
-        photo_upload: "އަޕްލޯޑް",
-        photo_clear: "ފޮހެލާ",
-        photo_tip: "ޓިޕް: ސާދާ ހެޑްޝޮޓެއް ބޭނުންކޮށްލާ؛ މިއީ ކަޅު-ހުދު (monochrome) ގޮތަށް ދައްކާނެ.",
-
-        pledges_title: "ވައްދުތައް",
-        pledges_intro: "ވަގުތު ކަނޑައެޅި، މިންގަނޑުތައް އަދި ޢާންމު ރިޕޯޓިންގ އެކު ލިބޭނެ ސަރުކާރީ ކަންކަން.",
-        pledges_pdf: "މުޅި ޕްލޭން PDF އެއްގޮތަށް ބޭނުންވޭ؟",
-        pledges_add_download: "ޑައުންލޯޑް ލިންކް އެއް އަޅާ",
-
-        manifesto_title: "ލިވިންގ މެނިފެސްޓޯ",
-        manifesto_intro: "މިއީ ކުރިއަށް ބަދަލުވާ ބަޔާނެއް: އަހުމައި އަޑުއަހާ، ނަތީޖާ މިންގަނޑުކޮށް، ބަދަލުތައް ކުރަނީ. ސްލޯގަން ކުޑަ، ކުރިޔަށް ހިންގުން ބޮޑު.",
-        manifesto_p1: "<span class=\"font-medium text-[color:var(--ink)]\">ހުކުމް ކުރާ ގޮތް:</span> ޕްލޭންތައް، ބަޖެޓްތައް، އަދި ޕްރޮގްރެސް ޢާންމުކޮށް ޕަބްލިޝް.",
-        manifesto_p2: "<span class=\"font-medium text-[color:var(--ink)]\">ތިޔަކުން ހިމެނޭ ގޮތް:</span> އަވަށް ބައިތަކަށް ވަޑައިގެންނަން، ހުޅުވާ އޮފީސް ވަގުތުތައް، އަދި އެންމެންނަށް ބެލޭ އިޝޫ ޓްރެކަރެއް.",
-        manifesto_p3: "<span class=\"font-medium text-[color:var(--ink)]\">ހިސާބު ކުރާނެ ގޮތް:</span> ސާފުކަން، އަމާންކަން، ރިސްޕޮންސް ވަގުތު، އަދި އަދާދުކަން އަށް ވާނެ ތަހުދީދުތައް.",
-        manifesto_cta_pledges: "ވައްދުތައް ބަލާ",
-        manifesto_cta_involved: "ހިމެނޭ",
-
-        version_title: "ވާރޝަން",
-        version_value: "v0.1 (ޓެމްޕްލޭޓް) — ތިޔައީ ބޭނުންވާ ތާރީޚު ބަދަލުކޮށްލާ.",
-        version_tip: "<span class=\"font-medium\">ޓިޕް:</span> PDF ލިންކެއް އަދި ޗޭންޖްލޮގް އެއް އަޅާ.",
-
-        about_title: "އަހަރެން ކޮންބައި؟",
-        about_p1: "މިބައިގައި ތިޔަބޭފުޅުގެ ބަޔާން ލިޔޭ: ދައުރު، ރެކޯޑް، އަދި މާލޭގެ މީހުންނަށް ކޮށްދީފައިވާ ކަންކަން.",
-        about_p2: "ވާހަކަ ވަރަށް ސާފުކޮށް: ކޮށްދިން ކަން، ފުރަތަމަ 100 ދުވަހުގައި ކުރާނެ ކަން، އަދި ހިސާބު ހިފާނެ ގޮތް.",
-        about_p3: "ބޭނުންވެޔޭ ނަމަ، ބަސް ބަދަލު އޮޕްޝަން (ދިވެހި/English) އަޅާ.",
-        about_cta_contact: "ކެމްޕޭން ކޮންޓާކްޓް",
-        about_cta_join: "ޓީމަށް ހިމެނޭ",
-
-        quickfacts_title: "އަވަސް މަޢުލޫމާތް",
-        qf_focus: "ހިންގާ މަގުސަދު",
-        qf_focus_value: "ޚިދުމަތް، ފާޅުކަން، އަދާދުކަން",
-        qf_city: "ސިޓީ",
-        qf_city_value: "މާލެ ސިޓީ",
-        qf_campaign: "ކެމްޕޭން",
-        qf_campaign_value: "އިންޑިޕެންޑެންޓް / ކޮލިޝަން (ބަދަލުކޮށްލާ)",
-        qf_tip: "<span class=\"font-medium\">ޓިޕް:</span> އެންޑޯސްމަންޓްތައް ލިންކާއެކު އަޅާ.",
-
-        involved_title: "ހިމެނޭ",
-        involved_intro: "މި ކެމްޕޭން ބިލްޑް ކުރަނީ ބައި ބައިކޮށް. މި ހަފްތާގައި އެއް ސާދާ ގޮތަކަށް އެއްބަސްވާ.",
-        card_volunteer_title: "ވޮލަންޓިއަރ ޝިފްޓް",
-        card_volunteer_body: "ގޭގޭ މަގުމަގު، އައުޓްރީޗް، ލޮޖިސްޓިކްސް، އަދި މުޖުތަމައު އިވެންޓްތައް.",
-        card_volunteer_link: "ރަޖިސްޓަރ",
-        card_host_title: "ކުޑަ ބައްދަލުވުމެއް ހޯދާ",
-        card_host_body: "އަވަށް މީހުން އެކުލައިލާ. އަހަރެމެން އަންނާނީ އަޑުއަހަން.",
-        card_host_link: "ވިޒިޓް އެދޭ",
-        card_issue_title: "އިޝޫ ހިއްސާ ކުރޭ",
-        card_issue_body: "ކުނި، އަމާންކަން، އެކްސެސް، ނުވަތަ އަދާދުކަން ފަދަ މަހައްލު މައްސަލަ ރިޕޯޓްކޮށްލާ.",
-        card_issue_link: "ކޮންޓާކްޓް",
-        brief_title: "އެއް ޕޭޖް ބްރީފް ބޭނުންވޭ؟",
-        brief_body: "ތިޔަބޭފުޅުގެ މެނިފެސްޓޯ PDF، ލިންކްޓްރީ، ނުވަތަ ޑޮނޭޝަން/ވޮލަންޓިއަރ ޕްލެޓްފޯމެއް ލިންކް ކޮށްލާ.",
-
-        contact_title: "ކޮންޓާކްޓް",
-        contact_intro: "ވޮލަންޓިއަރ، އެންޑޯސްމަންޓް، މީޑިއާ، ނުވަތަ މުޖުތަމައު މައްސަލަތަކަށް.",
-        contact_email_label: "އީމެއިލް:",
-        contact_phone_label: "ފޯން/WhatsApp:",
-        contact_ig_label: "Instagram:",
-        compliance_note: "އާދޭސްތައް އަދި ގާނޫނީ ލިޔުން (\"Paid for by…\") އެހެންވެ ބަދަލުކޮށްލާ.",
-
-        signup_title: "ރަޖިސްޓަރ",
-        signup_intro: "އަޕްޑޭޓްތައް ލިބޭ. ވޮލަންޓިއަރ. ކުޑަ ބައްދަލުވުމެއް. މަހައްލު ގޮތަށް.",
-        form_name: "ނަން",
-        form_email: "އީމެއިލް",
-        form_interest: "ތިޔަ ކޮންގޮތަކަށް އެއްބަސްވާން ބޭނުން؟",
-        opt_volunteer: "ވޮލަންޓިއަރ",
-        opt_host: "ބައްދަލުވުމެއް ހޯދާ",
-        opt_issue: "މުޖުތަމައު މައްސަލަ",
-        opt_media: "މީޑިއާ / ޕްރެސް",
-        form_submit: "ފޮނުއްވާ",
-        privacy_note: "ފޮނުއްވާލުމަކުން ކެމްޕޭން އަޕްޑޭޓްތައް ލިބޭނެ. (ޕްރައިވެސީ/ކޮމްޕްލައިއަންސް ލިޔުން ބަދަލުކޮށްލާ.)",
-        ph_name: "ތިޔަ ނަން",
-        ph_email: "you@example.com",
-
-        footer_brand: "ހިންގާ މާލެ (ޓެމްޕްލޭޓް)",
-        footer_paid: "ކެމްޕޭން ކޮމިޓީއަށް ފައިސާ ދެއްކި (ބަދަލުކޮށްލާ)",
-
-        toast_pdf_tip: "PDF އަޕްލޯޑްކޮށް މިތަނަށް ލިންކް ކޮށްލާ.",
-        toast_pdf_only: "PDF ފައިލެއް އަޕްލޯޑްކޮށްލާ.",
-        toast_pdf_read_fail: "PDF ކިޔާލެވޭނެ ނުވޭ.",
-        toast_pdf_saved: "އެޑެންޑަމް PDF ސޭވް ވެއްޖެ.",
-        toast_pdf_cleared: "އެޑެންޑަމް PDF ފޮހެލެވިއްޖެ.",
-
-        toast_signup_thanks: "ޝުކުރިއްޔާ — ތިޔައީ ލިސްޓުގައި.",
-        toast_img_only: "އިމޭޖެއް ފައިލް އަޕްލޯޑްކޮށްލާ.",
-        toast_img_read_fail: "ފޮޓޯ ކިޔާލެވޭނެ ނުވޭ.",
-        toast_photo_updated: "ފޮޓޯ އަޕްޑޭޓް ވެއްޖެ.",
-        toast_photo_cleared: "ފޮޓޯ ފޮހެލެވިއްޖެ.",
-
-        addendum_title: "އެޑެންޑަމް PDF",
-        addendum_desc: "މެނިފެސްޓޯ އަށް އިތުރުވާ PDF އެއް އަޅާ (މިސާލަށް: “ލިވިންގ މެނިފެސްޓޯ ބޭނުންކުރާ ގޮތް”). މި ބްރައުޒަރުގައި ލޯކަލަށް ސޭވް ވާނެ.",
-        addendum_view: "އެޑެންޑަމް ބަލާ / ޑައުންލޯޑް",
-        addendum_upload: "PDF އަޕްލޯޑް",
-        addendum_clear: "ފޮހެލާ",
-
-        accordion_open: "ހުޅުވާ",
-        accordion_close: "ބަންދާ"
+        for (let i = 1; i < rows.length; i++) {
+          const row = rows[i];
+          if (!row[keyIdx]) continue;
+          const key = row[keyIdx].trim();
+          if (enIdx >= 0 && row[enIdx] !== undefined) translations.en[key] = row[enIdx];
+          if (dvIdx >= 0 && row[dvIdx] !== undefined) translations.dv[key] = row[dvIdx];
+        }
+      } catch (e) {
+        console.warn('Could not load translations.csv, using fallback:', e);
+        // Minimal fallback
+        translations.en.brand = "Hingaa Male'";
+        translations.dv.brand = "ހިންގާ މާލެ";
       }
-    };
+    }
 
-    const pledgeItemsByLang = {
-      en: [
-        {
-          title: 'Clean streets & waste management',
-          summary: 'Reliable collection, cleaner public spaces, and transparent reporting.',
-          bullets: [
-            'Published collection schedules by neighborhood',
-            'Deploy dustbins at arms length & enforcement against illegal dumping',
-            'Monthly dashboard: cleanliness metrics and response times'
-          ]
-        },
-        {
-          title: 'Safe mobility & public space',
-          summary: 'Make streets safer for pedestrians, cyclists, and families.',
-          bullets: [
-            'Fix sidewalks, crossings, lighting, and accessibility',
-            'Experimental traffic management near schools and busy junctions',
-            'Maintain parks, sports areas, and community spaces'
-          ]
-        },
-        {
-          title: 'Affordable living & local jobs',
-          summary: 'Lower day-to-day costs and support small businesses.',
-          bullets: [
-            'Cut red tape for permits and small vendors',
-            'Youth development programs',
-            'Fair procurement that prioritize local SMEs'
-          ]
-        },
-        {
-          title: 'Transparent, accountable city government',
-          summary: 'Open budgets, open contracts, and real community input.',
-          bullets: [
-            'Publish budgets and contracts in real time',
-            'Regular town-halls & digital feedback channels',
-            'Service request tracker with public status updates'
-          ]
+    // Load pledges from CSV
+    async function loadPledgesCSV() {
+      try {
+        const resp = await fetch('pledges.csv');
+        const text = await resp.text();
+        const rows = parseCSV(text);
+        if (rows.length < 2) return;
+
+        const h = rows[0];
+        const idx = (name) => h.indexOf(name);
+
+        for (let i = 1; i < rows.length; i++) {
+          const r = rows[i];
+          if (!r[idx('id')]) continue;
+
+          pledgeItemsByLang.en.push({
+            title: r[idx('title_en')] || '',
+            summary: r[idx('summary_en')] || '',
+            bullets: [r[idx('bullet1_en')] || '', r[idx('bullet2_en')] || '', r[idx('bullet3_en')] || ''].filter(Boolean)
+          });
+          pledgeItemsByLang.dv.push({
+            title: r[idx('title_dv')] || '',
+            summary: r[idx('summary_dv')] || '',
+            bullets: [r[idx('bullet1_dv')] || '', r[idx('bullet2_dv')] || '', r[idx('bullet3_dv')] || ''].filter(Boolean)
+          });
         }
-      ],
-      dv: [
-        {
-          title: 'ސާފު މަގުތައް އަދި ކުނި މެނޭޖްމެންޓް',
-          summary: 'ގަޑިވަގުތު މަތީ ހަމަޖެހި ކުނި ނަގާލުން، ސާފު ޢާންމު ބައިތައް، އަދި ފާޅު ރިޕޯޓިންގ.',
-          bullets: [
-            'އަވަށް އަވަށްގެ ކުނި ނަގާ ގަޑިވަގުތު ޢާންމުކޮށް ޕަބްލިޝް',
-            'ކުނި ބިންތައް ބޮޑުކޮށް + ގާނޫނު ރަނގަޅަށް އަމަލުކުރުން',
-            'މަހަކު މަހަކު ޑޭޝްބޯޑް: ސާފުކަން މިންގަނޑުތައް އަދި ރިސްޕޮންސް ވަގުތު'
-          ]
-        },
-        {
-          title: 'އަމާން ދުއްވުން އަދި ޢާންމު ބައިތައް',
-          summary: 'މަގުތައް މީހުންނަށް (ހިނގުމަށް/ސައިކަލަށް) އަމާންކޮށް ހެދުން.',
-          bullets: [
-            'ފުޓްޕާސް، ކްރޮސިންގް، ލައިޓިންގ އަދި އެކްސެސިބިލިޓީ ސާފުކުރުން',
-            'ސްކޫލުތަކާ ކައިރީ ޓްރެފިކް ކާލމިންގ',
-            'ޕާކްތައް، ކުޅިވަރު ބައިތައް، އަދި މުޖުތަމައު ސްޕޭސްތައް ރަނގަޅަށް ބަލަހައްޓާ'
-          ]
-        },
-        {
-          title: 'އަދާދު ދިރިއުޅުން އަދި ރޮޒު',
-          summary: 'ދުވަހުން-ދުވަހަށް ޚަރަދު ދަށްކޮށް، ލޯކަލް ވިޔަފާރިތަކަށް ހެޔޮކުރުން.',
-          bullets: [
-            'ހުއްދަ/ޕާމިޓް އަށް ރައްދު ކުޑަކޮށް (ވަގުތު ފާޅުކޮށް)',
-            'މަހައްލު އަދި ޔޫތު ރޮޒު ޕްރޮގްރާމްތައް',
-            'ލޯކަލް SME ތަކަށް ހެޔޮކުރާ ފެއާ ޕްރޮކިއުއަރމެންޓް'
-          ]
-        },
-        {
-          title: 'ފާޅު އަދި ހިސާބުވެރި ސިޓީ ހުކުމުކުރުން',
-          summary: 'ބަޖެޓް އާއި ކޮންޓްރެކްޓް ފާޅުކޮށް، މީހުންނަށް ހިމެނޭ ހައްގު.',
-          bullets: [
-            'ބަޖެޓް/ކޮންޓްރެކްޓް ސާދާ ބަހުން ޕަބްލިޝް',
-            'ޓައުން-ހޯލް + އޮންލައިން ފީޑްބެކް ޗެނަލް',
-            'ސަރވިސް ރިކުއެސްޓް ޓްރެކަރ: ސްޓޭޓަސް ޢާންމުކޮށް އަޕްޑޭޓް'
-          ]
+      } catch (e) {
+        console.warn('Could not load pledges.csv:', e);
+      }
+    }
+
+    // Load issues from CSV
+    async function loadIssuesCSV() {
+      try {
+        const resp = await fetch('issues.csv');
+        const text = await resp.text();
+        const rows = parseCSV(text);
+        if (rows.length < 2) return;
+
+        const h = rows[0];
+        const idx = (name) => h.indexOf(name);
+
+        for (let i = 1; i < rows.length; i++) {
+          const r = rows[i];
+          if (!r[idx('id')]) continue;
+
+          issueItemsByLang.en.push({
+            title: r[idx('title_en')] || '',
+            stat: r[idx('stat_en')] || '',
+            reality: r[idx('reality_en')] || '',
+            plan: r[idx('plan_en')] || ''
+          });
+          issueItemsByLang.dv.push({
+            title: r[idx('title_dv')] || '',
+            stat: r[idx('stat_dv')] || '',
+            reality: r[idx('reality_dv')] || '',
+            plan: r[idx('plan_dv')] || ''
+          });
         }
-      ]
-    };
+      } catch (e) {
+        console.warn('Could not load issues.csv:', e);
+      }
+    }
 
     function t(key) {
       return (translations[currentLang] && translations[currentLang][key]) || (translations.en[key] || key);
@@ -952,13 +1031,9 @@
 
       // Update language button
       const btn = document.getElementById('langToggle');
-      // Button shows the language you can switch TO
       if (btn) {
         const nextLabelIsEN = currentLang === 'dv';
         btn.textContent = nextLabelIsEN ? 'EN' : 'ދިވެހި';
-        // Font rules:
-        // - When showing "EN", force system font
-        // - When showing Dhivehi label, force Thaana font (Faruma preferred)
         btn.classList.toggle('font-system', nextLabelIsEN);
         btn.classList.toggle('font-thaana', !nextLabelIsEN);
       }
@@ -967,8 +1042,16 @@
       document.documentElement.lang = currentLang === 'dv' ? 'dv' : 'en';
       document.documentElement.dir = currentLang === 'dv' ? 'rtl' : 'ltr';
 
-      // Re-render pledges to switch language
+      // Update document title
+      if (currentLang === 'dv') {
+        document.title = 'ހިންގާ މާލެ — މޭޔަރ ކެމްޕޭން';
+      } else {
+        document.title = "Hingaa Male' — Mayor Campaign";
+      }
+
+      // Re-render dynamic sections
       renderPlatform();
+      renderIssues();
 
       // Ensure page is visible after translations applied
       document.documentElement.classList.remove('i18n-loading');
@@ -982,12 +1065,18 @@
 
     function toggleLanguage() {
       setLanguage(currentLang === 'en' ? 'dv' : 'en');
-      // close mobile menu after toggle for clarity
       document.getElementById('mobileMenu')?.classList.add('hidden');
       document.querySelector('button[aria-controls="mobileMenu"]')?.setAttribute('aria-expanded', 'false');
     }
 
-    function loadLanguage() {
+    async function loadLanguage() {
+      // Load all CSVs in parallel
+      await Promise.all([
+        loadTranslationsCSV(),
+        loadPledgesCSV(),
+        loadIssuesCSV()
+      ]);
+
       const saved = localStorage.getItem(LANG_KEY);
       if (saved === 'dv' || saved === 'en') {
         currentLang = saved;
@@ -1012,7 +1101,6 @@
         const wrap = document.createElement('div');
         wrap.className = 'border border-[color:var(--line)]';
 
-        // In RTL: button on left, text on right. In LTR: text on left, button on right.
         const buttonContent = isRTL
           ? `<span class="mt-1 text-sm text-gray-600 shrink-0" aria-hidden="true">${escapeHtml(t('accordion_open'))}</span>
              <div class="text-right flex-1">
@@ -1043,6 +1131,56 @@
       });
     }
 
+    // ------- Issues (accordion) -------
+    function renderIssues() {
+      const root = document.getElementById('issuesAccordions');
+      if (!root) return;
+      root.innerHTML = '';
+
+      const items = issueItemsByLang[currentLang] || issueItemsByLang.en;
+      const isRTL = document.documentElement.dir === 'rtl';
+
+      items.forEach((item, idx) => {
+        const id = `issue_${idx}`;
+        const wrap = document.createElement('div');
+        wrap.className = 'border border-[color:var(--line)]';
+
+        const buttonContent = isRTL
+          ? `<span class="mt-1 text-sm text-gray-600 shrink-0" aria-hidden="true">${escapeHtml(t('accordion_open'))}</span>
+             <div class="text-right flex-1">
+               <h3 class="text-lg font-semibold tracking-tight">${escapeHtml(item.title)}</h3>
+               <p class="mt-1 text-sm font-medium text-[color:var(--ink)]">${escapeHtml(item.stat)}</p>
+             </div>`
+          : `<div class="text-left flex-1">
+               <h3 class="text-lg font-semibold tracking-tight">${escapeHtml(item.title)}</h3>
+               <p class="mt-1 text-sm font-medium text-[color:var(--ink)]">${escapeHtml(item.stat)}</p>
+             </div>
+             <span class="mt-1 text-sm text-gray-600 shrink-0" aria-hidden="true">${escapeHtml(t('accordion_open'))}</span>`;
+
+        const textAlign = isRTL ? 'text-right' : 'text-left';
+
+        wrap.innerHTML = `
+          <button class="w-full px-5 py-4 flex items-start justify-between gap-6" aria-controls="${id}" aria-expanded="false" onclick="toggleAccordion('${id}', this)">
+            ${buttonContent}
+          </button>
+          <div id="${id}" class="hidden px-5 pb-5 ${textAlign}">
+            <div class="space-y-3 text-sm text-gray-700">
+              <div>
+                <p class="font-medium text-[color:var(--ink)]">Current reality</p>
+                <p class="mt-1">${escapeHtml(item.reality)}</p>
+              </div>
+              <div>
+                <p class="font-medium text-[color:var(--ink)]">Our plan</p>
+                <p class="mt-1">${escapeHtml(item.plan)}</p>
+              </div>
+            </div>
+          </div>
+        `;
+
+        root.appendChild(wrap);
+      });
+    }
+
     function toggleAccordion(id, btn) {
       const panel = document.getElementById(id);
       const isOpen = !panel.classList.contains('hidden');
@@ -1066,7 +1204,6 @@
     document.getElementById('year').textContent = new Date().getFullYear();
     loadCandidatePhoto();
     renderAddendumLink();
-    // Default to Dhivehi and render before showing content
     loadLanguage();
   </script>
 </body>

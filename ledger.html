@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="i18n-loading">
+<html lang="dv" dir="rtl" class="i18n-loading">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Public Ledger — Hingaa Male'</title>
+  <title>ކެމްޕޭން ޕަބްލިކް ލެޖަރ — ހިންގާ މާލެ</title>
   <meta name="description" content="Campaign finance transparency for Male' City Mayor Campaign." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hingaamale.mv/ledger.html" />
+  <meta property="og:title" content="Campaign Public Ledger — Hingaa Male'" />
+  <meta property="og:description" content="Complete transparency. Every Rufiyaa donated and spent is tracked in real-time." />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Campaign Public Ledger — Hingaa Male'" />
+
+  <link rel="canonical" href="https://hingaamale.mv/ledger.html" />
+
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +39,7 @@
 
       <div class="hidden md:flex items-center gap-6 text-sm rtl-row">
         <a class="hover:underline" href="index.html#platform" data-i18n="nav_pledges">ވައްދުތައް</a>
+        <a class="hover:underline" href="index.html#issues" data-i18n="nav_issues">މައްސަލަތައް</a>
         <a class="hover:underline" href="index.html#manifesto" data-i18n="nav_manifesto">މެނިފެސްޓޯ</a>
         <a class="hover:underline" href="index.html#about" data-i18n="nav_about">އަހަރެން ކޮންބައި؟</a>
         <a class="hover:underline font-bold text-[color:var(--ink)]" href="ledger.html" data-i18n="nav_ledger">ލެޖަރ</a>
@@ -48,6 +62,7 @@
     <div id="mobileMenu" class="hidden md:hidden border-t border-[color:var(--line)] bg-white">
       <div class="mx-auto max-w-4xl px-6 py-3 flex flex-col gap-3 text-sm">
         <a class="hover:underline" href="index.html#platform" data-i18n="nav_pledges">Pledges</a>
+        <a class="hover:underline" href="index.html#issues" data-i18n="nav_issues">Issues</a>
         <a class="hover:underline" href="index.html#manifesto" data-i18n="nav_manifesto">Manifesto</a>
         <a class="hover:underline" href="index.html#about" data-i18n="nav_about">Who am I?</a>
         <a class="hover:underline font-bold" href="ledger.html" data-i18n="nav_ledger">Ledger</a>
@@ -119,9 +134,8 @@
   <footer class="border-t border-[color:var(--line)] py-10">
     <div class="mx-auto max-w-4xl px-6">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 rtl-row rtl-text">
-        <p class="text-sm text-gray-700">© <span id="year"></span> <span data-i18n="footer_brand">Hingaa Male'
-            (Template)</span></p>
-        <p class="text-sm text-gray-600" data-i18n="footer_paid">Paid for by the Campaign Committee (edit)</p>
+        <p class="text-sm text-gray-700">&copy; <span id="year"></span> <span data-i18n="footer_brand">Hingaa Male'</span></p>
+        <p class="text-sm text-gray-600" data-i18n="footer_paid">[FILL IN] Paid for by [campaign committee name]</p>
       </div>
     </div>
   </footer>
@@ -137,6 +151,122 @@
     }
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    // ------- CSV Parser (shared) -------
+    function parseCSV(text) {
+      const rows = [];
+      let current = '';
+      let inQuotes = false;
+      const lines = text.split('\n');
+      for (let i = 0; i < lines.length; i++) {
+        if (inQuotes) { current += '\n' + lines[i]; } else { current = lines[i]; }
+        let quoteCount = 0;
+        for (let j = 0; j < current.length; j++) { if (current[j] === '"') quoteCount++; }
+        inQuotes = quoteCount % 2 !== 0;
+        if (!inQuotes) { rows.push(parseCSVRow(current)); current = ''; }
+      }
+      return rows;
+    }
+    function parseCSVRow(line) {
+      const fields = [];
+      let field = '';
+      let inQ = false;
+      for (let i = 0; i < line.length; i++) {
+        const ch = line[i];
+        if (inQ) {
+          if (ch === '"') { if (i + 1 < line.length && line[i + 1] === '"') { field += '"'; i++; } else { inQ = false; } }
+          else { field += ch; }
+        } else {
+          if (ch === '"') { inQ = true; } else if (ch === ',') { fields.push(field); field = ''; } else if (ch !== '\r') { field += ch; }
+        }
+      }
+      fields.push(field);
+      return fields;
+    }
+
+    // ------- i18n Logic -------
+    const LANG_KEY = 'campaign_lang_v1';
+    // Default to Dhivehi (read from localStorage with dv fallback)
+    let currentLang = 'dv';
+
+    // Set initial attributes to match Dhivehi default
+    document.documentElement.lang = 'dv';
+    document.documentElement.dir = 'rtl';
+
+    const translations = { en: {}, dv: {} };
+
+    async function loadTranslationsCSV() {
+      try {
+        const resp = await fetch('translations.csv');
+        const text = await resp.text();
+        const rows = parseCSV(text);
+        if (rows.length < 2) throw new Error('Empty CSV');
+        const headers = rows[0];
+        const enIdx = headers.indexOf('en');
+        const dvIdx = headers.indexOf('dv');
+        const keyIdx = headers.indexOf('key');
+        for (let i = 1; i < rows.length; i++) {
+          const row = rows[i];
+          if (!row[keyIdx]) continue;
+          const key = row[keyIdx].trim();
+          if (enIdx >= 0 && row[enIdx] !== undefined) translations.en[key] = row[enIdx];
+          if (dvIdx >= 0 && row[dvIdx] !== undefined) translations.dv[key] = row[dvIdx];
+        }
+      } catch (e) {
+        console.warn('Could not load translations.csv, using fallback:', e);
+        // Minimal fallback for ledger
+        translations.en.brand = "Hingaa Male'";
+        translations.dv.brand = "ހިންގާ މާލެ";
+        translations.en.ledger_title = "Campaign Public Ledger";
+        translations.dv.ledger_title = "ކެމްޕޭން ޕަބްލިކް ލެޖަރ";
+      }
+    }
+
+    function t(key) {
+      return (translations[currentLang] && translations[currentLang][key]) || (translations.en[key] || key);
+    }
+
+    const toggleBtn = document.getElementById('langToggle');
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'dv' ? 'en' : 'dv';
+      localStorage.setItem(LANG_KEY, currentLang);
+      updateLanguage();
+    }
+
+    function updateLanguage() {
+      const isDv = currentLang === 'dv';
+      document.documentElement.lang = currentLang;
+      document.documentElement.dir = isDv ? 'rtl' : 'ltr';
+
+      // Update document title
+      if (isDv) {
+        document.title = 'ކެމްޕޭން ޕަބްލިކް ލެޖަރ — ހިންގާ މާލެ';
+      } else {
+        document.title = "Campaign Public Ledger — Hingaa Male'";
+      }
+
+      if (toggleBtn) {
+        toggleBtn.textContent = isDv ? 'EN' : 'ދިވެހި';
+        toggleBtn.className = isDv ? "text-xs font-medium underline font-system" : "text-xs font-medium underline font-thaana";
+        toggleBtn.setAttribute('aria-label', isDv ? 'Switch to English' : 'ދިވެހި ބަހަށް ބަދަލުކުރޭ');
+      }
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const val = t(key);
+        if (typeof val === 'string') el.textContent = val;
+      });
+
+      // Update dynamic table labels for mobile view
+      document.querySelectorAll('[data-i18n-label]').forEach(el => {
+        const key = el.getAttribute('data-i18n-label');
+        const val = t(key);
+        if (typeof val === 'string') el.setAttribute('data-label', val);
+      });
+
+      document.documentElement.classList.remove('i18n-loading');
+    }
+
     // ------- Google Sheet Fetcher -------
     const sheetId = '1e71szMh9_Wz19mraMGvdW0aIufTi8mLMz4bbRXjvwp0';
     const sheetName = 'Sheet1';
@@ -145,11 +275,10 @@
     fetch(url)
       .then(res => res.text())
       .then(data => {
-        // Parse the JSONP-like response
         const json = JSON.parse(data.substring(47, data.length - 2));
         const rows = json.table.rows;
         const tbody = document.getElementById('ledgerBody');
-        tbody.innerHTML = ''; // Clear loading state
+        tbody.innerHTML = '';
 
         let runningTotal = 0;
         let totalIncome = 0;
@@ -166,8 +295,6 @@
             totalOutgoing += amount;
           }
 
-          // Format Date (assuming string or standard date format)
-          // Simple formatting if it's a date string, or leave as is
           let displayDate = date;
           if (date && typeof date === 'string' && date.includes('Date')) {
             try { displayDate = new Date(eval(date)).toLocaleDateString(); } catch (e) { }
@@ -178,23 +305,18 @@
 
           const columnKeys = ['th_date', 'th_details', 'th_amount', 'th_total'];
 
-          const createCell = (text, index, isCurrency = false, isRtl = false) => {
+          const createCell = (text, index, isCurrency = false) => {
             const td = document.createElement('td');
             let colorClass = "text-gray-900";
-
             if (isCurrency && typeof text === 'number' && text < 0) {
               colorClass = "text-red-600";
             }
-
             td.className = "px-6 py-4" + (isCurrency ? ` text-right font-medium currency ltr ${colorClass}` : " text-gray-700");
-
-            // Mobile Card View Labels
             const labelKey = columnKeys[index];
             if (labelKey) {
-              td.setAttribute('data-label', translations[currentLang][labelKey] || '');
+              td.setAttribute('data-label', t(labelKey));
               td.setAttribute('data-i18n-label', labelKey);
             }
-
             if (isCurrency) {
               td.textContent = text.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
             } else {
@@ -205,9 +327,6 @@
 
           tr.appendChild(createCell(displayDate, 0));
           tr.appendChild(createCell(details, 1));
-
-          // Color code amount: positive (income) vs negative (expense) could be added if needed, 
-          // but for now just black text consistent with minimal style
           tr.appendChild(createCell(amount, 2, true));
           tr.appendChild(createCell(runningTotal, 3, true));
 
@@ -215,8 +334,6 @@
         });
 
         document.getElementById('totalIncome').textContent = totalIncome.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-        // Display absolute value for outgoing since the label implies direction, or keep negative. 
-        // Showing negative fits the table style.
         document.getElementById('totalOutgoing').textContent = totalOutgoing.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
       })
       .catch(err => {
@@ -225,111 +342,17 @@
         tbody.innerHTML = `<tr><td colspan="4" class="px-6 py-8 text-center text-red-600">Failed to load data. Please try again later.</td></tr>`;
       });
 
-    // ------- i18n Logic (Shared simplified) -------
-    const LANG_KEY = 'campaign_lang_v1';
-    let currentLang = 'en';
-
-    document.documentElement.lang = currentLang;
-    document.documentElement.dir = 'ltr';
-    document.documentElement.classList.remove('i18n-loading');
-
-    const toggleBtn = document.getElementById('langToggle');
-
-    function toggleLanguage() {
-      currentLang = currentLang === 'dv' ? 'en' : 'dv';
+    // Initialize — load CSV translations, then apply language
+    (async () => {
+      await loadTranslationsCSV();
+      const saved = localStorage.getItem(LANG_KEY);
+      if (saved === 'dv' || saved === 'en') {
+        currentLang = saved;
+      } else {
+        currentLang = 'dv'; // Default to Dhivehi
+      }
       updateLanguage();
-    }
-
-    function updateLanguage() {
-      const isDv = currentLang === 'dv';
-      document.documentElement.lang = currentLang;
-      document.documentElement.dir = isDv ? 'rtl' : 'ltr';
-
-      if (toggleBtn) {
-        toggleBtn.textContent = isDv ? 'English' : 'ދިވެހި';
-        toggleBtn.className = isDv ? "text-xs font-medium underline font-system" : "text-xs font-medium underline font-thaana";
-        toggleBtn.setAttribute('aria-label', isDv ? 'Switch to English' : 'ދިވެހި ބަހަށް ބަދަލުކުރޭ');
-      }
-
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[currentLang][key]) {
-          el.textContent = translations[currentLang][key];
-        }
-      });
-
-      // Update dynamic table labels for mobile view
-      document.querySelectorAll('[data-i18n-label]').forEach(el => {
-        const key = el.getAttribute('data-i18n-label');
-        if (translations[currentLang][key]) {
-          el.setAttribute('data-label', translations[currentLang][key]);
-        }
-      });
-    }
-
-    // Translations specific to Ledger + Basic Nav
-    const translations = {
-      en: {
-        brand: "Hingaa Male'",
-        nav_pledges: "Pledges",
-        nav_manifesto: "Manifesto",
-        nav_about: "Who am I?",
-        nav_ledger: "Ledger",
-        nav_get_involved: "Get involved",
-        nav_contact: "Contact",
-        nav_volunteer: "Volunteer",
-        nav_contact: "Contact",
-
-        ledger_subtitle: "Transparency & Integrity",
-        ledger_title: "Campaign Public Ledger",
-        ledger_intro: "We believe in complete transparency. Every Rufiyaa donated and every Rufiyaa spent is tracked here in real-time.",
-
-        summary_income: "Total Income",
-        summary_outgoing: "Total Outgoing",
-
-        th_date: "Date",
-        th_details: "Details",
-        th_amount: "Amount",
-        th_total: "Balance",
-        loading: "Loading data...",
-        ledger_note: "These records are pulled directly from our campaign finance spreadsheet.",
-
-        footer_brand: "Hingaa Male' (Template)",
-        footer_paid: "Paid for by the Campaign Committee (edit)"
-      },
-      dv: {
-        brand: "ހިންގާ މާލެ",
-        nav_pledges: "ވައްދުތައް",
-        nav_manifesto: "މެނިފެސްޓޯ",
-        nav_about: "އަހަރެން ކޮންބައި؟",
-        nav_ledger: "ލެޖަރ",
-        nav_get_involved: "ހިމެނޭ",
-        nav_contact: "ކޮންޓާކްޓް",
-        nav_volunteer: "ވޮލަންޓިއަރ",
-        nav_contact: "ކޮންޓާކްޓް",
-
-        ledger_subtitle: "ފާޅުކަން & އަމާނާތްތެރިކަން",
-        ledger_title: "ކެމްޕޭން ޕަބްލިކް ލެޖަރ",
-        ledger_intro: "އަޅުގަނޑުމެން ގަބޫލުކުރަނީ ފުރިހަމަ ފާޅުކަން. ލިބޭ ކޮންމެ ރުފިޔާއެއް އަދި ހޭދަކުރާ ކޮންމެ ރުފިޔާއެއް މިތަނުން ވަގުތުން ފެންނާނެ.",
-
-        summary_income: "ޖުމްލަ އާމްދަނީ",
-        summary_outgoing: "ޖުމްލަ ޚަރަދު",
-
-        th_date: "ތާރީޚް",
-        th_details: "ތަފްސީލް",
-        th_amount: "އަދަދު",
-        th_total: "ބާކީ",
-        loading: "ޑޭޓާ ލޯޑުކުރަނީ...",
-        ledger_note: "މި ހިސާބުތަކަކީ އަޅުގަނޑުމެންގެ ކެމްޕޭން ފައިނޭންސް ޝީޓުން ސީދާ ނަގާ އެއްޗެހި.",
-
-        footer_brand: "ހިންގާ މާލެ (ޓެމްޕްލޭޓް)",
-        footer_paid: "ކެމްޕޭން ކޮމިޓީއަށް ފައިސާ ދެއްކި (ބަދަލުކޮށްލާ)"
-      }
-    };
-
-    // Initialize
-    updateLanguage();
-
+    })();
   </script>
 </body>
 
