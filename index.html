@@ -33,11 +33,13 @@
   <!-- Navigation -->
   <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-[color:var(--line)]">
     <div class="mx-auto max-w-4xl px-6 py-4 flex items-center justify-between rtl-row">
-      <div class="flex items-center gap-3 rtl-row">
-        <a href="#home" class="font-semibold tracking-tight text-lg" data-i18n="brand">Hingaa Male'</a>
-        <button id="langToggle" type="button" class="text-xs font-medium underline font-system"
-          onclick="toggleLanguage()" aria-label="ބަސް ބަދަލު">EN</button>
-        <span class="text-[10px] uppercase tracking-widest text-gray-500 border border-[color:var(--line)] px-2 py-0.5" data-i18n="phase_label">Phase 1: Listening</span>
+      <div class="rtl-row">
+        <div class="flex items-center gap-3 rtl-row">
+          <a href="#home" class="font-semibold tracking-tight text-lg" data-i18n="brand">Hingaa Male'</a>
+          <button id="langToggle" type="button" class="text-xs font-medium underline font-system"
+            onclick="toggleLanguage()" aria-label="ބަސް ބަދަލު">EN</button>
+        </div>
+        <span class="text-[10px] uppercase tracking-widest text-gray-500" data-i18n="phase_label">Phase 1: Listening</span>
       </div>
 
       <div class="hidden md:flex items-center gap-6 text-sm rtl-row">
@@ -79,7 +81,7 @@
   <!-- Hero -->
   <header id="home" class="py-14 md:py-20">
     <div class="mx-auto max-w-4xl px-6">
-      <div class="grid md:grid-cols-12 gap-10 items-start">
+      <div class="grid md:grid-cols-12 gap-10 items-stretch">
         <div class="md:col-span-7 rtl-text">
           <p class="text-sm uppercase tracking-widest text-gray-600" data-i18n="hero_kicker">Mayor of Male' City,
             Maldives</p>
@@ -107,34 +109,11 @@
               Find your ward
             </a>
           </div>
-
-          <div class="mt-8 border-t border-[color:var(--line)] pt-6 grid gap-6 text-sm sm:grid-cols-2 md:grid-cols-4">
-            <div class="min-w-0">
-              <p class="text-gray-600" data-i18n="contact_campaign_email">Campaign email</p>
-              <a class="font-medium underline break-words ltr"
-                href="mailto:campaign@mayormale.mv">campaign@mayormale.mv</a>
-            </div>
-            <div class="min-w-0">
-              <p class="text-gray-600" data-i18n="contact_whatsapp">WhatsApp</p>
-              <a class="font-medium underline break-words ltr" href="https://wa.me/960XXXXXXX" target="_blank"
-                rel="noreferrer">[FILL IN]</a>
-            </div>
-            <div class="min-w-0">
-              <p class="text-gray-600" data-i18n="contact_viber">Viber</p>
-              <a class="font-medium underline break-words ltr" href="viber://chat?number=960XXXXXXX" target="_blank"
-                rel="noreferrer">[FILL IN]</a>
-            </div>
-            <div class="min-w-0">
-              <p class="text-gray-600" data-i18n="contact_instagram">Instagram</p>
-              <a class="font-medium underline break-words ltr" href="https://www.instagram.com/hingaamale/"
-                target="_blank" rel="noreferrer">@hingaamale</a>
-            </div>
-          </div>
         </div>
 
-        <div class="md:col-span-5">
-          <div class="border border-[color:var(--ink)] bg-white p-3">
-            <div class="aspect-[4/5] bg-gray-100 overflow-hidden">
+        <div class="md:col-span-5 flex flex-col">
+          <div class="flex-1 flex flex-col border border-[color:var(--ink)] bg-white p-3">
+            <div class="flex-1 bg-gray-100 overflow-hidden">
               <img id="candidatePhoto" alt="Candidate photo" class="w-full h-full object-cover grayscale"
                 loading="eager"
                 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='800'%20height='1000'%20viewBox='0%200%20800%201000'%3E%3Crect%20width='800'%20height='1000'%20fill='%23f3f4f6'/%3E%3Cg%20fill='none'%20stroke='%239ca3af'%20stroke-width='10'%3E%3Ccircle%20cx='400'%20cy='360'%20r='130'/%3E%3Cpath%20d='M170%20930%20c35-220%20155-320%20230-340%2035-10%2070-10%20105%200%2075%2020%20195%20120%20230%20340'/%3E%3C/g%3E%3Ctext%20x='50%25'%20y='70%25'%20text-anchor='middle'%20font-family='ui-sans-serif,%20system-ui'%20font-size='28'%20fill='%236b7280'%3EFILL%20IN%20-%20upload%20candidate%20photo%3C/text%3E%3C/svg%3E" />
@@ -150,6 +129,29 @@
               <input id="photoInput" type="file" accept="image/*" class="hidden" onchange="handlePhotoUpload(event)" />
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="mt-8 border-t border-[color:var(--line)] pt-6 grid gap-6 text-sm sm:grid-cols-2 md:grid-cols-4 rtl-text">
+        <div class="min-w-0">
+          <p class="text-gray-600" data-i18n="contact_campaign_email">Campaign email</p>
+          <a class="font-medium underline break-words ltr"
+            href="mailto:campaign@mayormale.mv">campaign@mayormale.mv</a>
+        </div>
+        <div class="min-w-0">
+          <p class="text-gray-600" data-i18n="contact_whatsapp">WhatsApp</p>
+          <a class="font-medium underline break-words ltr" href="https://wa.me/960XXXXXXX" target="_blank"
+            rel="noreferrer">[FILL IN]</a>
+        </div>
+        <div class="min-w-0">
+          <p class="text-gray-600" data-i18n="contact_viber">Viber</p>
+          <a class="font-medium underline break-words ltr" href="viber://chat?number=960XXXXXXX" target="_blank"
+            rel="noreferrer">[FILL IN]</a>
+        </div>
+        <div class="min-w-0">
+          <p class="text-gray-600" data-i18n="contact_instagram">Instagram</p>
+          <a class="font-medium underline break-words ltr" href="https://www.instagram.com/hingaamale/"
+            target="_blank" rel="noreferrer">@hingaamale</a>
         </div>
       </div>
     </div>
@@ -412,29 +414,24 @@
       </div>
 
       <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="border border-[color:var(--line)] p-6 rtl-text">
+        <div class="flex flex-col border border-[color:var(--line)] p-6 rtl-text">
           <h3 class="font-semibold" data-i18n="card_volunteer_title">Volunteer shift</h3>
-          <p class="mt-2 text-sm text-gray-700" data-i18n="card_volunteer_body">Door-to-door, outreach, logistics, and community events across 6 wards.</p>
-          <a href="#signup" class="mt-4 inline-flex text-sm font-medium underline" data-i18n="card_volunteer_link">Sign
-            up</a>
+          <p class="mt-2 flex-1 text-sm text-gray-700" data-i18n="card_volunteer_body">Door-to-door, outreach, logistics, and community events across 6 wards.</p>
+          <a href="#signup" class="mt-4 inline-flex text-sm font-medium underline" data-i18n="card_volunteer_link">Sign up</a>
         </div>
-        <div class="border border-[color:var(--line)] p-6 rtl-text">
+        <div class="flex flex-col border border-[color:var(--line)] p-6 rtl-text">
           <h3 class="font-semibold" data-i18n="card_host_title">Host a small meeting</h3>
-          <p class="mt-2 text-sm text-gray-700" data-i18n="card_host_body">Bring neighbors together. We'll show up and
-            listen.</p>
-          <a href="#signup" class="mt-4 inline-flex text-sm font-medium underline" data-i18n="card_host_link">Request a
-            visit</a>
+          <p class="mt-2 flex-1 text-sm text-gray-700" data-i18n="card_host_body">Bring neighbors together. We'll show up and listen.</p>
+          <a href="#signup" class="mt-4 inline-flex text-sm font-medium underline" data-i18n="card_host_link">Request a visit</a>
         </div>
-        <div class="border border-[color:var(--line)] p-6 rtl-text">
+        <div class="flex flex-col border border-[color:var(--line)] p-6 rtl-text">
           <h3 class="font-semibold" data-i18n="card_issue_title">Share an issue</h3>
-          <p class="mt-2 text-sm text-gray-700" data-i18n="card_issue_body">Report a local concern: waste, safety,
-            access, or affordability.</p>
-          <a href="#contact" class="mt-4 inline-flex text-sm font-medium underline"
-            data-i18n="card_issue_link">Contact</a>
+          <p class="mt-2 flex-1 text-sm text-gray-700" data-i18n="card_issue_body">Report a local concern: waste, safety, access, or affordability.</p>
+          <a href="#contact" class="mt-4 inline-flex text-sm font-medium underline" data-i18n="card_issue_link">Contact</a>
         </div>
-        <div class="border border-[color:var(--line)] p-6 rtl-text">
+        <div class="flex flex-col border border-[color:var(--line)] p-6 rtl-text">
           <h3 class="font-semibold" data-i18n="card_survey_title">Take the Perception Survey</h3>
-          <p class="mt-2 text-sm text-gray-700" data-i18n="card_survey_body">Tell us what matters most in your ward. 2-minute anonymous survey.</p>
+          <p class="mt-2 flex-1 text-sm text-gray-700" data-i18n="card_survey_body">Tell us what matters most in your ward. 2-minute anonymous survey.</p>
           <a href="#" class="mt-4 inline-flex text-sm font-medium underline" data-i18n="card_survey_link">Start survey</a>
         </div>
       </div>
