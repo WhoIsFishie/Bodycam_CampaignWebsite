@@ -1,20 +1,20 @@
 key,en,dv
-brand,"Hingaa Male'","ހިންގާ މާލެ"
+brand,Hingaa Male',ހިންގާ މާލެ
 nav_pledges,Pledges,ވައްދުތައް
 nav_issues,Issues,މައްސަލަތައް
 nav_manifesto,Manifesto,މެނިފެސްޓޯ
-nav_about,"Who am I?","އަހަރެން ކޮންބައި؟"
+nav_about,Who am I?,މީ ކާކު؟
 nav_ledger,Ledger,ލެޖަރ
-nav_get_involved,Get involved,ހިމެނޭ
-nav_contact,Contact,ކޮންޓާކްޓް
+nav_get_involved,Get involved,އެހީ ވުމަށް
+nav_contact,Contact,ކޮންޓެކްޓް
 nav_volunteer,Volunteer,ވޮލަންޓިއަރ
-phase_label,"Phase 1: Listening","[TODO] ފޭސް 1: އަޑުއެހުން"
-hero_kicker,"Mayor of Male' City, Maldives","މާލެ ސިޓީ، ދިވެހިރާއްޖޭގެ މޭޔަރ"
-hero_title,"97,000 per km². 3.5× Manhattan. This is your city.","[TODO] 97,000 per km². 3.5× Manhattan. މިއީ ތިޔަބޭފުޅުންގެ ސިޓީ."
-hero_subtitle,"Malé deserves a mayor who works for residents, not a party. Focused on everyday services: waste, public spaces, safe streets, transparent budgets, and local jobs.","[TODO] މާލެއަށް ބޭނުންވަނީ ޕާޓީއަކަށް ނޫން، ރައްޔިތުންނަށް މަސައްކަތް ކުރާ މޭޔަރެއް. ދުވަހުން ދުވަހަށް ޚިދުމަތްތައް: ކުނި، ޢާންމު ބައިތައް، އަމާން މަގުތައް، ފާޅު ބަޖެޓް، އަދި ރޮޒު."
-cta_volunteer,"Join 100 founding volunteers","[TODO] 100 ފައުންޑިންގ ވޮލަންޓިއަރުންނާ ގުޅޭ"
+phase_label,Phase 1: Listening,[TODO] ފޭސް 1: އަޑުއެހުން
+hero_kicker,"Mayor of Male' City, Maldives",މާލެ ސިޓީ، ދިވެހިރާއްޖޭގެ މޭޔަރ
+hero_title,"A community-first vision for a pedestrianized Male', promoting dignified living for every resident. This is our city.","[TODO] 97,000 per km². 3.5× Manhattan. މިއީ ތިޔަބޭފުޅުންގެ ސިޓީ."
+hero_subtitle,"We deserve a mayor who puts residents first and never a party. Focused on everyday services: waste, public spaces, safe streets, a transparent adminstration, and improving YOUR daily quality of life.",[TODO] މާލެއަށް ބޭނުންވަނީ ޕާޓީއަކަށް ނޫން، ރައްޔިތުންނަށް މަސައްކަތް ކުރާ މޭޔަރެއް. ދުވަހުން ދުވަހަށް ޚިދުމަތްތައް: ކުނި، ޢާންމު ބައިތައް، އަމާން މަގުތައް، ފާޅު ބަޖެޓް، އަދި ރޮޒު.
+cta_volunteer,Volunteer with us!,[TODO] 100 ފައުންޑިންގ ވޮލަންޓިއަރުންނާ ގުޅޭ
 cta_manifesto,Read the plan,ޕްލޭން ކިޔާ
-cta_get_involved,Find your ward,"[TODO] ތިޔަ ވޯޑް ހޯދާ"
+cta_get_involved,Find your ward,[TODO] ތިޔަ ވޯޑް ހޯދާ
 contact_campaign_email,Campaign email,ކެމްޕޭން އީމެއިލް
 contact_whatsapp,WhatsApp,WhatsApp
 contact_viber,Viber,Viber
@@ -22,77 +22,78 @@ contact_instagram,Instagram,Instagram
 photo_label,Landing photo,ލޭންޑިންގ ފޮޓޯ
 photo_upload,Upload,އަޕްލޯޑް
 photo_clear,Clear,ފޮހެލާ
-social_proof_volunteers,"[FILL IN] volunteers have joined so far","[TODO] [FILL IN] ވޮލަންޓިއަރުން ގުޅިއްޖެ"
+social_proof_volunteers,[FILL IN] volunteers have joined so far,[TODO] [FILL IN] ވޮލަންޓިއަރުން ގުޅިއްޖެ
 social_proof_quote,"""We listen before we act. Power belongs to people, not parties.""","[TODO] ""އަޅުގަނޑުމެން ފުރަތަމަ އަޑުއަހަނީ. ބާރު އޮންނަނީ ރައްޔިތުންގެ، ޕާޓީގެ ނޫން."""
 video_title,Watch: Why this campaign,ބަލާ: މި ކެމްޕޭން ކީއްވެ
 video_placeholder,[FILL IN - add YouTube embed URL],[FILL IN - YouTube އެމްބެޑް URL އަޅާ]
 pledges_title,Pledges,ވައްދުތައް
-pledges_intro,"Every promise has a number and a deadline. Here are measurable commitments we will report on publicly.","[TODO] ކޮންމެ ވައްދެއްގައި ނަންބަރެއް އަދި ސުންގަޑިއެއް. މިއީ ޢާންމުކޮށް ރިޕޯޓް ކުރާނެ މިންގަނޑު ވައްދުތައް."
+pledges_intro,Every promise has a number and a deadline. Here are measurable commitments we will report on publicly.,[TODO] ކޮންމެ ވައްދެއްގައި ނަންބަރެއް އަދި ސުންގަޑިއެއް. މިއީ ޢާންމުކޮށް ރިޕޯޓް ކުރާނެ މިންގަނޑު ވައްދުތައް.
 pledges_pdf,Want the full plan as a PDF?,މުޅި ޕްލޭން PDF އެއްގޮތަށް ބޭނުންވޭ؟
 pledges_add_download,Add download link,ޑައުންލޯޑް ލިންކް އެއް އަޅާ
 issues_title,Issues,މައްސަލަތައް
-issues_intro,"Six challenges facing Malé — with data, context, and our plan for each.","[TODO] މާލެއަށް ދިމާވެފައިވާ ހަ ގޮންޖެހުން — ޑޭޓާ، ހާލަތު، އަދި ކޮންމެ ކަމަކަށް އަހަރެމެންގެ ޕްލޭން."
-manifesto_title,Living manifesto,ލިވިންގ މެނިފެސްޓޯ
-manifesto_intro,"This is a working document: updated in public as we listen, measure results, and adjust. It's short on slogans and long on delivery.","މިއީ ކުރިއަށް ބަދަލުވާ ބަޔާނެއް: އަހުމައި އަޑުއަހާ، ނަތީޖާ މިންގަނޑުކޮށް، ބަދަލުތައް ކުރަނީ. ސްލޯގަން ކުޑަ، ކުރިޔަށް ހިންގުން ބޮޑު."
+issues_intro,"Six challenges facing Malé — with data, context, and our plan for each.",[TODO] މާލެއަށް ދިމާވެފައިވާ ހަ ގޮންޖެހުން — ޑޭޓާ، ހާލަތު، އަދި ކޮންމެ ކަމަކަށް އަހަރެމެންގެ ޕްލޭން.
+manifesto_title,The Living manifesto,ލިވިންގ މެނިފެސްޓޯ
+manifesto_intro,"This is a working document: updated in public as we listen, measure results, and adjust. It's short on slogans and long on delivery.",މިއީ ކުރިއަށް ބަދަލުވާ ބަޔާނެއް: އަހުމައި އަޑުއަހާ، ނަތީޖާ މިންގަނޑުކޮށް، ބަދަލުތައް ކުރަނީ. ސްލޯގަން ކުޑަ، ކުރިޔަށް ހިންގުން ބޮޑު.
 manifesto_p1,"<span class=""font-medium text-[color:var(--ink)]"">How we'll govern:</span> publish plans, publish budgets, publish progress. The council controls just 5% of Male' revenue — we'll make every laari count.","<span class=""font-medium text-[color:var(--ink)]"">ހުކުމް ކުރާ ގޮތް:</span> ޕްލޭންތައް، ބަޖެޓްތައް، އަދި ޕްރޮގްރެސް ޢާންމުކޮށް ޕަބްލިޝް. ކައުންސިލަށް ލިބެނީ މާލޭ އާމްދަނީގެ އެންމެ 5% — ކޮންމެ ލާރިއެއް ގުނާނީ."
 manifesto_p2,"<span class=""font-medium text-[color:var(--ink)]"">How you'll participate:</span> neighborhood visits, open office hours, and a public issue tracker you can follow at our <a href=""ledger.html"" class=""underline"">transparency ledger</a>.","<span class=""font-medium text-[color:var(--ink)]"">ތިޔަކުން ހިމެނޭ ގޮތް:</span> އަވަށް ބައިތަކަށް ވަޑައިގެންނަން، ހުޅުވާ އޮފީސް ވަގުތުތައް، އަދި <a href=""ledger.html"" class=""underline"">ޓްރާންސްޕޭރެންސީ ލެޖަރ</a> ގައި ބެލޭ އިޝޫ ޓްރެކަރެއް."
 manifesto_p3,"<span class=""font-medium text-[color:var(--ink)]"">How we'll be judged:</span> clear targets for cleanliness, safety, response times, and affordability — serving 41% of the nation's population on this 2 km² island.","<span class=""font-medium text-[color:var(--ink)]"">ހިސާބު ކުރާނެ ގޮތް:</span> ސާފުކަން، އަމާންކަން، ރިސްޕޮންސް ވަގުތު، އަދި އަދާދުކަން — މި 2 km² ރަށުގައި ގައުމުގެ 41% އާބާދީއަށް ޚިދުމަތް ކުރަން."
 manifesto_cta_pledges,See pledges,ވައްދުތައް ބަލާ
 manifesto_cta_involved,Get involved,ހިމެނޭ
 version_title,Version,ވާރޝަން
-version_value,"v1.0 — February 2026","v1.0 — ފެބްރުއަރީ 2026"
+version_value,v1.0 — February 2026,v1.0 — ފެބްރުއަރީ 2026
 addendum_title,Addendum PDF,އެޑެންޑަމް PDF
-addendum_desc,"Add a PDF addendum. Saved locally in your browser.","މެނިފެސްޓޯ އަށް އިތުރުވާ PDF އެއް އަޅާ. މި ބްރައުޒަރުގައި ލޯކަލަށް ސޭވް ވާނެ."
+addendum_desc,Add a PDF addendum. Saved locally in your browser.,މެނިފެސްޓޯ އަށް އިތުރުވާ PDF އެއް އަޅާ. މި ބްރައުޒަރުގައި ލޯކަލަށް ސޭވް ވާނެ.
 addendum_view,View / download addendum,އެޑެންޑަމް ބަލާ / ޑައުންލޯޑް
 addendum_upload,Upload PDF,PDF އަޕްލޯޑް
 addendum_clear,Clear,ފޮހެލާ
 version_tip,"<span class=""font-medium"">Tip:</span> Add a PDF download link and a changelog.","<span class=""font-medium"">ޓިޕް:</span> PDF ލިންކެއް އަދި ޗޭންޖްލޮގް އެއް އަޅާ."
-about_title,"Who am I?","އަހަރެން ކޮންބައި؟"
+about_title,Who am I?,އަހަރެން ކޮންބައި؟
 about_who_heading,Who I am,އަހަރެން ކާކު
-about_who,"[FILL IN] A resident of Malé who has spent [X] years working on [area]. I've seen firsthand how city services fail the people who depend on them most.","[FILL IN] [TODO] މާލޭގައި ދިރިއުޅޭ، [X] އަހަރު [ދާއިރާ] ގައި މަސައްކަތް ކޮށްފައިވާ މީހެއް."
+about_who,"A resident of Malé who spent over a decade organizing grassroots civil society across governance, civil rights and conservation. I have seen firsthand how services fail the people who depend on them the most. ",[FILL IN] [TODO] މާލޭގައި ދިރިއުޅޭ، [X] އަހަރު [ދާއިރާ] ގައި މަސައްކަތް ކޮށްފައިވާ މީހެއް.
 about_why_heading,Why independent,އިންޑިޕެންޑެންޓް ކީއްވެ
-about_why,"[FILL IN] Party politics has failed Malé. Decisions are made in party headquarters, not in your neighborhood. I answer to residents — not a party whip.","[FILL IN] [TODO] ޕާޓީ ސިޔާސީ ވެފައި މާލެ ފެއިލް ވެއްޖެ. ނިންމުންތައް ނިންމަނީ ޕާޓީ ހެޑްކުއާޓާސް ގައި، ތިޔަ އަވަށުގައެއް ނޫން."
+about_why,"My intention is not to divide the vote, or cause chaos, but rather to unite the city, its communities, and usher in a new form of (non-partisan) politics that prioritises accountability, transparency and representation of the people (stakeholders) at every level of decision-making.",[FILL IN] [TODO] ޕާޓީ ސިޔާސީ ވެފައި މާލެ ފެއިލް ވެއްޖެ. ނިންމުންތައް ނިންމަނީ ޕާޓީ ހެޑްކުއާޓާސް ގައި، ތިޔަ އަވަށުގައެއް ނޫން.
 about_100days_heading,First 100 days,ފުރަތަމަ 100 ދުވަސް
-about_100days_1,"Publish the full city budget in plain language online","[TODO] ސިޓީ ބަޖެޓް ސާދާ ބަހުން އޮންލައިންކޮށް ޢާންމުކުރުން"
-about_100days_2,"Launch a public service request tracker with response-time targets","[TODO] ޢާންމު ޚިދުމަތް ރިކުއެސްޓް ޓްރެކަރ ފެށުން"
-about_100days_3,"Hold neighborhood listening sessions in all 6 wards","[TODO] 6 ވޯޑުގައި އަވަށް އަޑުއެހުންތައް ބޭއްވުން"
+about_100days_1,"Publish the full city budget, and state of audit report in plain language online",[TODO] ސިޓީ ބަޖެޓް ސާދާ ބަހުން އޮންލައިންކޮށް ޢާންމުކުރުން
+about_100days_2,Launch a public service request tracker with response-time targets,[TODO] ޢާންމު ޚިދުމަތް ރިކުއެސްޓް ޓްރެކަރ ފެށުން
+about_100days_3,"Host physical townhalls every month, with 'Dhaairaa' councillors hosting weekly neighboorhood listening sessions.",[TODO] 6 ވޯޑުގައި އަވަށް އަޑުއެހުންތައް ބޭއްވުން
+about_100days_4,Open our digital townhall as an internet public relay chat.,[TODO] 6 ވޯޑުގައި އަވަށް އަޑުއެހުންތައް ބޭއްވުން
 about_accountable_heading,How to hold me accountable,ހިސާބު ހިފާނެ ގޮތް
-about_accountable,"Every pledge has a number and a deadline. Track progress at our public ledger. If we fail, you'll know — because the data is open.","[TODO] ކޮންމެ ވައްދެއްގައި ނަންބަރެއް އަދި ސުންގަޑިއެއް. ޕަބްލިކް ލެޖަރ އިން ބަލާ. ފެއިލް ވެއްޖެނަމަ، ޑޭޓާ ހުޅުވާފައި ހުރީމަ އެނގޭނެ."
+about_accountable,"My town hall will be an open platform to get invovled, add to and criticize our every move. As an elected public servant, I am beholden to my residents. If I am failing, every citizen has a right to call for a motion of no-confidence against me, and demand better. I will never shy away from your concerns.",[TODO] ކޮންމެ ވައްދެއްގައި ނަންބަރެއް އަދި ސުންގަޑިއެއް. ޕަބްލިކް ލެޖަރ އިން ބަލާ. ފެއިލް ވެއްޖެނަމަ، ޑޭޓާ ހުޅުވާފައި ހުރީމަ އެނގޭނެ.
 about_cta_contact,Contact the campaign,ކެމްޕޭން ކޮންޓާކްޓް
 about_cta_join,Join the team,ޓީމަށް ހިމެނޭ
 quickfacts_title,Quick facts,އަވަސް މަޢުލޫމާތް
 qf_focus,Focus,ހިންގާ މަގުސަދު
-qf_focus_value,"Services, transparency, affordability","ޚިދުމަތް، ފާޅުކަން، އަދާދުކަން"
-qf_city,City,ސިޓީ
-qf_city_value,"Male' City","މާލެ ސިޓީ"
+qf_focus_value,"Services, transparency, accessibility",ޚިދުމަތް، ފާޅުކަން، އަދާދުކަން
+qf_city,Male' City,ސިޓީ
+qf_city_value,"Villingili, Hulhumale', Male'",މާލެ ސިޓީ
 qf_campaign,Campaign,ކެމްޕޭން
 qf_campaign_value,Independent,އިންޑިޕެންޑެންޓް
 involved_title,Get involved,ހިމެނޭ
-involved_intro,"This campaign is built ward-by-ward across Henveiru, Galolhu, Machchangolhi, Maafannu, Hulhumalé, and Vilimalé. Choose one way to help this week.","[TODO] މި ކެމްޕޭން ހެންވޭރު، ގަލޮޅު، މައްޗަންގޮޅި، މާފަންނު، ހުޅުމާލެ، އަދި ވިލިމާލެ ގެ ވޯޑުތަކުން ބިނާ ކުރަނީ. މި ހަފްތާގައި އެއް ގޮތަކަށް އެއްބަސްވާ."
+involved_intro,"This campaign is built from the ground up, powered by the people, for the people. Choose one way to help this week.",[TODO] މި ކެމްޕޭން ހެންވޭރު، ގަލޮޅު، މައްޗަންގޮޅި، މާފަންނު، ހުޅުމާލެ، އަދި ވިލިމާލެ ގެ ވޯޑުތަކުން ބިނާ ކުރަނީ. މި ހަފްތާގައި އެއް ގޮތަކަށް އެއްބަސްވާ.
 card_volunteer_title,Volunteer shift,ވޮލަންޓިއަރ ޝިފްޓް
-card_volunteer_body,"Door-to-door, outreach, logistics, and community events across 6 wards.","[TODO] ގޭގޭ މަގުމަގު، އައުޓްރީޗް، ލޮޖިސްޓިކްސް، 6 ވޯޑުގައި މުޖުތަމައު އިވެންޓްތައް."
+card_volunteer_body,"Door-to-door, outreach, logistics, and community events.",[TODO] ގޭގޭ މަގުމަގު، އައުޓްރީޗް، ލޮޖިސްޓިކްސް، 6 ވޯޑުގައި މުޖުތަމައު އިވެންޓްތައް.
 card_volunteer_link,Sign up,ރަޖިސްޓަރ
 card_host_title,Host a small meeting,ކުޑަ ބައްދަލުވުމެއް ހޯދާ
-card_host_body,"Bring neighbors together. We'll show up and listen.","އަވަށް މީހުން އެކުލައިލާ. އަހަރެމެން އަންނާނީ އަޑުއަހަން."
+card_host_body,Bring your neighbors together and we will show up to listen. ,އަވަށް މީހުން އެކުލައިލާ. އަހަރެމެން އަންނާނީ އަޑުއަހަން.
 card_host_link,Request a visit,ވިޒިޓް އެދޭ
 card_issue_title,Share an issue,އިޝޫ ހިއްސާ ކުރޭ
-card_issue_body,"Report a local concern: waste, safety, access, or affordability.","ކުނި، އަމާންކަން، އެކްސެސް، ނުވަތަ އަދާދުކަން ފަދަ މަހައްލު މައްސަލަ ރިޕޯޓްކޮށްލާ."
+card_issue_body,"Lodge your concerns directly: waste, public safety, access etc",ކުނި، އަމާންކަން، އެކްސެސް، ނުވަތަ އަދާދުކަން ފަދަ މަހައްލު މައްސަލަ ރިޕޯޓްކޮށްލާ.
 card_issue_link,Contact,ކޮންޓާކްޓް
-card_survey_title,Take the Perception Survey,"[TODO] ޕާސެޕްޝަން ސާރވޭ ފުރާ"
-card_survey_body,"Tell us what matters most in your ward. 2-minute anonymous survey.","[TODO] ތިޔަ ވޯޑުގައި އެންމެ މުހިންމީ ކޮންކަމެއްތޯ ބުނެލާ. 2 މިނިޓް ސާރވޭ."
-card_survey_link,Start survey,"[TODO] ސާރވޭ ފަށާ"
-visit_form_title,Request a neighborhood visit,"[TODO] އަވަށް ވިޒިޓެއް އެދޭ"
-visit_form_name,Your name,"[TODO] ތިޔަ ނަން"
-visit_form_ward,Ward,"[TODO] ވޯޑް"
-visit_form_date,Preferred date,"[TODO] އެދޭ ތާރީޚް"
-visit_form_attendees,Expected attendees,"[TODO] ބައިވެރިވާނެ ޢަދަދު"
-visit_form_topics,Topics to discuss,"[TODO] މަޝްވަރާ ކުރާނެ މައުޟޫޢު"
-visit_form_submit,Submit request,"[TODO] ރިކުއެސްޓް ފޮނުއްވާ"
-visit_form_saved,Visit request saved!,"[TODO] ވިޒިޓް ރިކުއެސްޓް ސޭވް ވެއްޖެ!"
+card_survey_title,Take the Perception Survey,[TODO] ޕާސެޕްޝަން ސާރވޭ ފުރާ
+card_survey_body,Tell us what matters most to you. 5-minute anonymous survey.,[TODO] ތިޔަ ވޯޑުގައި އެންމެ މުހިންމީ ކޮންކަމެއްތޯ ބުނެލާ. 2 މިނިޓް ސާރވޭ.
+card_survey_link,Start survey,[TODO] ސާރވޭ ފަށާ
+visit_form_title,Request a neighborhood visit,[TODO] އަވަށް ވިޒިޓެއް އެދޭ
+visit_form_name,Your name,[TODO] ތިޔަ ނަން
+visit_form_ward,Ward,[TODO] ވޯޑް
+visit_form_date,Preferred date,[TODO] އެދޭ ތާރީޚް
+visit_form_attendees,Expected attendees,[TODO] ބައިވެރިވާނެ ޢަދަދު
+visit_form_topics,Topics to discuss,[TODO] މަޝްވަރާ ކުރާނެ މައުޟޫޢު
+visit_form_submit,Submit request,[TODO] ރިކުއެސްޓް ފޮނުއްވާ
+visit_form_saved,Visit request saved!,[TODO] ވިޒިޓް ރިކުއެސްޓް ސޭވް ވެއްޖެ!
 brief_title,Want a simple one-page brief?,އެއް ޕޭޖް ބްރީފް ބޭނުންވޭ؟
-brief_body,"Add a link here to your manifesto PDF, a linktree, or a donation/volunteer platform.","ތިޔަބޭފުޅުގެ މެނިފެސްޓޯ PDF، ލިންކްޓްރީ، ނުވަތަ ޑޮނޭޝަން/ވޮލަންޓިއަރ ޕްލެޓްފޯމެއް ލިންކް ކޮށްލާ."
-events_title,Campaign updates,"[TODO] ކެމްޕޭން އަޕްޑޭޓްތައް"
-events_intro,Upcoming events and recent milestones.,"[TODO] ކުރިއަށް އޮތް އިވެންޓްތައް އަދި ފާހަގަ ކުރެވޭ ކަންކަން."
+brief_body,"Add a link here to your manifesto PDF, a linktree, or a donation/volunteer platform.",ތިޔަބޭފުޅުގެ މެނިފެސްޓޯ PDF، ލިންކްޓްރީ، ނުވަތަ ޑޮނޭޝަން/ވޮލަންޓިއަރ ޕްލެޓްފޯމެއް ލިންކް ކޮށްލާ.
+events_title,Campaign updates,[TODO] ކެމްޕޭން އަޕްޑޭޓްތައް
+events_intro,Upcoming events and recent milestones.,[TODO] ކުރިއަށް އޮތް އިވެންޓްތައް އަދި ފާހަގަ ކުރެވޭ ކަންކަން.
 event_1_date,[FILL IN],[FILL IN]
 event_1_title,[FILL IN - Event title],[FILL IN]
 event_1_desc,[FILL IN - Event description],[FILL IN]
@@ -103,14 +104,14 @@ event_3_date,[FILL IN],[FILL IN]
 event_3_title,[FILL IN - Event title],[FILL IN]
 event_3_desc,[FILL IN - Event description],[FILL IN]
 contact_title,Contact,ކޮންޓާކްޓް
-contact_intro,"For volunteering, endorsements, media, or community issues.","ވޮލަންޓިއަރ، އެންޑޯސްމަންޓް، މީޑިއާ، ނުވަތަ މުޖުތަމައު މައްސަލަތަކަށް."
+contact_intro,"For volunteering, endorsements, media, or community issues.",ވޮލަންޓިއަރ، އެންޑޯސްމަންޓް، މީޑިއާ، ނުވަތަ މުޖުތަމައު މައްސަލަތަކަށް.
 contact_email_label,Email:,އީމެއިލް:
 contact_phone_label,Phone/WhatsApp:,ފޯން/WhatsApp:
 contact_viber_label,Viber:,Viber:
 contact_ig_label,Instagram:,Instagram:
-compliance_note,"[FILL IN] Campaign compliance text (""Paid for by…"") as required by law.","[FILL IN] [TODO] ގާނޫނީ ކޮމްޕްލައިއަންސް ލިޔުން."
-signup_title,"Join the campaign","[TODO] ކެމްޕޭނާ ގުޅޭ"
-signup_intro,"Be part of the founding team. We listen before we act — help us hear your ward.","[TODO] ފައުންޑިންގ ޓީމުގެ ބައެއް. އަޅުގަނޑުމެން ފުރަތަމަ އަޑުއަހަނީ — ތިޔަ ވޯޑުގެ އަޑު އިއްވާ."
+compliance_note,"[FILL IN] Campaign compliance text (""Paid for by…"") as required by law.",[FILL IN] [TODO] ގާނޫނީ ކޮމްޕްލައިއަންސް ލިޔުން.
+signup_title,Join the campaign,[TODO] ކެމްޕޭނާ ގުޅޭ
+signup_intro,Be part of the founding team. We listen before we act — help us hear your ward.,[TODO] ފައުންޑިންގ ޓީމުގެ ބައެއް. އަޅުގަނޑުމެން ފުރަތަމަ އަޑުއަހަނީ — ތިޔަ ވޯޑުގެ އަޑު އިއްވާ.
 form_name,Name,ނަން
 form_email,Email,އީމެއިލް
 form_phone,Phone / WhatsApp,ފޯން / WhatsApp
@@ -119,44 +120,45 @@ form_ward_henveiru,Henveiru,ހެންވޭރު
 form_ward_galolhu,Galolhu,ގަލޮޅު
 form_ward_machchangolhi,Machchangolhi,މައްޗަންގޮޅި
 form_ward_maafannu,Maafannu,މާފަންނު
-form_ward_hulhumale,Hulhumalé,ހުޅުމާލެ
-form_ward_vilimale,Vilimalé,ވިލިމާލެ
-form_ward_select,Select your ward,"[TODO] ވޯޑް އިޚްތިޔާރު ކުރޭ"
-form_concern,What concerns you most?,"[TODO] އެންމެ ބޮޑު ކަންބޮޑުވުމަކީ ކޮބާ؟"
-form_concern_flooding,Flooding,"[TODO] ފެންބޮޑުވުން"
-form_concern_waste,Waste management,"[TODO] ކުނި މެނޭޖްމެންޓް"
-form_concern_housing,Housing affordability,"[TODO] ބޯހިޔާވެހިކަން"
-form_concern_traffic,Traffic congestion,"[TODO] ޓްރެފިކް"
-form_concern_green,Green space,"[TODO] ފެހި ސްޕޭސް"
-form_concern_governance,Governance,"[TODO] ހިންގުން"
-form_concern_select,Select a concern,"[TODO] ކަންބޮޑުވުމެއް އިޚްތިޔާރު ކުރޭ"
-form_interest,How would you like to help?,"ތިޔަ ކޮންގޮތަކަށް އެއްބަސްވާން ބޭނުން؟"
+form_ward_hulhumale,Hulhumalé Phase 1,ހުޅުމާލެ
+form_ward_hulhumale,Hulhumalé Phase 2,ހުޅުމާލެ
+form_ward_vilimale,Villingili ,ވިލިމާލެ
+form_ward_select,Select your ward,[TODO] ވޯޑް އިޚްތިޔާރު ކުރޭ
+form_concern,What concerns you most?,[TODO] އެންމެ ބޮޑު ކަންބޮޑުވުމަކީ ކޮބާ؟
+form_concern_flooding,Flooding,[TODO] ފެންބޮޑުވުން
+form_concern_waste,Waste management,[TODO] ކުނި މެނޭޖްމެންޓް
+form_concern_housing,Housing,[TODO] ބޯހިޔާވެހިކަން
+form_concern_traffic,Traffic congestion,[TODO] ޓްރެފިކް
+form_concern_green,Green space,[TODO] ފެހި ސްޕޭސް
+form_concern_governance,Governance,[TODO] ހިންގުން
+form_concern_select,Select a concern,[TODO] ކަންބޮޑުވުމެއް އިޚްތިޔާރު ކުރޭ
+form_interest,How would you like to help?,ތިޔަ ކޮންގޮތަކަށް އެއްބަސްވާން ބޭނުން؟
 opt_volunteer,Volunteer,ވޮލަންޓިއަރ
 opt_host,Host a meeting,ބައްދަލުވުމެއް ހޯދާ
 opt_issue,Community issue,މުޖުތަމައު މައްސަލަ
 opt_media,Media / press,މީޑިއާ / ޕްރެސް
 form_submit,Submit,ފޮނުއްވާ
-privacy_note,"By submitting, you agree to receive campaign updates. Your data stays local until we set up a secure endpoint.","[TODO] ފޮނުއްވާލުމަކުން ކެމްޕޭން އަޕްޑޭޓްތައް ލިބޭނެ."
-ph_name,Your name,ތިޔަ ނަން
-ph_email,you@example.com,you@example.com
-ph_phone,+960,"[TODO] +960"
-footer_brand,"Hingaa Male'","ހިންގާ މާލެ"
-footer_paid,"[FILL IN] Paid for by [campaign committee name]","[FILL IN] [TODO] [ކެމްޕޭން ކޮމިޓީ ނަން] އިން ފައިސާ ދެއްކި"
+privacy_note,"By submitting, you agree to receive campaign updates. Your data stays local until we set up a secure endpoint.",[TODO] ފޮނުއްވާލުމަކުން ކެމްޕޭން އަޕްޑޭޓްތައް ލިބޭނެ.
+ph_name,Ahmed Aiham,ތިޔަ ނަން
+ph_email,hingaamale@gmail.com,you@example.com
+ph_phone,9953458,[TODO] +960
+footer_brand,Hingaa Male',ހިންގާ މާލެ
+footer_paid,Paid for by the people.,[FILL IN] [TODO] [ކެމްޕޭން ކޮމިޓީ ނަން] އިން ފައިސާ ދެއްކި
 toast_pdf_tip,Upload your PDF and link it here.,PDF އަޕްލޯޑްކޮށް މިތަނަށް ލިންކް ކޮށްލާ.
 toast_pdf_only,Please upload a PDF file.,PDF ފައިލެއް އަޕްލޯޑްކޮށްލާ.
 toast_pdf_read_fail,Could not read PDF.,PDF ކިޔާލެވޭނެ ނުވޭ.
 toast_pdf_saved,Addendum PDF saved.,އެޑެންޑަމް PDF ސޭވް ވެއްޖެ.
 toast_pdf_cleared,Addendum PDF cleared.,އެޑެންޑަމް PDF ފޮހެލެވިއްޖެ.
-toast_signup_thanks,"Thanks — you're on the list.","ޝުކުރިއްޔާ — ތިޔައީ ލިސްޓުގައި."
+toast_signup_thanks,Thanks — you're on the list.,ޝުކުރިއްޔާ — ތިޔައީ ލިސްޓުގައި.
 toast_img_only,Please upload an image file.,އިމޭޖެއް ފައިލް އަޕްލޯޑްކޮށްލާ.
 toast_img_read_fail,Could not read image.,ފޮޓޯ ކިޔާލެވޭނެ ނުވޭ.
 toast_photo_updated,Photo updated.,ފޮޓޯ އަޕްޑޭޓް ވެއްޖެ.
 toast_photo_cleared,Photo cleared.,ފޮޓޯ ފޮހެލެވިއްޖެ.
 accordion_open,Open,ހުޅުވާ
 accordion_close,Close,ބަންދާ
-ledger_subtitle,Transparency & Integrity,"ފާޅުކަން & އަމާނާތްތެރިކަން"
+ledger_subtitle,Transparency & Integrity,ފާޅުކަން & އަމާނާތްތެރިކަން
 ledger_title,Campaign Public Ledger,ކެމްޕޭން ޕަބްލިކް ލެޖަރ
-ledger_intro,"We believe in complete transparency. Every Rufiyaa donated and every Rufiyaa spent is tracked here in real-time.","އަޅުގަނޑުމެން ގަބޫލުކުރަނީ ފުރިހަމަ ފާޅުކަން. ލިބޭ ކޮންމެ ރުފިޔާއެއް އަދި ހޭދަކުރާ ކޮންމެ ރުފިޔާއެއް މިތަނުން ވަގުތުން ފެންނާނެ."
+ledger_intro,We believe in complete transparency. Every Rufiyaa donated and every Rufiyaa spent is tracked here weekly.,އަޅުގަނޑުމެން ގަބޫލުކުރަނީ ފުރިހަމަ ފާޅުކަން. ލިބޭ ކޮންމެ ރުފިޔާއެއް އަދި ހޭދަކުރާ ކޮންމެ ރުފިޔާއެއް މިތަނުން ވަގުތުން ފެންނާނެ.
 summary_income,Total Income,ޖުމްލަ އާމްދަނީ
 summary_outgoing,Total Outgoing,ޖުމްލަ ޚަރަދު
 th_date,Date,ތާރީޚް
@@ -164,4 +166,4 @@ th_details,Details,ތަފްސީލް
 th_amount,Amount,އަދަދު
 th_total,Balance,ބާކީ
 loading,Loading data...,ޑޭޓާ ލޯޑުކުރަނީ...
-ledger_note,These records are pulled directly from our campaign finance spreadsheet.,"މި ހިސާބުތަކަކީ އަޅުގަނޑުމެންގެ ކެމްޕޭން ފައިނޭންސް ޝީޓުން ސީދާ ނަގާ އެއްޗެހި."
+ledger_note,These records are pulled directly from our campaign finance spreadsheet.,މި ހިސާބުތަކަކީ އަޅުގަނޑުމެންގެ ކެމްޕޭން ފައިނޭންސް ޝީޓުން ސީދާ ނަގާ އެއްޗެހި.
