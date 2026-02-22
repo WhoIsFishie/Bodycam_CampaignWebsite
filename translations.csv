@@ -17,7 +17,7 @@ cta_manifesto,Read the plan,ޕްލޭން ކިޔާ
 cta_get_involved,Find your ward,[TODO] ތިޔަ ވޯޑް ހޯދާ
 contact_campaign_email,Campaign email,ކެމްޕޭން އީމެއިލް
 contact_whatsapp,WhatsApp,WhatsApp
-contact_viber,Viber,Viber
+contact_viber,Twitter ,Viber
 contact_instagram,Instagram,Instagram
 photo_label,Landing photo,ލޭންޑިންގ ފޮޓޯ
 photo_upload,Upload,އަޕްލޯޑް
@@ -104,14 +104,14 @@ event_3_date,[FILL IN],[FILL IN]
 event_3_title,[FILL IN - Event title],[FILL IN]
 event_3_desc,[FILL IN - Event description],[FILL IN]
 contact_title,Contact,ކޮންޓާކްޓް
-contact_intro,"For volunteering, endorsements, media, or community issues.",ވޮލަންޓިއަރ، އެންޑޯސްމަންޓް، މީޑިއާ، ނުވަތަ މުޖުތަމައު މައްސަލަތަކަށް.
-contact_email_label,Email:,އީމެއިލް:
-contact_phone_label,Phone/WhatsApp:,ފޯން/WhatsApp:
-contact_viber_label,Viber:,Viber:
-contact_ig_label,Instagram:,Instagram:
+contact_intro,"For volunteering, endorsements, media inquiries, or simply to present your community issues.",ވޮލަންޓިއަރ، އެންޑޯސްމަންޓް، މީޑިއާ، ނުވަތަ މުޖުތަމައު މައްސަލަތަކަށް.
+contact_email_label,Email: hingaamale@gmail.com,އީމެއިލް:
+contact_phone_label,Phone/WhatsApp: 9953458,ފޯން/WhatsApp:
+contact_viber_label,Twitter: @hingaamale / @anehkenaa / ,Viber:
+contact_ig_label,Instagram: @hingaamale / @a.nekkena,Instagram:
 compliance_note,"[FILL IN] Campaign compliance text (""Paid for by…"") as required by law.",[FILL IN] [TODO] ގާނޫނީ ކޮމްޕްލައިއަންސް ލިޔުން.
 signup_title,Join the campaign,[TODO] ކެމްޕޭނާ ގުޅޭ
-signup_intro,Be part of the founding team. We listen before we act — help us hear your ward.,[TODO] ފައުންޑިންގ ޓީމުގެ ބައެއް. އަޅުގަނޑުމެން ފުރަތަމަ އަޑުއަހަނީ — ތިޔަ ވޯޑުގެ އަޑު އިއްވާ.
+signup_intro,"Be part of the founding team. We listen before we act, help us hear you out.",[TODO] ފައުންޑިންގ ޓީމުގެ ބައެއް. އަޅުގަނޑުމެން ފުރަތަމަ އަޑުއަހަނީ — ތިޔަ ވޯޑުގެ އަޑު އިއްވާ.
 form_name,Name,ނަން
 form_email,Email,އީމެއިލް
 form_phone,Phone / WhatsApp,ފޯން / WhatsApp
@@ -121,7 +121,7 @@ form_ward_galolhu,Galolhu,ގަލޮޅު
 form_ward_machchangolhi,Machchangolhi,މައްޗަންގޮޅި
 form_ward_maafannu,Maafannu,މާފަންނު
 form_ward_hulhumale,Hulhumalé Phase 1,ހުޅުމާލެ
-form_ward_hulhumale,Hulhumalé Phase 2,ހުޅުމާލެ
+form_ward_hulhumale 2,Hulhumalé Phase 2,ހުޅުމާލެ
 form_ward_vilimale,Villingili ,ވިލިމާލެ
 form_ward_select,Select your ward,[TODO] ވޯޑް އިޚްތިޔާރު ކުރޭ
 form_concern,What concerns you most?,[TODO] އެންމެ ބޮޑު ކަންބޮޑުވުމަކީ ކޮބާ؟
