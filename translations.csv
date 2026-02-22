@@ -94,12 +94,12 @@ brief_title,Want a simple one-page brief?,އެއް ޕޭޖް ބްރީފް ބޭނ�
 brief_body,"Add a link here to your manifesto PDF, a linktree, or a donation/volunteer platform.",ތިޔަބޭފުޅުގެ މެނިފެސްޓޯ PDF، ލިންކްޓްރީ، ނުވަތަ ޑޮނޭޝަން/ވޮލަންޓިއަރ ޕްލެޓްފޯމެއް ލިންކް ކޮށްލާ.
 events_title,Campaign updates,[TODO] ކެމްޕޭން އަޕްޑޭޓްތައް
 events_intro,Upcoming events and recent milestones.,[TODO] ކުރިއަށް އޮތް އިވެންޓްތައް އަދި ފާހަގަ ކުރެވޭ ކަންކަން.
-event_1_date,[FILL IN],[FILL IN]
-event_1_title,[FILL IN - Event title],[FILL IN]
-event_1_desc,[FILL IN - Event description],[FILL IN]
-event_2_date,[FILL IN],[FILL IN]
-event_2_title,[FILL IN - Event title],[FILL IN]
-event_2_desc,[FILL IN - Event description],[FILL IN]
+event_1_date,FEBRUARY 27 / SATURDAY ,[FILL IN]
+event_1_title,BBQ & Potluck Tharaavees,[FILL IN]
+event_1_desc,"We invite all residents to join our first official campaign gathering. We will be sure to fire up the pit, but be sure to bring your concerns to the table, and maybe some food to share around ",[FILL IN]
+event_2_date,JANUARY 15 / THURSDAY ,[FILL IN]
+event_2_title,Hingaa Male' Hingaalun,[FILL IN]
+event_2_desc,"A walk held to announce the launch of the Hingaa Male' campaign. Over 20 core supporters joined the walk, marching from Social Centre till Artificial Beach in mainland Male' City.",[FILL IN]
 event_3_date,[FILL IN],[FILL IN]
 event_3_title,[FILL IN - Event title],[FILL IN]
 event_3_desc,[FILL IN - Event description],[FILL IN]
@@ -121,7 +121,6 @@ form_ward_galolhu,Galolhu,ގަލޮޅު
 form_ward_machchangolhi,Machchangolhi,މައްޗަންގޮޅި
 form_ward_maafannu,Maafannu,މާފަންނު
 form_ward_hulhumale,Hulhumalé Phase 1,ހުޅުމާލެ
-form_ward_hulhumale 2,Hulhumalé Phase 2,ހުޅުމާލެ
 form_ward_vilimale,Villingili ,ވިލިމާލެ
 form_ward_select,Select your ward,[TODO] ވޯޑް އިޚްތިޔާރު ކުރޭ
 form_concern,What concerns you most?,[TODO] އެންމެ ބޮޑު ކަންބޮޑުވުމަކީ ކޮބާ؟
