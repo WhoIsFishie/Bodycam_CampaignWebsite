@@ -94,10 +94,11 @@ html[dir="rtl"] ol.list-decimal {
         display: none;
     }
 
-    /* Card Container */
+    /* Card Container — columns: Date From Details Ref Amount Total */
     #expenseTable tr {
         display: grid;
         grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto auto auto;
         gap: 0.25rem;
         padding: 1rem;
         margin-bottom: 1rem;
@@ -121,18 +122,30 @@ html[dir="rtl"] ol.list-decimal {
         content: none;
     }
 
-    /* --- Section 1: Details & Date --- */
+    /* --- Row 1: From (left, bold) | Ref (right, muted) --- */
 
-    /* Details (Child 2) */
+    /* From (Child 2) */
     #expenseTable td:nth-child(2) {
-        grid-column: 1 / -1;
+        grid-column: 1;
         grid-row: 1;
         font-weight: 600;
         font-size: 1rem;
         color: var(--ink);
-        margin-bottom: 0.25rem;
         line-height: 1.4;
+        align-self: start;
     }
+
+    /* Ref (Child 4) */
+    #expenseTable td:nth-child(4) {
+        grid-column: 2;
+        grid-row: 1;
+        font-size: 0.8rem;
+        color: var(--muted);
+        align-self: start;
+        text-align: end;
+    }
+
+    /* --- Row 2: Date (full width, muted, divider) --- */
 
     /* Date (Child 1) */
     #expenseTable td:nth-child(1) {
@@ -140,26 +153,37 @@ html[dir="rtl"] ol.list-decimal {
         grid-row: 2;
         font-size: 0.8rem;
         color: var(--muted);
+        padding-top: 0.25rem;
+    }
+
+    /* --- Row 3: Details (full width, divider below) --- */
+
+    /* Details (Child 3) */
+    #expenseTable td:nth-child(3) {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        font-size: 0.875rem;
+        color: var(--ink);
         padding-bottom: 0.75rem;
         border-bottom: 1px dashed var(--line);
         margin-bottom: 0.75rem;
     }
 
-    /* --- Section 2: Amount & Total --- */
+    /* --- Row 4: Amount (left) | Total (right) --- */
 
-    /* Amount (Child 3) */
-    #expenseTable td:nth-child(3) {
+    /* Amount (Child 5) */
+    #expenseTable td:nth-child(5) {
         grid-column: 1;
-        grid-row: 3;
+        grid-row: 4;
         font-weight: 600;
         font-size: 1rem;
         align-self: end;
     }
 
-    /* Total (Child 4) */
-    #expenseTable td:nth-child(4) {
+    /* Total (Child 6) */
+    #expenseTable td:nth-child(6) {
         grid-column: 2;
-        grid-row: 3;
+        grid-row: 4;
         font-size: 0.85rem;
         color: var(--muted);
         align-self: end;
@@ -175,7 +199,8 @@ html[dir="rtl"] ol.list-decimal {
         text-align: right;
     }
 
-    html[dir="rtl"] #expenseTable td:nth-child(4) {
+    html[dir="rtl"] #expenseTable td:nth-child(4),
+    html[dir="rtl"] #expenseTable td:nth-child(6) {
         text-align: left;
     }
 }

@@ -161,8 +161,11 @@ ledger_intro,We believe in complete transparency. Every Rufiyaa donated and ever
 summary_income,Total Income,ޖުމްލަ އާމްދަނީ
 summary_outgoing,Total Outgoing,ޖުމްލަ ޚަރަދު
 th_date,Date,ތާރީޚް
+th_from,From,ފަރާތް
 th_details,Details,ތަފްސީލް
-th_amount,Amount,އަދަދު
-th_total,Balance,ބާކީ
+th_ref,Ref,ރެފ
+th_outgoing,Outgoing,ޚަރަދު
+th_incoming,Incoming,ލިބިލި
+th_total,Total,ޖުމްލަ
 loading,Loading data...,ޑޭޓާ ލޯޑުކުރަނީ...
 ledger_note,These records are pulled directly from our campaign finance spreadsheet.,މި ހިސާބުތަކަކީ އަޅުގަނޑުމެންގެ ކެމްޕޭން ފައިނޭންސް ޝީޓުން ސީދާ ނަގާ އެއްޗެހި.

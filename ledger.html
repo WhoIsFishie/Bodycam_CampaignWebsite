@@ -110,14 +110,16 @@
             <thead class="bg-gray-50 text-gray-600 font-medium border-b border-[color:var(--line)]">
               <tr>
                 <th class="px-6 py-4" data-i18n="th_date">Date</th>
+                <th class="px-6 py-4" data-i18n="th_from">From</th>
                 <th class="px-6 py-4" data-i18n="th_details">Details</th>
+                <th class="px-6 py-4" data-i18n="th_ref">Ref</th>
                 <th class="px-6 py-4 text-right ltr" data-i18n="th_amount">Amount</th>
-                <th class="px-6 py-4 text-right ltr" data-i18n="th_total">Running Total</th>
+                <th class="px-6 py-4 text-right ltr" data-i18n="th_total">Total</th>
               </tr>
             </thead>
             <tbody class="md:divide-y md:divide-[color:var(--line)]" id="ledgerBody">
               <tr>
-                <td colspan="4" class="px-6 py-8 text-center text-gray-500" data-i18n="loading">Loading data...</td>
+                <td colspan="6" class="px-6 py-8 text-center text-gray-500" data-i18n="loading">Loading data...</td>
               </tr>
             </tbody>
           </table>
@@ -280,20 +282,42 @@
         const tbody = document.getElementById('ledgerBody');
         tbody.innerHTML = '';
 
-        let runningTotal = 0;
         let totalIncome = 0;
         let totalOutgoing = 0;
 
+        const columnKeys = ['th_date', 'th_from', 'th_details', 'th_ref', 'th_amount', 'th_total'];
+
+        const createCell = (text, index, isCurrency = false, forceColor = null) => {
+          const td = document.createElement('td');
+          let colorClass = forceColor || "text-gray-900";
+          if (!forceColor && isCurrency && typeof text === 'number' && text < 0) {
+            colorClass = "text-red-600";
+          }
+          td.className = "px-6 py-4" + (isCurrency ? ` text-right font-medium currency ltr ${colorClass}` : " text-gray-700");
+          const labelKey = columnKeys[index];
+          if (labelKey) {
+            td.setAttribute('data-label', t(labelKey));
+            td.setAttribute('data-i18n-label', labelKey);
+          }
+          if (isCurrency && typeof text === 'number') {
+            td.textContent = text.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+          } else {
+            td.textContent = text;
+          }
+          return td;
+        };
+
         rows.forEach(row => {
           const date = row.c[0] ? row.c[0].v : '';
-          const details = row.c[1] ? row.c[1].v : '-';
-          const amount = row.c[2] ? parseFloat(row.c[2].v) : 0;
-          runningTotal += amount;
-          if (amount >= 0) {
-            totalIncome += amount;
-          } else {
-            totalOutgoing += amount;
-          }
+          const from = row.c[1] ? row.c[1].v : '-';
+          const details = row.c[2] ? row.c[2].v : '-';
+          const ref = row.c[3] ? row.c[3].v : '-';
+          const outgoing = row.c[4] ? parseFloat(row.c[4].v) : 0;
+          const incoming = row.c[5] ? parseFloat(row.c[5].v) : 0;
+          const total = row.c[6] ? parseFloat(row.c[6].v) : 0;
+
+          totalIncome += incoming;
+          totalOutgoing += outgoing;
 
           let displayDate = date;
           if (date && typeof date === 'string' && date.includes('Date')) {
@@ -303,32 +327,14 @@
           const tr = document.createElement('tr');
           tr.className = "hover:bg-gray-50 transition-colors";
 
-          const columnKeys = ['th_date', 'th_details', 'th_amount', 'th_total'];
-
-          const createCell = (text, index, isCurrency = false) => {
-            const td = document.createElement('td');
-            let colorClass = "text-gray-900";
-            if (isCurrency && typeof text === 'number' && text < 0) {
-              colorClass = "text-red-600";
-            }
-            td.className = "px-6 py-4" + (isCurrency ? ` text-right font-medium currency ltr ${colorClass}` : " text-gray-700");
-            const labelKey = columnKeys[index];
-            if (labelKey) {
-              td.setAttribute('data-label', t(labelKey));
-              td.setAttribute('data-i18n-label', labelKey);
-            }
-            if (isCurrency) {
-              td.textContent = text.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-            } else {
-              td.textContent = text;
-            }
-            return td;
-          }
+          const amount = incoming > 0 ? incoming : (outgoing > 0 ? -outgoing : 0);
 
           tr.appendChild(createCell(displayDate, 0));
-          tr.appendChild(createCell(details, 1));
-          tr.appendChild(createCell(amount, 2, true));
-          tr.appendChild(createCell(runningTotal, 3, true));
+          tr.appendChild(createCell(from, 1));
+          tr.appendChild(createCell(details, 2));
+          tr.appendChild(createCell(ref, 3));
+          tr.appendChild(createCell(amount, 4, true, amount < 0 ? "text-red-600" : amount > 0 ? "text-green-600" : null));
+          tr.appendChild(createCell(total, 5, true, total < 0 ? "text-red-600" : null));
 
           tbody.appendChild(tr);
         });
@@ -339,7 +345,7 @@
       .catch(err => {
         console.error('Error fetching sheet:', err);
         const tbody = document.getElementById('ledgerBody');
-        tbody.innerHTML = `<tr><td colspan="4" class="px-6 py-8 text-center text-red-600">Failed to load data. Please try again later.</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="6" class="px-6 py-8 text-center text-red-600">Failed to load data. Please try again later.</td></tr>`;
       });
 
     // Initialize — load CSV translations, then apply language
