@@ -6,6 +6,12 @@
 }
 
 html {
+    /* ── Global font scale ──────────────────────────────────────────
+       Change this one value to scale ALL text up or down.
+       Browser default is 16px. Try 15px (smaller) or 17px (larger).
+    ────────────────────────────────────────────────────────────── */
+    font-size: 16px;
+
     scroll-behavior: smooth;
 }
 
@@ -20,6 +26,15 @@ html.i18n-loading body {
 }
 
 html[lang="dv"] body {
+    font-family: "Faruma", "Noto Sans Thaana", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+html[lang="dv"] h1,
+html[lang="dv"] h2,
+html[lang="dv"] h3,
+html[lang="dv"] h4,
+html[lang="dv"] h5,
+html[lang="dv"] h6 {
     font-family: "Noto Sans Thaana", "Faruma", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 

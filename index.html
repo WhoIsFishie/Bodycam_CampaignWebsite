@@ -112,21 +112,10 @@
         </div>
 
         <div class="md:col-span-5 flex flex-col">
-          <div class="flex-1 flex flex-col border border-[color:var(--ink)] bg-white p-3">
-            <div class="flex-1 bg-gray-100 overflow-hidden">
-              <img id="candidatePhoto" alt="Candidate photo" class="w-full h-full object-cover grayscale"
-                loading="eager"
-                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='800'%20height='1000'%20viewBox='0%200%20800%201000'%3E%3Crect%20width='800'%20height='1000'%20fill='%23f3f4f6'/%3E%3Cg%20fill='none'%20stroke='%239ca3af'%20stroke-width='10'%3E%3Ccircle%20cx='400'%20cy='360'%20r='130'/%3E%3Cpath%20d='M170%20930%20c35-220%20155-320%20230-340%2035-10%2070-10%20105%200%2075%2020%20195%20120%20230%20340'/%3E%3C/g%3E%3Ctext%20x='50%25'%20y='70%25'%20text-anchor='middle'%20font-family='ui-sans-serif,%20system-ui'%20font-size='28'%20fill='%236b7280'%3EFILL%20IN%20-%20upload%20candidate%20photo%3C/text%3E%3C/svg%3E" />
-            </div>
-            <div class="mt-3 flex items-center justify-between gap-4 rtl-row">
-              <p class="text-xs text-gray-600" data-i18n="photo_label">Landing photo</p>
-              <div class="flex items-center gap-3 rtl-row">
-                <button class="text-xs font-medium underline" onclick="triggerPhotoUpload()" type="button"
-                  data-i18n="photo_upload">Upload</button>
-                <button class="text-xs text-gray-600 underline" onclick="clearPhoto()" type="button"
-                  data-i18n="photo_clear">Clear</button>
-              </div>
-              <input id="photoInput" type="file" accept="image/*" class="hidden" onchange="handlePhotoUpload(event)" />
+          <div class="flex-1 border border-[color:var(--ink)] bg-white p-3">
+            <div class="h-full bg-gray-100 overflow-hidden">
+              <img alt="Candidate photo" class="w-full h-full object-cover object-top grayscale"
+                loading="eager" src="headshot.webp" />
             </div>
           </div>
         </div>
@@ -661,9 +650,6 @@
       toastTimer = setTimeout(() => el.classList.add('hidden'), 2600);
     }
 
-    // ------- Candidate photo (local upload) -------
-    const CANDIDATE_PHOTO_KEY = 'candidate_photo_v1';
-
     // ------- Manifesto addendum PDF (local upload) -------
     const MANIFESTO_ADDENDUM_KEY = 'manifesto_addendum_pdf_v1';
 
@@ -737,49 +723,6 @@
         link.removeAttribute('href');
         meta.textContent = '';
       }
-    }
-
-    function triggerPhotoUpload() {
-      document.getElementById('photoInput')?.click();
-    }
-
-    function handlePhotoUpload(event) {
-      const file = event.target?.files?.[0];
-      if (!file) return;
-      if (!file.type?.startsWith('image/')) {
-        toast(t('toast_img_only'));
-        return;
-      }
-      const reader = new FileReader();
-      reader.onload = () => {
-        const dataUrl = String(reader.result || '');
-        if (!dataUrl.startsWith('data:image/')) {
-          toast(t('toast_img_read_fail'));
-          return;
-        }
-        localStorage.setItem(CANDIDATE_PHOTO_KEY, dataUrl);
-        const img = document.getElementById('candidatePhoto');
-        if (img) img.src = dataUrl;
-        toast(t('toast_photo_updated'));
-      };
-      reader.readAsDataURL(file);
-      event.target.value = '';
-    }
-
-    function clearPhoto() {
-      localStorage.removeItem(CANDIDATE_PHOTO_KEY);
-      const img = document.getElementById('candidatePhoto');
-      if (img) {
-        img.src = "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='800'%20height='1000'%20viewBox='0%200%20800%201000'%3E%3Crect%20width='800'%20height='1000'%20fill='%23f3f4f6'/%3E%3Cg%20fill='none'%20stroke='%239ca3af'%20stroke-width='10'%3E%3Ccircle%20cx='400'%20cy='360'%20r='130'/%3E%3Cpath%20d='M170%20930%20c35-220%20155-320%20230-340%2035-10%2070-10%20105%200%2075%2020%20195%20120%20230%20340'/%3E%3C/g%3E%3Ctext%20x='50%25'%20y='70%25'%20text-anchor='middle'%20font-family='ui-sans-serif,%20system-ui'%20font-size='28'%20fill='%236b7280'%3EFILL%20IN%20-%20upload%20candidate%20photo%3C/text%3E%3C/svg%3E";
-      }
-      toast(t('toast_photo_cleared'));
-    }
-
-    function loadCandidatePhoto() {
-      const saved = localStorage.getItem(CANDIDATE_PHOTO_KEY);
-      if (!saved) return;
-      const img = document.getElementById('candidatePhoto');
-      if (img) img.src = saved;
     }
 
     // ------- Signup -------
@@ -1190,7 +1133,6 @@
 
     // Init
     document.getElementById('year').textContent = new Date().getFullYear();
-    loadCandidatePhoto();
     renderAddendumLink();
     loadLanguage();
   </script>
