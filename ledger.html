@@ -198,7 +198,7 @@
 
     async function loadTranslationsCSV() {
       try {
-        const resp = await fetch('translations.csv');
+        const resp = await fetch('translations.csv', { cache: 'no-cache' });
         const text = await resp.text();
         const rows = parseCSV(text);
         if (rows.length < 2) throw new Error('Empty CSV');

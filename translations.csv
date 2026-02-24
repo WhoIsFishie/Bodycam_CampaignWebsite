@@ -164,8 +164,7 @@ th_date,Date,ތާރީޚް
 th_from,From,ފަރާތް
 th_details,Details,ތަފްސީލް
 th_ref,Ref,ރެފ
-th_outgoing,Outgoing,ޚަރަދު
-th_incoming,Incoming,ލިބިލި
+th_amount,Amount,އަދަދު
 th_total,Total,ޖުމްލަ
 loading,Loading data...,ޑޭޓާ ލޯޑުކުރަނީ...
 ledger_note,These records are pulled directly from our campaign finance spreadsheet.,މި ހިސާބުތަކަކީ އަޅުގަނޑުމެންގެ ކެމްޕޭން ފައިނޭންސް ޝީޓުން ސީދާ ނަގާ އެއްޗެހި.
