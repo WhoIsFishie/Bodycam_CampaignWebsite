@@ -10,7 +10,7 @@ html {
        Change this one value to scale ALL text up or down.
        Browser default is 16px. Try 15px (smaller) or 17px (larger).
     ────────────────────────────────────────────────────────────── */
-    font-size: 16px;
+    font-size: 20px;
 
     scroll-behavior: smooth;
 }
