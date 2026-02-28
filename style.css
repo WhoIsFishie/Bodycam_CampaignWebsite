@@ -10,7 +10,7 @@ html {
        Change this one value to scale ALL text up or down.
        Browser default is 16px. Try 15px (smaller) or 17px (larger).
     ────────────────────────────────────────────────────────────── */
-    font-size: 20px;
+    font-size: 15px;
 
     scroll-behavior: smooth;
 }
@@ -218,4 +218,5 @@ html[dir="rtl"] ol.list-decimal {
     html[dir="rtl"] #expenseTable td:nth-child(6) {
         text-align: left;
     }
+
 }
