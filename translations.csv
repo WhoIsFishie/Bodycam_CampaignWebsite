@@ -24,10 +24,10 @@ photo_upload,Upload,އަޕްލޯޑް
 photo_clear,Clear,ފޮހެލާ
 social_proof_volunteers,50 volunteers have joined so far,[TODO] [FILL IN] ވޮލަންޓިއަރުން ގުޅިއްޖެ
 social_proof_quote,"""We listen before we act. Power belongs to people, not parties.""","[TODO] ""އަޅުގަނޑުމެން ފުރަތަމަ އަޑުއަހަނީ. ބާރު އޮންނަނީ ރައްޔިތުންގެ، ޕާޓީގެ ނޫން."""
-video_title,Watch: Why Hingaa Male'?,ބަލާ: ކީއްވެ ހިނގާ މާލެ؟
-video_placeholder,"<iframe width=""560"" height=""315"" src=""https://www.youtube.com/embed/dZDxuFjM3hI?si=ULUZfAdsn54T691T"" title=""YouTube video player"" frameborder=""0"" allow=""accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"" referrerpolicy=""strict-origin-when-cross-origin"" allowfullscreen></iframe>","<iframe width=""560"" height=""315"" src=""https://www.youtube.com/embed/dZDxuFjM3hI?si=ULUZfAdsn54T691T"" title=""YouTube video player"" frameborder=""0"" allow=""accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"" referrerpolicy=""strict-origin-when-cross-origin"" allowfullscreen></iframe>"
+video_title,Watch: Why Hingaa Male?,ބަލާ: ކީއްވެ ހިނގާ މާލެ؟
+video_placeholder,"<iframe width=""560"" height=""315"" src=""https://www.youtube.com/embed/gn4S7lQ111M?si=O1rK5lb90KUMl3Lp"" title=""YouTube video player"" frameborder=""0"" allow=""accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"" referrerpolicy=""strict-origin-when-cross-origin"" allowfullscreen></iframe>","<iframe width=""560"" height=""315"" src=""https://www.youtube.com/embed/gn4S7lQ111M?si=O1rK5lb90KUMl3Lp"" title=""YouTube video player"" frameborder=""0"" allow=""accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"" referrerpolicy=""strict-origin-when-cross-origin"" allowfullscreen></iframe>"
 pledges_title,Pledges,ވައްދުތައް
-pledges_intro,Every promise comes. Here are measurable commitments we will report on publicly.,[TODO] ކޮންމެ ވައްދެއްގައި ނަންބަރެއް އަދި ސުންގަޑިއެއް. މިއީ ޢާންމުކޮށް ރިޕޯޓް ކުރާނެ މިންގަނޑު ވައްދުތައް.
+pledges_intro,"Every promise comes from the people, based on our collective strugglee. Here are measurable commitments we will report on publicly.",[TODO] ކޮންމެ ވައްދެއްގައި ނަންބަރެއް އަދި ސުންގަޑިއެއް. މިއީ ޢާންމުކޮށް ރިޕޯޓް ކުރާނެ މިންގަނޑު ވައްދުތައް.
 pledges_pdf,Want the full plan as a PDF?,މުޅި ޕްލޭން PDF އެއްގޮތަށް ބޭނުންވޭ؟
 pledges_add_download,Add download link,ޑައުންލޯޑް ލިންކް އެއް އަޅާ
 issues_title,Issues,މައްސަލަތައް
