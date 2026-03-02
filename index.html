@@ -748,7 +748,8 @@
       try {
         await fetch(SIGNUP_WEBAPP_URL, {
           method: 'POST',
-          body: params,
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: params.toString(),
         });
       } catch (_) {
         // Network error — save locally as fallback
