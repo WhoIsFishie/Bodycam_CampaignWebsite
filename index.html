@@ -733,15 +733,14 @@
       const data = Object.fromEntries(new FormData(form).entries());
       const btn = form.querySelector('[type="submit"]');
 
-      const payload = {
-        origin: window.location.origin,
-        Name: data.name,
-        Email: data.email,
-        Phone: data.phone,
-        Ward: data.ward,
-        Concern: data.concern,
-        Help: data.interest,
-      };
+      const params = new URLSearchParams();
+      params.append('origin', window.location.origin);
+      params.append('Name', data.name);
+      params.append('Email', data.email);
+      params.append('Phone', data.phone);
+      params.append('Ward', data.ward);
+      params.append('Concern', data.concern);
+      params.append('Help', data.interest);
 
       btn.disabled = true;
       btn.style.opacity = '0.6';
@@ -749,8 +748,7 @@
       try {
         await fetch(SIGNUP_WEBAPP_URL, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
+          body: params,
         });
       } catch (_) {
         // Network error — save locally as fallback
