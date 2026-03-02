@@ -137,7 +137,7 @@ opt_host,Host a meeting,ބައްދަލުވުމެއް ހޯދާ
 opt_issue,Community issue,މުޖުތަމައު މައްސަލަ
 opt_media,Media / press,މީޑިއާ / ޕްރެސް
 form_submit,Submit,ފޮނުއްވާ
-privacy_note,"By submitting, you agree to receive campaign updates. Your data stays local until we set up a secure endpoint.",[TODO] ފޮނުއްވާލުމަކުން ކެމްޕޭން އަޕްޑޭޓްތައް ލިބޭނެ.
+privacy_note,"By submitting, you agree to receive campaign updates. Your information is kept confidential and used only for campaign communications.",ފޮނުއްވާލުމަކުން ކެމްޕޭން އަޕްޑޭޓްތައް ލިބޭނެ. ތިޔަ ބޭފުޅާގެ މައުލޫމާތު ހިއްސާ ނުކުރެވޭނެ.
 ph_name,Ahmed Aiham,ތިޔަ ނަން
 ph_email,hingaamale@gmail.com,you@example.com
 ph_phone,9953458,[TODO] +960

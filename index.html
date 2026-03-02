@@ -584,8 +584,7 @@
                 Submit
               </button>
 
-              <p class="text-xs text-gray-600" data-i18n="privacy_note">By submitting, you agree to receive campaign
-                updates. Your data stays local until we set up a secure endpoint.</p>
+              <p class="text-xs text-gray-600" data-i18n="privacy_note">By submitting, you agree to receive campaign updates. Your information is kept confidential and used only for campaign communications.</p>
             </form>
           </div>
         </div>
@@ -726,15 +725,43 @@
     }
 
     // ------- Signup -------
-    function handleSubscribe(event) {
+    const SIGNUP_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbxwih_3llf4ufpB-bipF_A9RLO6oSMJG-Z8oZMfILQgpk7ZzmIz5z2CLOuumpqYfTqk/exec';
+
+    async function handleSubscribe(event) {
       event.preventDefault();
       const form = event.target;
       const data = Object.fromEntries(new FormData(form).entries());
+      const btn = form.querySelector('[type="submit"]');
 
-      const key = 'campaign_signups_v1';
-      const existing = JSON.parse(localStorage.getItem(key) || '[]');
-      existing.push({ ...data, createdAt: new Date().toISOString() });
-      localStorage.setItem(key, JSON.stringify(existing));
+      const payload = {
+        origin: window.location.origin,
+        Name: data.name,
+        Email: data.email,
+        Phone: data.phone,
+        Ward: data.ward,
+        Concern: data.concern,
+        Help: data.interest,
+      };
+
+      btn.disabled = true;
+      btn.style.opacity = '0.6';
+
+      try {
+        await fetch(SIGNUP_WEBAPP_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+      } catch (_) {
+        // Network error — save locally as fallback
+        const key = 'campaign_signups_v1';
+        const existing = JSON.parse(localStorage.getItem(key) || '[]');
+        existing.push({ ...data, createdAt: new Date().toISOString() });
+        localStorage.setItem(key, JSON.stringify(existing));
+      } finally {
+        btn.disabled = false;
+        btn.style.opacity = '';
+      }
 
       form.reset();
       toast(t('toast_signup_thanks'));
