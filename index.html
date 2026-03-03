@@ -5,15 +5,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ހިންގާ މާލެ — މޭޔަރ ކެމްޕޭން</title>
-  <meta name="description" content="Malé deserves a mayor who works for residents, not a party." />
+  <meta name="description" content="97,000 per km². 3.5× Manhattan. Malé deserves a mayor who works for residents, not a party." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://hingaamale.mv/" />
   <meta property="og:title" content="Hingaa Male' — Mayor Campaign" />
-  <meta property="og:description" content="Malé deserves a mayor who works for residents, not a party." />
+  <meta property="og:description" content="97,000 per km². 3.5× Manhattan. Malé deserves a mayor who works for residents, not a party." />
   <meta property="og:image" content="[FILL IN - og-image.jpg]" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Hingaa Male' — Mayor Campaign" />
-  <meta name="twitter:description" content="Malé deserves a mayor who works for residents, not a party." />
+  <meta name="twitter:description" content="97,000 per km². 3.5× Manhattan. Malé deserves a mayor who works for residents, not a party." />
   <link rel="canonical" href="https://hingaamale.mv/" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -571,6 +571,10 @@
                 <input dir="ltr" name="phone" type="tel" required class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black" placeholder="+960" data-i18n-placeholder="ph_phone" />
               </label>
               <label class="block">
+                <span class="text-sm text-gray-700" data-i18n="form_id_card">ID Card Number</span>
+                <input dir="ltr" name="id_card" type="text" class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black" placeholder="A000000" data-i18n-placeholder="ph_id_card" />
+              </label>
+              <label class="block">
                 <span class="text-sm text-gray-700" data-i18n="form_ward">Ward</span>
                 <select name="ward" required class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-black">
                   <option value="" data-i18n="form_ward_select">Select your ward</option>
@@ -731,6 +735,7 @@
       params.append('Name', data.name);
       params.append('Email', data.email);
       params.append('Phone', data.phone);
+      params.append('IDCard', data.id_card);
       params.append('Ward', data.ward);
       params.append('Concern', data.concern);
       params.append('Interest', data.interest);
