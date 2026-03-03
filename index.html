@@ -134,7 +134,7 @@
   <!-- Video Embed -->
   <section class="py-10 border-b border-[color:var(--line)]">
     <div class="mx-auto max-w-6xl px-6">
-      <details class="group">
+      <details class="group" open>
         <summary class="cursor-pointer text-sm font-medium underline rtl-text" data-i18n="video_title">Watch: Why this campaign</summary>
         <div class="mt-4 aspect-video">
           <iframe class="w-full h-full" src="https://www.youtube.com/embed/FWxOt_ZxEUU?si=LmJ5QZqQSCpA6diE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -894,7 +894,8 @@
     async function loadLanguage() {
       await Promise.all([loadTranslationsCSV(), loadPledgesCSV(), loadIssuesCSV()]);
       const saved = localStorage.getItem(LANG_KEY);
-      currentLang = (saved === 'dv' || saved === 'en') ? saved : 'dv';
+      // default to English if nothing saved
+      currentLang = (saved === 'dv' || saved === 'en') ? saved : 'en';
       applyTranslations();
       document.documentElement.classList.remove('i18n-loading');
     }
