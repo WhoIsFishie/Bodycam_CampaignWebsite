@@ -6,19 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ހިންގާ މާލެ — މޭޔަރ ކެމްޕޭން</title>
   <meta name="description" content="97,000 per km². 3.5× Manhattan. Malé deserves a mayor who works for residents, not a party." />
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://hingaamale.mv/" />
   <meta property="og:title" content="Hingaa Male' — Mayor Campaign" />
   <meta property="og:description" content="97,000 per km². 3.5× Manhattan. Malé deserves a mayor who works for residents, not a party." />
   <meta property="og:image" content="[FILL IN - og-image.jpg]" />
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Hingaa Male' — Mayor Campaign" />
   <meta name="twitter:description" content="97,000 per km². 3.5× Manhattan. Malé deserves a mayor who works for residents, not a party." />
-
   <link rel="canonical" href="https://hingaamale.mv/" />
-
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -154,7 +150,6 @@
         <h2 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="pledges_title">Pledges</h2>
         <p class="mt-4 text-gray-700 leading-relaxed" data-i18n="pledges_intro">Every promise has a number and a deadline.</p>
       </div>
-        <!-- accordion items injected by JS -->
       <div class="mt-10 space-y-4" id="platformAccordions"></div>
       <div class="mt-10 border border-[color:var(--line)] p-6 rtl-text">
         <p class="text-sm text-gray-700">
@@ -753,7 +748,6 @@
       toast(t('toast_signup_thanks'));
     }
 
-    // ------- Visit Request -------
     function handleVisitRequest(event) {
       event.preventDefault();
       const form = event.target;
@@ -806,15 +800,12 @@
     // ------- i18n -------
     const LANG_KEY = 'campaign_lang_v1';
     let currentLang = 'dv';
-    // Ensure initial document attributes match default language immediately
     document.documentElement.lang = 'dv';
     document.documentElement.dir = 'rtl';
-    // Hardcoded fallback translations (used if CSV fetch fails)
     const translations = { en: {}, dv: {} };
     let pledgeItemsByLang = { en: [], dv: [] };
     let issueItemsByLang = { en: [], dv: [] };
 
-    // Load translations from CSV
     async function loadTranslationsCSV() {
       try {
         const resp = await fetch('translations.csv', { cache: 'no-cache' });
@@ -836,7 +827,6 @@
       }
     }
 
-    // Load pledges from CSV
     async function loadPledgesCSV() {
       try {
         const resp = await fetch('pledges.csv');
@@ -853,7 +843,6 @@
       } catch (e) { console.warn('Could not load pledges.csv:', e); }
     }
 
-    // Load issues from CSV
     async function loadIssuesCSV() {
       try {
         const resp = await fetch('issues.csv');
