@@ -201,150 +201,67 @@
 
       <!-- Data Visualizations -->
       <div class="mt-10 grid sm:grid-cols-2 gap-6">
-
-        <!-- 1. Density comparison (updated with Ap Lei Chau) -->
+        <!-- Density comparison -->
         <div class="border border-[color:var(--line)] p-6">
-          <h3 class="text-sm font-semibold mb-4 rtl-text" data-i18n="chart_density_title">Population Density (per km²)</h3>
+          <h3 class="text-sm font-semibold mb-4 rtl-text">Population Density (per km²)</h3>
           <div class="space-y-2">
             <div class="flex items-center gap-2 rtl-row">
-              <span class="text-xs w-24 shrink-0 ltr">Malé</span>
+              <span class="text-xs w-20 shrink-0 ltr">Malé</span>
               <div class="flex-1 bg-gray-100 h-5 relative"><div class="bg-[color:var(--ink)] h-5" style="width:100%"></div></div>
               <span class="text-xs w-14 ltr text-right">97,000</span>
             </div>
             <div class="flex items-center gap-2 rtl-row">
-              <span class="text-xs w-24 shrink-0 ltr">Ap Lei Chau</span>
-              <div class="flex-1 bg-gray-100 h-5 relative"><div class="bg-gray-400 h-5" style="width:69%"></div></div>
-              <span class="text-xs w-14 ltr text-right">66,755</span>
-            </div>
-            <div class="flex items-center gap-2 rtl-row">
-              <span class="text-xs w-24 shrink-0 ltr">Dhaka</span>
+              <span class="text-xs w-20 shrink-0 ltr">Dhaka</span>
               <div class="flex-1 bg-gray-100 h-5 relative"><div class="bg-gray-400 h-5" style="width:48%"></div></div>
               <span class="text-xs w-14 ltr text-right">47,000</span>
             </div>
             <div class="flex items-center gap-2 rtl-row">
-              <span class="text-xs w-24 shrink-0 ltr">Manila</span>
+              <span class="text-xs w-20 shrink-0 ltr">Manila</span>
               <div class="flex-1 bg-gray-100 h-5 relative"><div class="bg-gray-400 h-5" style="width:44%"></div></div>
               <span class="text-xs w-14 ltr text-right">43,000</span>
             </div>
             <div class="flex items-center gap-2 rtl-row">
-              <span class="text-xs w-24 shrink-0 ltr">Manhattan</span>
+              <span class="text-xs w-20 shrink-0 ltr">Manhattan</span>
               <div class="flex-1 bg-gray-100 h-5 relative"><div class="bg-gray-400 h-5" style="width:28%"></div></div>
               <span class="text-xs w-14 ltr text-right">27,500</span>
             </div>
             <div class="flex items-center gap-2 rtl-row">
-              <span class="text-xs w-24 shrink-0 ltr">Singapore</span>
+              <span class="text-xs w-20 shrink-0 ltr">Singapore</span>
               <div class="flex-1 bg-gray-100 h-5 relative"><div class="bg-gray-400 h-5" style="width:8%"></div></div>
               <span class="text-xs w-14 ltr text-right">8,000</span>
             </div>
           </div>
         </div>
 
-        <!-- 2. Revenue allocation (updated to 0.89%) -->
+        <!-- Revenue allocation -->
         <div class="border border-[color:var(--line)] p-6">
-          <h3 class="text-sm font-semibold mb-4 rtl-text" data-i18n="chart_revenue_title">Revenue: Council vs National</h3>
+          <h3 class="text-sm font-semibold mb-4 rtl-text">Revenue: Council vs National</h3>
           <div class="flex h-8 w-full border border-[color:var(--line)] overflow-hidden">
-            <div class="bg-[color:var(--ink)] h-full flex items-center justify-center text-white text-[10px] font-medium" style="width:4%; min-width: 36px;">0.89%</div>
-            <div class="bg-gray-200 h-full flex items-center justify-center text-gray-600 text-xs font-medium flex-1">99.11%</div>
+            <div class="bg-[color:var(--ink)] h-full flex items-center justify-center text-white text-xs font-medium" style="width:5%">5%</div>
+            <div class="bg-gray-200 h-full flex items-center justify-center text-gray-600 text-xs font-medium flex-1">95%</div>
           </div>
           <div class="flex justify-between mt-2 text-xs text-gray-600 rtl-row">
-            <span data-i18n="chart_revenue_council">Male' City Council</span>
-            <span data-i18n="chart_revenue_national">National Government</span>
+            <span>City Council</span>
+            <span>National Government</span>
           </div>
         </div>
 
-        <!-- 3. Budget: Male' City Council 2025 (placeholder — needs real data) -->
-        <div class="border border-[color:var(--line)] p-6">
-          <h3 class="text-sm font-semibold mb-4 rtl-text" data-i18n="chart_budget_male_title">2025 Budget: Male' City Council</h3>
-          <div class="flex items-end gap-1 h-32">
-            <div class="flex-1 flex flex-col items-center justify-end">
-              <span class="text-[10px] font-medium ltr mb-1">[FILL IN]</span>
-              <div class="w-full bg-[color:var(--ink)] rounded-t" style="height:60%"></div>
-              <span class="text-[10px] text-gray-600 mt-1 ltr text-center">Allocated</span>
-            </div>
-            <div class="flex-1 flex flex-col items-center justify-end">
-              <span class="text-[10px] font-medium ltr mb-1">[FILL IN]</span>
-              <div class="w-full bg-gray-300 rounded-t" style="height:100%"></div>
-              <span class="text-[10px] text-gray-600 mt-1 ltr text-center">Required</span>
-            </div>
-          </div>
-          <p class="mt-3 text-[10px] text-gray-500 rtl-text" data-i18n="chart_budget_male_note">Source: finance.gov.mv — upload budget data to populate</p>
-        </div>
-
-        <!-- 4. Budget: All Other Councils 2025 (placeholder — needs real data) -->
-        <div class="border border-[color:var(--line)] p-6">
-          <h3 class="text-sm font-semibold mb-4 rtl-text" data-i18n="chart_budget_others_title">2025 Budget: All Other Councils</h3>
-          <div class="flex items-end gap-1 h-32">
-            <div class="flex-1 flex flex-col items-center justify-end">
-              <span class="text-[10px] font-medium ltr mb-1">[FILL IN]</span>
-              <div class="w-full bg-gray-400 rounded-t" style="height:75%"></div>
-              <span class="text-[10px] text-gray-600 mt-1 ltr text-center">Allocated</span>
-            </div>
-            <div class="flex-1 flex flex-col items-center justify-end">
-              <span class="text-[10px] font-medium ltr mb-1">[FILL IN]</span>
-              <div class="w-full bg-gray-300 rounded-t" style="height:100%"></div>
-              <span class="text-[10px] text-gray-600 mt-1 ltr text-center">Required</span>
-            </div>
-          </div>
-          <p class="mt-3 text-[10px] text-gray-500 rtl-text" data-i18n="chart_budget_others_note">Source: finance.gov.mv — upload budget data to populate</p>
-        </div>
-
-        <!-- 5. Housing cost (updated to 75%) -->
-        <div class="border border-[color:var(--line)] p-6">
-          <h3 class="text-sm font-semibold mb-4 rtl-text" data-i18n="chart_housing_title">Housing Cost (% of income)</h3>
+        <!-- Housing cost -->
+        <div class="border border-[color:var(--line)] p-6 sm:col-span-2">
+          <h3 class="text-sm font-semibold mb-4 rtl-text">Housing Cost (% of income)</h3>
           <div class="space-y-2">
             <div class="flex items-center gap-2 rtl-row">
-              <span class="text-xs w-28 shrink-0 ltr">Male' City</span>
-              <div class="flex-1 bg-gray-100 h-5 relative"><div class="bg-[color:var(--ink)] h-5" style="width:75%"></div></div>
-              <span class="text-xs w-10 ltr text-right">75%</span>
+              <span class="text-xs w-28 shrink-0 ltr">Malé (actual)</span>
+              <div class="flex-1 bg-gray-100 h-5 relative"><div class="bg-[color:var(--ink)] h-5" style="width:57%"></div></div>
+              <span class="text-xs w-14 ltr text-right">50-60%</span>
             </div>
             <div class="flex items-center gap-2 rtl-row">
               <span class="text-xs w-28 shrink-0 ltr">WHO threshold</span>
               <div class="flex-1 bg-gray-100 h-5 relative"><div class="bg-gray-400 h-5" style="width:30%"></div></div>
-              <span class="text-xs w-10 ltr text-right">30%</span>
+              <span class="text-xs w-14 ltr text-right">30%</span>
             </div>
           </div>
         </div>
-
-        <!-- 6. Minimum wage brackets vs average rent -->
-        <div class="border border-[color:var(--line)] p-6">
-          <h3 class="text-sm font-semibold mb-4 rtl-text" data-i18n="chart_wage_title">Minimum Wage vs Average Rent (MVR)</h3>
-          <div class="space-y-2">
-            <div class="flex items-center gap-2 rtl-row">
-              <span class="text-xs w-32 shrink-0 ltr">Avg rent</span>
-              <div class="flex-1 bg-gray-100 h-5 relative"><div class="bg-[color:var(--ink)] h-5" style="width:100%"></div></div>
-              <span class="text-xs w-16 ltr text-right">15,000</span>
-            </div>
-            <div class="flex items-center gap-2 rtl-row">
-              <span class="text-xs w-32 shrink-0 ltr">Wage (highest)</span>
-              <div class="flex-1 bg-gray-100 h-5 relative"><div class="bg-gray-400 h-5" style="width:53%"></div></div>
-              <span class="text-xs w-16 ltr text-right">8,000</span>
-            </div>
-            <div class="flex items-center gap-2 rtl-row">
-              <span class="text-xs w-32 shrink-0 ltr">Wage (lowest)</span>
-              <div class="flex-1 bg-gray-100 h-5 relative"><div class="bg-gray-400 h-5" style="width:30%"></div></div>
-              <span class="text-xs w-16 ltr text-right">4,500</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7. Rent-to-wage discrepancy (full width) -->
-        <div class="border border-[color:var(--line)] p-6 sm:col-span-2">
-          <h3 class="text-sm font-semibold mb-4 rtl-text" data-i18n="chart_discrepancy_title">Rent Affordability Gap: Lowest Minimum Wage vs Average Rent</h3>
-          <div class="flex items-stretch h-10 w-full border border-[color:var(--line)] overflow-hidden">
-            <div class="bg-gray-300 h-full flex items-center justify-center text-gray-700 text-xs font-medium" style="width:30%">
-              MVR 4,500
-            </div>
-            <div class="bg-[color:var(--ink)] h-full flex items-center justify-center text-white text-xs font-medium flex-1">
-              MVR 10,500 shortfall
-            </div>
-          </div>
-          <div class="flex justify-between mt-2 text-xs text-gray-600 rtl-row">
-            <span data-i18n="chart_disc_wage">Lowest min. wage</span>
-            <span data-i18n="chart_disc_gap">Monthly gap to afford average rent (MVR 15,000)</span>
-          </div>
-          <p class="mt-3 text-xs text-gray-500 rtl-text" data-i18n="chart_disc_note">A worker earning the lowest minimum wage bracket would need to spend 3.3× their entire monthly salary to cover average rent alone.</p>
-        </div>
-
       </div>
 
       <div class="mt-10 space-y-4" id="issuesAccordions">
