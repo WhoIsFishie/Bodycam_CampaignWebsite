@@ -724,7 +724,7 @@
     }
 
     // ------- Signup -------
-    const SIGNUP_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbz_qfrB_59NvC8gj_iXCmk9IOJJdDrzoTLtTgWM90h_NS7-q-ISdNmQryNkxsrvZhnt/exec';
+    const SIGNUP_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbzRUFdl2JvpJs3Caju7Vxv7yly72m6m9A-PJme9CmvOzodKJWAXbXB9052jV53RgXym/exec';
 
     async function handleSubscribe(event) {
       event.preventDefault();
@@ -739,7 +739,8 @@
       params.append('Phone', data.phone);
       params.append('Ward', data.ward);
       params.append('Concern', data.concern);
-      params.append('Help', data.interest);
+      params.append('Interest', data.interest);
+      params.append('form_type', 'volunteer');
 
       btn.disabled = true;
       btn.style.opacity = '0.6';
@@ -771,10 +772,25 @@
       const form = event.target;
       const data = Object.fromEntries(new FormData(form).entries());
 
-      const key = 'campaign_visit_requests_v1';
-      const existing = JSON.parse(localStorage.getItem(key) || '[]');
-      existing.push({ ...data, createdAt: new Date().toISOString() });
-      localStorage.setItem(key, JSON.stringify(existing));
+      const params = new URLSearchParams();
+      params.append('form_type', 'visit');
+      params.append('visit_name', data.visit_name);
+      params.append('visit_ward', data.visit_ward);
+      params.append('visit_date', data.visit_date);
+      params.append('visit_attendees', data.visit_attendees);
+      params.append('visit_topics', data.visit_topics);
+
+      fetch(SIGNUP_WEBAPP_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: params,
+      }).catch(() => {
+        // Fallback: save locally if network fails
+        const key = 'campaign_visit_requests_v1';
+        const existing = JSON.parse(localStorage.getItem(key) || '[]');
+        existing.push({ ...data, createdAt: new Date().toISOString() });
+        localStorage.setItem(key, JSON.stringify(existing));
+      });
 
       form.reset();
       toast(t('visit_form_saved'));
