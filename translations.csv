@@ -169,14 +169,14 @@ th_total,Total,ޖުމްލަ
 loading,Loading data...,ޑޭޓާ ލޯޑުކުރެވެނީ...
 ledger_note,These records are pulled directly from our campaign finance spreadsheet.,މި ރެކޯޑުތައް ނެގެނީ ސީދާ އަޅުގަނޑުމެންގެ ކެމްޕޭން ފައިނޭންސް ސްޕްރެޑްޝީޓުން.
 chart_density_title,Population Density (per km²),އާބާދީ ބޯމިން (ކިލޯ މީޓަރަކަށް)
-chart_revenue_title,Council Budget vs National Budget,ކައުންސިލް ބަޖެޓް vs ގައުމީ ބަޖެޓް
-chart_revenue_council,Male' City Council (MVR 487.2M),މާލެ ސިޓީ ކައުންސިލް (MVR 487.2M)
-chart_revenue_national,National Budget (MVR 130.8B),ގައުމީ ބަޖެޓް (MVR 130.8B)
-chart_budget_male_title,Council Budget Breakdown,ކައުންސިލް ބަޖެޓް ބެހިފައިވާ ގޮތް
+chart_revenue_title,Male' City Council Budget vs National Budget,ކައުންސިލް ބަޖެޓް vs ގައުމީ ބަޖެޓް
+chart_revenue_council,Male' City Council (MVR 487.2M) *2025,މާލެ ސިޓީ ކައުންސިލް (MVR 487.2M)
+chart_revenue_national,National Budget (MVR 64.2B) *2026,ގައުމީ ބަޖެޓް (MVR 130.8B)
+chart_budget_male_title,MCC Budget Breakdown,ކައުންސިލް ބަޖެޓް ބެހިފައިވާ ގޮތް
 chart_budget_others_title,National Block Grants to All Councils (2026),ހުރިހާ ކައުންސިލްތަކަށް ދޫކުރި ބްލޮކް ގްރާންޓް (2026)
 chart_housing_title,Housing Cost (% of income),ބޯހިޔާވެހިކަމުގެ ޚަރަދު (އާމްދަނީގެ %)
 chart_wage_title,Minimum Wage vs Average Rent (MVR),މިނިމަމް ވެއިޖް vs އެވެރެޖް ކުލި (MVR)
 chart_discrepancy_title,Rent Affordability Gap,ކުލީގެ ދެމެހެއްޓެނިވިކަމުގެ ފަރަގު
 chart_disc_wage,Lowest minimum wage,އެންމެ ކުޑަ މިނިމަމް ވެއިޖް
 chart_disc_gap,Monthly gap to afford average rent (MVR 15000),އެވެރެޖް ކުލި ދެއްކުމުގެ މަހު ފަރަގު (MVR 15000)
-chart_disc_note,"A worker earning the lowest minimum wage would need to spend 3.3× their entire monthly salary to cover average rent alone.",އެންމެ ކުޑަ މިނިމަމް ވެއިޖް ލިބޭ މީހަކު އެވެރެޖް ކުލި ދައްކަން މުޅި މުސާރައިގެ 3.3 ގުނަ ހޭދަ ކުރަންޖެހޭނެ.
+chart_disc_note,A worker earning the lowest minimum wage would need to spend 3.3× their entire monthly salary to cover average rent alone.,އެންމެ ކުޑަ މިނިމަމް ވެއިޖް ލިބޭ މީހަކު އެވެރެޖް ކުލި ދައްކަން މުޅި މުސާރައިގެ 3.3 ގުނަ ހޭދަ ކުރަންޖެހޭނެ.
