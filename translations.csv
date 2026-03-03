@@ -25,13 +25,40 @@ photo_clear,Clear,ފޮހެލާ
 social_proof_volunteers,50 volunteers have joined so far,މިހާތަނަށް 50 ވޮލަންޓިއަރުން ގުޅިއްޖެ
 social_proof_quote,"""We listen before we act. Power belongs to people, not parties.""",އަޅުގަނޑުމެން ޢަމަލު ކުރުމުގެ ކުރިން އަޑުއަހަން. ބާރު އޮންނަނީ ރައްޔިތުންގެ، ޕާޓީތަކުގެ ނޫން.
 video_title,Watch: Why Hingaa Male?,ބަލާ: ކީއްވެ ހިނގާ މާލެ؟
-video_placeholder,"<iframe width=""560"" height=""315"" src=""https://www.youtube.com/embed/gn4S7lQ111M?si=O1rK5lb90KUMl3Lp"" title=""YouTube video player"" frameborder=""0"" allow=""accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"" referrerpolicy=""strict-origin-when-cross-origin"" allowfullscreen></iframe>","<iframe width=""560"" height=""315"" src=""https://www.youtube.com/embed/gn4S7lQ111M?si=O1rK5lb90KUMl3Lp"" title=""YouTube video player"" frameborder=""0"" allow=""accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"" referrerpolicy=""strict-origin-when-cross-origin"" allowfullscreen></iframe>"
 pledges_title,Pledges,ވައުދުތައް
-pledges_intro,"Every promise comes from the people, data-drive from our collective struggle. Here are crucial commitments we will find solutions for, together.",ކޮންމެ ވައުދެއް އަންނަނީ ރައްޔިތުންގެ ފަރާތުން، އެކުގައި ކުރި މަސައްކަތުގެ ޑޭޓާ އިން. މިއީ އެކުގައި ޙައްލު ހޯދާނެ މުހިންމު ވައުދުތައް.
+pledges_intro,"Every promise comes from the people, data-driven from our collective struggle. Here are crucial commitments we will find solutions for, together.",ކޮންމެ ވައުދެއް އަންނަނީ ރައްޔިތުންގެ ފަރާތުން، އެކުގައި ކުރި މަސައްކަތުގެ ޑޭޓާ އިން. މިއީ އެކުގައި ޙައްލު ހޯދާނެ މުހިންމު ވައުދުތައް.
 pledges_pdf,Want the full plan as a PDF?,މުޅި ޕްލޭން PDF ގެ ގޮތުގައި ބޭނުންތޯ؟
 pledges_add_download,Add download link,ޑައުންލޯޑް ލިންކް އެޅުއްވާ
 issues_title,Issues,މައްސަލަތައް
 issues_intro,"Six challenges facing Malé Area — with data, context, and our plan for each.",މާލެ ސަރަޙައްދަށް ކުރިމަތިވެފައިވާ ހަ ގޮންޖެހުން — ޑޭޓާ، ހާލަތު، އަދި ކޮންމެ ކަމަކަށް އަޅުގަނޑުމެންގެ ޕްލޭން.
+issue_reality_label,Current reality,ހާލަތު
+issue_plan_label,Our plan,އަޅުގަނޑުމެންގެ ޕްލޭން
+chart_density_title,Population Density (per km²),އާބާދީ ބޯމިން (ކިލޯ މީޓަރަކަށް)
+chart_revenue_title,Male' City Council Budget vs National Budget,ކައުންސިލް ބަޖެޓް vs ގައުމީ ބަޖެޓް
+chart_revenue_council,Male' City Council (MVR 487.2M) *2025,މާލެ ސިޓީ ކައުންސިލް (MVR 487.2M)
+chart_revenue_national,National Budget (MVR 64.2B) *2026,ގައުމީ ބަޖެޓް (MVR 64.2B) *2026
+chart_budget_male_title,MCC Budget Breakdown,ކައުންސިލް ބަޖެޓް ބެހިފައިވާ ގޮތް
+chart_budget_total_label,Total budget: MVR 487.2M,ޖުމްލަ ބަޖެޓް: MVR 487.2M
+chart_budget_approved,2025 approved,2025 ފާސްކޮށްފައި
+chart_budget_grant_label,National block grant: MVR 179.5M,ގައުމީ ބްލޮކް ގްރާންޓް: MVR 179.5M
+chart_budget_grant_pct,36.8% of council budget,ކައުންސިލް ބަޖެޓްގެ 36.8%
+chart_budget_own_label,Own-source revenue: MVR 308M,އަމިއްލަ ރެވެނިއު: MVR 308M
+chart_budget_own_pct,63.2% of council budget,ކައުންސިލް ބަޖެޓްގެ 63.2%
+chart_budget_others_title,National Block Grants to All Councils (2026),ހުރިހާ ކައުންސިލްތަކަށް ދޫކުރި ބްލޮކް ގްރާންޓް (2026)
+chart_block_grants_label,MVR 2.212B — all council block grants,MVR 2.212B — ހުރިހާ ކައުންސިލް ބްލޮކް ގްރާންޓް
+chart_block_grants_pct,4.02% of national budget,ގައުމީ ބަޖެޓްގެ 4.02%
+chart_national_budget_label,MVR 64.2B — national budget,MVR 64.2B — ގައުމީ ބަޖެޓް
+chart_housing_title,Housing Cost (% of income),ބޯހިޔާވެހިކަމުގެ ޚަރަދު (އާމްދަނީގެ %)
+chart_housing_greater_male,Greater Male' City,ގްރޭޓަރ މާލެ ސިޓީ
+chart_housing_global,Global Standard threshold,ބައިނަލްއަޤްވާމީ ތަންފީޒީ ފެންވަރު
+chart_wage_title,Minimum Wage vs Average Rent (MVR),މިނިމަމް ވެއިޖް vs އެވެރެޖް ކުލި (MVR)
+chart_wage_avg_rent,Avg rent,އެވެރެޖް ކުލި
+chart_wage_highest,Wage (highest),މުސާރަ (އެންމެ ބޮޑު)
+chart_wage_lowest,Wage (lowest),މުސާރަ (އެންމެ ކުޑަ)
+chart_discrepancy_title,Rent Affordability Gap,ކުލީގެ ދެމެހެއްޓެނިވިކަމުގެ ފަރަގު
+chart_disc_wage,Lowest minimum wage,އެންމެ ކުޑަ މިނިމަމް ވެއިޖް
+chart_disc_gap,Monthly gap to afford average rent (MVR 15000),އެވެރެޖް ކުލި ދެއްކުމުގެ މަހު ފަރަގު (MVR 15000)
+chart_disc_note,A worker earning the lowest minimum wage would need to spend 3.3× their entire monthly salary to cover average rent alone.,އެންމެ ކުޑަ މިނިމަމް ވެއިޖް ލިބޭ މީހަކު އެވެރެޖް ކުލި ދައްކަން މުޅި މުސާރައިގެ 3.3 ގުނަ ހޭދަ ކުރަންޖެހޭނެ.
 manifesto_title,The Living manifesto,ދިރޭ މެނިފެސްޓޯ
 manifesto_intro,"This is a working document: updated in public as we listen, measure results, and adjust accordingly",މިއީ ބަދަލުވެ ކުރިއެރޭ ލިޔުމެއް: ޢާންމުކޮށް އަޕްޑޭޓް ކުރެވެނީ އަޑުއަހާ، ނަތީޖާ މިންކޮށް، ބަދަލު ގެންނަމުން.
 manifesto_p1,"<span class=""font-medium text-[color:var(--ink)]"">How we'll govern:</span> Radically transparent - publish plans & budgets openly, track progress in real time. The council operates on a fraction of the budget required; we will make every laari count","<span class=""font-medium text-[color:var(--ink)]"">ހިންގާނެ ގޮތް:</span> ފުރިހަމައަށް ދެފުށް ފެންނަ ގޮތަށް - ޕްލޭންތަކާއި ބަޖެޓް ހާމަކޮށް ޝާއިޢުކުރުން، ކުރިއެރުން ވަގުތުން ވަގުތަށް ބެލުން. ކައުންސިލް ހިންގަނީ ބޭނުންވާ ބަޖެޓުގެ ކުޑަ މިންވަރެއް ލިބޭ ގޮތަށް؛ ކޮންމެ ލާރިއެއް ހިސާބު ކުރާނަން."
@@ -46,38 +73,37 @@ addendum_desc,Add a PDF addendum. Saved locally in your browser.,PDF އެޑެނ�
 addendum_view,View / download addendum,އެޑެންޑަމް ބަލާ / ޑައުންލޯޑް
 addendum_upload,Upload PDF,PDF އަޕްލޯޑް
 addendum_clear,Clear,ފޮހެލާ
-version_tip,"<span class=""font-medium"">Tip:</span> Add a PDF download link and a changelog.","<span class=""font-medium"">ޓިޕް:</span> PDF ޑައުންލޯޑް ލިންކެއް އަދި ޗޭންޖްލޮގެއް އެޅުއްވާ."
 about_title,Who am I?,އަހަންނަކީ ކާކު؟
 about_who_heading,Who I am,އަހަންނަކީ ކާކުކަން
-about_who,"A resident of Malé who spent over a decade organizing grassroots civil society across governance, civil rights and conservation. I have seen firsthand how services fail the people who depend on them the most. ",މާލޭގައި ދިރިއުޅޭ، ހިންގުމާއި މަދަނީ ޙައްޤުތަކާއި ތިމާވެށި ހިމާޔަތް ކުރުމުގެ ދާއިރާގައި ދިހަ އަހަރަށް ވުރެ ގިނަ ދުވަހު ރައްޔިތުންގެ ޖަމިއްޔާތައް ހިންގުމުގައި ޙަރަކާތްތެރިވީ މީހެއް. ޚިދުމަތްތައް އެންމެ ބޭނުންވާ ރައްޔިތުންނަށް ފެއިލްވާ ގޮތް އަމިއްލަ ލޮލުން ދެކުނިން.
+about_who,"A resident of Malé who spent over a decade organizing grassroots civil society across governance, civil rights and conservation. I have seen firsthand how services fail the people who depend on them the most.",މާލޭގައި ދިރިއުޅޭ، ހިންގުމާއި މަދަނީ ޙައްޤުތަކާއި ތިމާވެށި ހިމާޔަތް ކުރުމުގެ ދާއިރާގައި ދިހަ އަހަރަށް ވުރެ ގިނަ ދުވަހު ރައްޔިތުންގެ ޖަމިއްޔާތައް ހިންގުމުގައި ޙަރަކާތްތެރިވީ މީހެއް. ޚިދުމަތްތައް އެންމެ ބޭނުންވާ ރައްޔިތުންނަށް ފެއިލްވާ ގޮތް އަމިއްލަ ލޮލުން ދެކުނިން.
 about_why_heading,Why independent,ކީއްވެ އިންޑިޕެންޑެންޓް
-about_why,"My intention is not to divide the vote, or cause chaos, but rather to unite the city, its communities, and usher in a new form of (non-partisan) politics that prioritises accountability, transparency and representation of the people (stakeholders) at every level of decision-making.",އަޅުގަނޑުގެ މަޤްޞަދަކީ ވޯޓު ބައިބައިކުރުން ނުވަތަ ހަލަބޮލިކަން އުފެއްދުން ނޫން، އެކަމަކު ސިޓީ އެއްކޮށް، ޖަމާޢަތްތައް ގުޅުވާ، ނިންމުންތައް ނިންމާ ކޮންމެ ފެންވަރެއްގައި ޒިންމާދާރުކަމާއި ދެފުށް ފެނުމާއި ރައްޔިތުންގެ ތަމްސީލު އިސްކުރާ (ޕާޓީ ނޫން) އައު ސިޔާސީ ވައްޓަފާޅިއެއް ގެނައުން.
+about_why,"My intention is not to divide the vote, or cause chaos, but rather to unite the city, its communities, and usher in a new form of (non-partisan) politics that prioritises accountability, transparency and representation of the people at every level of decision-making.",އަޅުގަނޑުގެ މަޤްޞަދަކީ ވޯޓު ބައިބައިކުރުން ނުވަތަ ހަލަބޮލިކަން އުފެއްދުން ނޫން، އެކަމަކު ސިޓީ އެއްކޮށް، ޖަމާޢަތްތައް ގުޅުވާ، ނިންމުންތައް ނިންމާ ކޮންމެ ފެންވަރެއްގައި ޒިންމާދާރުކަމާއި ދެފުށް ފެނުމާއި ރައްޔިތުންގެ ތަމްސީލު އިސްކުރާ (ޕާޓީ ނޫން) އައު ސިޔާސީ ވައްޓަފާޅިއެއް ގެނައުން.
 about_100days_heading,First 100 days,ފުރަތަމަ 100 ދުވަސް
 about_100days_1,"Publish the full city budget, and state of audit report in plain language online",ސިޓީ ބަޖެޓް ފުރިހަމައަށް އަދި އޮޑިޓް ރިޕޯޓް ސާދާ ބަހުން އޮންލައިންކޮށް ޝާއިޢުކުރުން
 about_100days_2,Launch a public service request tracker with response-time targets,ޖަވާބު ދޭނެ ވަގުތުގެ ޓާގެޓާ އެކު ޢާންމު ޚިދުމަތް ރިކުއެސްޓް ޓްރެކަރ ފެށުން
-about_100days_3,"Host physical townhalls every month, with 'Dhaairaa' councillors hosting weekly neighboorhood listening sessions.",ކޮންމެ މަހަކު ޓައުންހޯލް ބޭއްވުން، 'ދާއިރާ' ކައުންސިލަރުން ކޮންމެ ހަފްތާއަކު އަވަށު އަޑުއެހުންތައް ބޭއްވުން.
+about_100days_3,"Host physical townhalls every month, with 'Dhaairaa' councillors hosting weekly neighbourhood listening sessions.",ކޮންމެ މަހަކު ޓައުންހޯލް ބޭއްވުން، 'ދާއިރާ' ކައުންސިލަރުން ކޮންމެ ހަފްތާއަކު އަވަށު އަޑުއެހުންތައް ބޭއްވުން.
 about_100days_4,Open our digital townhall as an internet public relay chat.,ޑިޖިޓަލް ޓައުންހޯލް އިންޓަނެޓް ޕަބްލިކް ރިލޭ ޗެޓެއް ގޮތަށް ހުޅުވާލުން.
 about_accountable_heading,How to hold me accountable,އަޅުގަނޑު ޒިންމާދާރު ކުރުވާނެ ގޮތް
-about_accountable,"My town hall will be an open platform to get invovled, add to and criticize our every move. As an elected public servant, I am beholden to my residents. If I am failing, every citizen has a right to call for a motion of no-confidence against me, and demand better. I will never shy away from your concerns.",އަޅުގަނޑުގެ ޓައުންހޯލް ވާނީ ބައިވެރިވެ، ޚިޔާލު ފާޅުކޮށް، ކޮންމެ ފިޔަވަޅެއް ފާޑުކިޔޭ ހުޅުވާލެވިފައިވާ ޕްލެޓްފޯމެއް. ރައްޔިތުން ހޮވާފައިވާ ޚާދިމެއްގެ ގޮތުން، އަޅުގަނޑު ޖަވާބުދާރީވާނީ ރައްޔިތުންނަށް. ފެއިލްވެއްޖެނަމަ، ކޮންމެ ރައްޔިތަކަށް ވެސް އިތުބާރު ނެތް ކަމުގެ ވޯޓެއް ނެގުމުގެ ޙައްޤު އޮންނާނެ. ތިޔަބޭފުޅުންގެ ކަންބޮޑުވުންތަކުން ދުވަހަކު ވެސް ފަހަތަށް ނުޖެހޭނަން.
+about_accountable,"My town hall will be an open platform to get involved, add to and criticize our every move. As an elected public servant, I am beholden to my residents. If I am failing, every citizen has a right to call for a motion of no-confidence against me, and demand better.",އަޅުގަނޑުގެ ޓައުންހޯލް ވާނީ ބައިވެރިވެ، ޚިޔާލު ފާޅުކޮށް، ކޮންމެ ފިޔަވަޅެއް ފާޑުކިޔޭ ހުޅުވާލެވިފައިވާ ޕްލެޓްފޯމެއް. ރައްޔިތުން ހޮވާފައިވާ ޚާދިމެއްގެ ގޮތުން، އަޅުގަނޑު ޖަވާބުދާރީވާނީ ރައްޔިތުންނަށް. ފެއިލްވެއްޖެނަމަ، ކޮންމެ ރައްޔިތަކަށް ވެސް އިތުބާރު ނެތް ކަމުގެ ވޯޓެއް ނެގުމުގެ ޙައްޤު އޮންނާނެ.
 about_cta_contact,Contact the campaign,ކެމްޕޭނާ ގުޅޭ
 about_cta_join,Join the team,ޓީމާ ގުޅޭ
 quickfacts_title,Quick facts,އަވަސް މައުލޫމާތު
 qf_focus,Focus,މައިގަނޑު އަމާޒު
-qf_focus_value,"Services, transparency, accessibility",ޚިދުމަތް، ދެފުށް ފެނުން، ފޯރާކަން
+qf_focus_value,"Services, transparency, accessibility","ޚިދުމަތް، ދެފުށް ފެނުން، ފޯރާކަން"
 qf_city,Male' City,މާލެ ސިޓީ
-qf_city_value,"Villingili, Hulhumale', Male'",ވިލިމާލެ، ހުޅުމާލެ، މާލެ
+qf_city_value,"Villingili, Hulhumale', Male'","ވިލިމާލެ، ހުޅުމާލެ، މާލެ"
 qf_campaign,Campaign,ކެމްޕޭން
 qf_campaign_value,Independent,އިންޑިޕެންޑެންޓް
 involved_title,Get involved,ބައިވެރިވޭ
 involved_intro,"This campaign is built from the ground up, powered by the people, for the people. Choose one way to help this week.",މި ކެމްޕޭން ބިނާކުރެވެނީ ބިމުން ފެށިގެން، ރައްޔިތުންގެ ބާރުން، ރައްޔިތުންނަށް. މި ހަފްތާގައި އެއް ގޮތަކަށް އެހީވޭ.
 card_volunteer_title,Volunteer shift,ވޮލަންޓިއަރ ޝިފްޓް
-card_volunteer_body,"Door-to-door, outreach, logistics, and community events.",ގެއިން ގެއަށް، އައުޓްރީޗް، ލޮޖިސްޓިކްސް، އަދި މުޖުތަމައު އިވެންޓްތައް.
+card_volunteer_body,"Door-to-door, outreach, logistics, and community events.","ގެއިން ގެއަށް، އައުޓްރީޗް، ލޮޖިސްޓިކްސް، އަދި މުޖުތަމައު އިވެންޓްތައް."
 card_volunteer_link,Sign up,ސައިން އަޕް
 card_host_title,Host a small meeting,ކުޑަ ބައްދަލުވުމެއް ބާއްވާ
 card_host_body,Bring your neighbors together and we will show up to listen.,ތިޔަ އަވައްޓެރިން އެއްކޮށްލައްވާ، އަޅުގަނޑުމެން އަންނާނީ އަޑުއަހަން.
 card_host_link,Request a visit,ޒިޔާރަތެއް އެދޭ
 card_issue_title,Share an issue,މައްސަލައެއް ހިއްސާ ކުރޭ
-card_issue_body,"Lodge your concerns directly: waste, public safety, access etc",ތިޔަ ކަންބޮޑުވުންތައް ސީދާ ހުށައަޅާ: ކުނި، ޢާންމު ރައްކާތެރިކަން، ފޯރާކަން ފަދަ ކަންކަން.
+card_issue_body,"Lodge your concerns directly: waste, public safety, access etc","ތިޔަ ކަންބޮޑުވުންތައް ސީދާ ހުށައަޅާ: ކުނި، ޢާންމު ރައްކާތެރިކަން، ފޯރާކަން ފަދަ ކަންކަން."
 card_issue_link,Contact,ގުޅޭ
 card_survey_title,Take the Perception Survey,ޕާސެޕްޝަން ސާރވޭ ފުރާ
 card_survey_body,Tell us what matters most to you. 5-minute anonymous survey.,ތިޔަބޭފުޅުންނަށް އެންމެ މުހިންމީ ކޮން ކަމެއްތޯ ބުނެލައްވާ. 5 މިނެޓުގެ ސިއްރު ސާރވޭ.
@@ -91,27 +117,26 @@ visit_form_topics,Topics to discuss,މަޝްވަރާ ކުރާނެ މައުޟޫޢ
 visit_form_submit,Submit request,ރިކުއެސްޓް ހުށައެޅުއްވާ
 visit_form_saved,Visit request saved!,ޒިޔާރަތު ރިކުއެސްޓް ސޭވް ވެއްޖެ!
 brief_title,Want a simple one-page brief?,ސާދާ އެއް ޞަފުޙާ ބްރީފެއް ބޭނުންތޯ؟
-brief_body,"Add a link here to your manifesto PDF, a linktree, or a donation/volunteer platform.",ތިޔަ މެނިފެސްޓޯ PDF، ލިންކްޓްރީ، ނުވަތަ ޑޮނޭޝަން/ވޮލަންޓިއަރ ޕްލެޓްފޯމެއް ލިންކް ކޮށްލައްވާ.
+brief_body,"Add a link here to your manifesto PDF, a linktree, or a donation/volunteer platform.","ތިޔަ މެނިފެސްޓޯ PDF، ލިންކްޓްރީ، ނުވަތަ ޑޮނޭޝަން/ވޮލަންޓިއަރ ޕްލެޓްފޯމެއް ލިންކް ކޮށްލައްވާ."
 events_title,Campaign updates,ކެމްޕޭން އަޕްޑޭޓްތައް
 events_intro,Upcoming events and recent milestones.,ކުރިއަށް ހުރި އިވެންޓްތައް އަދި ފާހަގަކުރެވޭ ކަންކަން.
 event_1_date,FEBRUARY 27 / SATURDAY,ފެބްރުއަރީ 27 / ހޮނިހިރު
 event_1_title,BBQ & Potluck Tharaavees,ބީބީކިއު އަދި ޕޮޓްލަކް ތަރާވީސް
-event_1_desc,"We invited residents to join our first official campaign gathering. Simple living by the beach, with youth bring your concerns to the table, and some food to share around.",ކެމްޕޭންގެ ފުރަތަމަ ރަސްމީ ޖަމާވުމުގައި ބައިވެރިވުމަށް ރައްޔިތުންނަށް ދައުވަތު ދިނީ. ގޮނޑުދޮށުގައި ސާދާ ވަގުތެއް، ޒުވާނުން ކަންބޮޑުވުންތައް ހިއްސާކޮށް، ކެއުން ބެހުން.
+event_1_desc,"We invited residents to join our first official campaign gathering. Simple living by the beach, with youth bring your concerns to the table, and some food to share around.","ކެމްޕޭންގެ ފުރަތަމަ ރަސްމީ ޖަމާވުމުގައި ބައިވެރިވުމަށް ރައްޔިތުންނަށް ދައުވަތު ދިނީ. ގޮނޑުދޮށުގައި ސާދާ ވަގުތެއް، ޒުވާނުން ކަންބޮޑުވުންތައް ހިއްސާކޮށް، ކެއުން ބެހުން."
 event_2_date,JANUARY 15 / THURSDAY,ޖެނުއަރީ 15 / ބުރާސްފަތި
 event_2_title,Hingaa Male' Hingaalun,ހިނގާ މާލެ ހިނގާލުން
-event_2_desc,"A walk held to announce the launch of the Hingaa Male' campaign. Over 20 core supporters joined the walk, marching from Social Centre till Artificial Beach in mainland Male' City.",ހިނގާ މާލެ ކެމްޕޭން ފެށުން އިޢުލާންކުރުމަށް ބޭއްވި ހިނގާލުމެއް. 20 އަށް ވުރެ ގިނަ މައިގަނޑު ސަޕޯޓަރުން ގުޅި، ސޯޝަލް ސެންޓަރުން ފެށިގެން މާލޭ އާޓިފިޝަލް ބީޗާ ހަމައަށް ހިނގީ.
+event_2_desc,"A walk held to announce the launch of the Hingaa Male' campaign. Over 20 core supporters joined the walk, marching from Social Centre till Artificial Beach in mainland Male' City.","ހިނގާ މާލެ ކެމްޕޭން ފެށުން އިޢުލާންކުރުމަށް ބޭއްވި ހިނގާލުމެއް. 20 އަށް ވުރެ ގިނަ މައިގަނޑު ސަޕޯޓަރުން ގުޅި، ސޯޝަލް ސެންޓަރުން ފެށިގެން މާލޭ އާޓިފިޝަލް ބީޗާ ހަމައަށް ހިނގީ."
 event_3_date,[FILL IN],[FILL IN]
 event_3_title,[FILL IN - Event title],[FILL IN]
 event_3_desc,[FILL IN - Event description],[FILL IN]
 contact_title,Contact,ގުޅޭ
-contact_intro,"For volunteering, endorsements, media inquiries, or simply to present your community issues.",ވޮލަންޓިއަރ ކުރުމަށް، ތާއީދު ދެއްވުމަށް، މީޑިއާ ސުވާލުތަކަށް، ނުވަތަ މުޖުތަމައު މައްސަލަތައް ހުށައެޅުއްވުމަށް.
+contact_intro,"For volunteering, endorsements, media inquiries, or simply to present your community issues.","ވޮލަންޓިއަރ ކުރުމަށް، ތާއީދު ދެއްވުމަށް، މީޑިއާ ސުވާލުތަކަށް، ނުވަތަ މުޖުތަމައު މައްސަލަތައް ހުށައެޅުއްވުމަށް."
 contact_email_label,Email: hingaamale@gmail.com,އީމެއިލް: hingaamale@gmail.com
 contact_phone_label,Phone/WhatsApp: 9953458,ފޯން/ވަޓްސްއެޕް: 9953458
-contact_viber_label,Twitter: @hingaamale / @anehkenaa /,ޓްވިޓަރ: @hingaamale / @anehkenaa /
-contact_ig_label,Instagram: @hingaamale / @a.nekkena,އިންސްޓަގްރާމް: @hingaamale / @a.nekkena
-compliance_note,"[FILL IN] Campaign compliance text (""Paid for by…"") as required by law.",[FILL IN]
+contact_viber_label,Twitter: @hingaamale,ޓްވިޓަރ: @hingaamale
+contact_ig_label,Instagram: @hingaamale,އިންސްޓަގްރާމް: @hingaamale
 signup_title,Join the campaign,ކެމްޕޭނާ ގުޅޭ
-signup_intro,"Be part of the founding team. We listen before we act, help us hear you out.",ފައުންޑިން ޓީމުގެ ބައެއް ކަމުގައި ވޭ. ޢަމަލު ކުރުމުގެ ކުރިން އަޅުގަނޑުމެން އަޑުއަހަން — ތިޔަ އަޑު އިއްވާ.
+signup_intro,"Be part of the founding team. We listen before we act, help us hear you out.","ފައުންޑިން ޓީމުގެ ބައެއް ކަމުގައި ވޭ. ޢަމަލު ކުރުމުގެ ކުރިން އަޅުގަނޑުމެން އަޑުއަހަން — ތިޔަ އަޑު އިއްވާ."
 form_name,Name,ނަން
 form_email,Email,އީމެއިލް
 form_phone,Phone / WhatsApp,ފޯން / ވަޓްސްއެޕް
@@ -137,7 +162,7 @@ opt_host,Host a meeting,ބައްދަލުވުމެއް ބާއްވާ
 opt_issue,Community issue,މުޖުތަމައު މައްސަލަ
 opt_media,Media / press,މީޑިއާ / ނޫސްވެރިކަން
 form_submit,Submit,ހުށައެޅުއްވާ
-privacy_note,"By submitting, you agree to receive campaign updates. Your information is kept confidential and used only for campaign communications.",ހުށައެޅުއްވުމުން ކެމްޕޭން އަޕްޑޭޓްތައް ލިބޭނެ ކަމަށް އެއްބަސްވެއެވެ. ތިޔަ މައުލޫމާތު ސިއްރުކޮށް ބެލެހެއްޓޭނެ، ބޭނުންކުރާނީ ހަމައެކަނި ކެމްޕޭން މުވާސަލާތަށް.
+privacy_note,"By submitting, you agree to receive campaign updates. Your information is kept confidential and used only for campaign communications.","ހުށައެޅުއްވުމުން ކެމްޕޭން އަޕްޑޭޓްތައް ލިބޭނެ ކަމަށް އެއްބަސްވެއެވެ. ތިޔަ މައުލޫމާތު ސިއްރުކޮށް ބެލެހެއްޓޭނެ، ބޭނުންކުރާނީ ހަމައެކަނި ކެމްޕޭން މުވާސަލާތަށް."
 ph_name,Ahmed Aiham,އަޙްމަދު އައިހަމް
 ph_email,hingaamale@gmail.com,hingaamale@gmail.com
 ph_phone,9953458,9953458
@@ -168,15 +193,3 @@ th_amount,Amount,ޢަދަދު
 th_total,Total,ޖުމްލަ
 loading,Loading data...,ޑޭޓާ ލޯޑުކުރެވެނީ...
 ledger_note,These records are pulled directly from our campaign finance spreadsheet.,މި ރެކޯޑުތައް ނެގެނީ ސީދާ އަޅުގަނޑުމެންގެ ކެމްޕޭން ފައިނޭންސް ސްޕްރެޑްޝީޓުން.
-chart_density_title,Population Density (per km²),އާބާދީ ބޯމިން (ކިލޯ މީޓަރަކަށް)
-chart_revenue_title,Male' City Council Budget vs National Budget,ކައުންސިލް ބަޖެޓް vs ގައުމީ ބަޖެޓް
-chart_revenue_council,Male' City Council (MVR 487.2M) *2025,މާލެ ސިޓީ ކައުންސިލް (MVR 487.2M)
-chart_revenue_national,National Budget (MVR 64.2B) *2026,ގައުމީ ބަޖެޓް (MVR 130.8B)
-chart_budget_male_title,MCC Budget Breakdown,ކައުންސިލް ބަޖެޓް ބެހިފައިވާ ގޮތް
-chart_budget_others_title,National Block Grants to All Councils (2026),ހުރިހާ ކައުންސިލްތަކަށް ދޫކުރި ބްލޮކް ގްރާންޓް (2026)
-chart_housing_title,Housing Cost (% of income),ބޯހިޔާވެހިކަމުގެ ޚަރަދު (އާމްދަނީގެ %)
-chart_wage_title,Minimum Wage vs Average Rent (MVR),މިނިމަމް ވެއިޖް vs އެވެރެޖް ކުލި (MVR)
-chart_discrepancy_title,Rent Affordability Gap,ކުލީގެ ދެމެހެއްޓެނިވިކަމުގެ ފަރަގު
-chart_disc_wage,Lowest minimum wage,އެންމެ ކުޑަ މިނިމަމް ވެއިޖް
-chart_disc_gap,Monthly gap to afford average rent (MVR 15000),އެވެރެޖް ކުލި ދެއްކުމުގެ މަހު ފަރަގު (MVR 15000)
-chart_disc_note,A worker earning the lowest minimum wage would need to spend 3.3× their entire monthly salary to cover average rent alone.,އެންމެ ކުޑަ މިނިމަމް ވެއިޖް ލިބޭ މީހަކު އެވެރެޖް ކުލި ދައްކަން މުޅި މުސާރައިގެ 3.3 ގުނަ ހޭދަ ކުރަންޖެހޭނެ.
