@@ -11,7 +11,7 @@ nav_volunteer,Volunteer,ވޮލަންޓިއަރ
 phase_label,Phase 1: Listening,ފޭސް 1: އަޑުއެހުން
 hero_kicker,"Mayor of Male' City, Maldives",މާލެ ސިޓީ، ދިވެހިރާއްޖެގެ މޭޔަރ
 hero_title,"A community-first vision for a pedestrianized Male', dignified living for everyone",ހިނގާބިނގާވެ އުޅެވޭ މާލެއެއް ހެދުމަށް މުޖުތަމައު އިސް ތަސައްވުރެއް، ކޮންމެ މީހަކަށް ކަރާމާތްތެރި ދިރިއުޅުން
-hero_subtitle,"We deserve a mayor who puts residents first and never a party. Focused on everyday services: decongestion, waste, public safety and a transparent adminstration that improves YOUR daily quality of life.",އަޅުގަނޑުމެންނަށް ޙައްޤީ ރައްޔިތުން އިސްކޮށް ދުވަހަކުވެސް ޕާޓީއެއް ނޫން މޭޔަރެއް. ކޮންމެ ދުވަހެއްގެ ޚިދުމަތްތަކަށް އަމާޒު: ތޮއްޖެހުން ކުޑަކުރުން، ކުނި، ޢާންމު ރައްކާތެރިކަން، އަދި ތިޔަބޭފުޅުންގެ ދިރިއުޅުމުގެ ފެންވަރު ރަނގަޅުކުރާ ދެފުށް ފެންނަ ހިންގުމެއް.
+hero_subtitle,"We deserve a mayor who puts residents first and never a party. Focused on everyday services: decongestion, waste, public safety and a transparent administration that improves YOUR daily quality of life.",އަޅުގަނޑުމެންނަށް ޙައްޤީ ރައްޔިތުން އިސްކޮށް ދުވަހަކުވެސް ޕާޓީއެއް ނޫން މޭޔަރެއް. ކޮންމެ ދުވަހެއްގެ ޚިދުމަތްތަކަށް އަމާޒު: ތޮއްޖެހުން ކުޑަކުރުން، ކުނި، ޢާންމު ރައްކާތެރިކަން، އަދި ތިޔަބޭފުޅުންގެ ދިރިއުޅުމުގެ ފެންވަރު ރަނގަޅުކުރާ ދެފުށް ފެންނަ ހިންގުމެއް.
 cta_volunteer,Volunteer with us!,އަޅުގަނޑުމެންނާ އެކު ވޮލަންޓިއަރ ކުރޭ!
 cta_manifesto,Read the plan,ޕްލޭން ކިޔާ
 cta_get_involved,Get involved,ބައިވެރިވޭ
@@ -103,7 +103,7 @@ card_host_title,Host a small meeting,ކުޑަ ބައްދަލުވުމެއް ބާ�
 card_host_body,Bring your neighbors together and we will show up to listen.,ތިޔަ އަވައްޓެރިން އެއްކޮށްލައްވާ، އަޅުގަނޑުމެން އަންނާނީ އަޑުއަހަން.
 card_host_link,Request a visit,ޒިޔާރަތެއް އެދޭ
 card_issue_title,Share an issue,މައްސަލައެއް ހިއްސާ ކުރޭ
-card_issue_body,"Lodge your concerns directly: waste, public safety, access etc","ތިޔަ ކަންބޮޑުވުންތައް ސީދާ ހުށައަޅާ: ކުނި، ޢާންމު ރައްކާތެރިކަން، ފޯރާކަން ފަދަ ކަންކަން."
+card_issue_body,"Lodge your concerns directly: waste, public safety, access, etc.","ތިޔަ ކަންބޮޑުވުންތައް ސީދާ ހުށައަޅާ: ކުނި، ޢާންމު ރައްކާތެރިކަން، ފޯރާކަން ފަދަ ކަންކަން."
 card_issue_link,Contact,ގުޅޭ
 card_survey_title,Take the Perception Survey,ޕާސެޕްޝަން ސާރވޭ ފުރާ
 card_survey_body,Tell us what matters most to you. 5-minute anonymous survey.,ތިޔަބޭފުޅުންނަށް އެންމެ މުހިންމީ ކޮން ކަމެއްތޯ ބުނެލައްވާ. 5 މިނެޓުގެ ސިއްރު ސާރވޭ.
@@ -122,10 +122,10 @@ events_title,Campaign updates,ކެމްޕޭން އަޕްޑޭޓްތައް
 events_intro,Upcoming events and recent milestones.,ކުރިއަށް ހުރި އިވެންޓްތައް އަދި ފާހަގަކުރެވޭ ކަންކަން.
 event_1_date,FEBRUARY 27 / SATURDAY,ފެބްރުއަރީ 27 / ހޮނިހިރު
 event_1_title,BBQ & Potluck Tharaavees,ބީބީކިއު އަދި ޕޮޓްލަކް ތަރާވީސް
-event_1_desc,"We invited residents to join our first official campaign gathering. Simple living by the beach, with youth bring your concerns to the table, and some food to share around.","ކެމްޕޭންގެ ފުރަތަމަ ރަސްމީ ޖަމާވުމުގައި ބައިވެރިވުމަށް ރައްޔިތުންނަށް ދައުވަތު ދިނީ. ގޮނޑުދޮށުގައި ސާދާ ވަގުތެއް، ޒުވާނުން ކަންބޮޑުވުންތައް ހިއްސާކޮށް، ކެއުން ބެހުން."
+event_1_desc,"We invited residents to join our first official campaign gathering. Simple living by the beach, with youth bringing their concerns to the table, and some food to share around.","ކެމްޕޭންގެ ފުރަތަމަ ރަސްމީ ޖަމާވުމުގައި ބައިވެރިވުމަށް ރައްޔިތުންނަށް ދައުވަތު ދިނީ. ގޮނޑުދޮށުގައި ސާދާ ވަގުތެއް، ޒުވާނުން ކަންބޮޑުވުންތައް ހިއްސާކޮށް، ކެއުން ބެހުން."
 event_2_date,JANUARY 15 / THURSDAY,ޖެނުއަރީ 15 / ބުރާސްފަތި
 event_2_title,Hingaa Male' Hingaalun,ހިނގާ މާލެ ހިނގާލުން
-event_2_desc,"A walk held to announce the launch of the Hingaa Male' campaign. Over 20 core supporters joined the walk, marching from Social Centre till Artificial Beach in mainland Male' City.","ހިނގާ މާލެ ކެމްޕޭން ފެށުން އިޢުލާންކުރުމަށް ބޭއްވި ހިނގާލުމެއް. 20 އަށް ވުރެ ގިނަ މައިގަނޑު ސަޕޯޓަރުން ގުޅި، ސޯޝަލް ސެންޓަރުން ފެށިގެން މާލޭ އާޓިފިޝަލް ބީޗާ ހަމައަށް ހިނގީ."
+event_2_desc,"A walk held to announce the launch of the Hingaa Male' campaign. Over 20 core supporters joined the walk, marching from Social Centre to Artificial Beach in mainland Male' City.","ހިނގާ މާލެ ކެމްޕޭން ފެށުން އިޢުލާންކުރުމަށް ބޭއްވި ހިނގާލުމެއް. 20 އަށް ވުރެ ގިނަ މައިގަނޑު ސަޕޯޓަރުން ގުޅި، ސޯޝަލް ސެންޓަރުން ފެށިގެން މާލޭ އާޓިފިޝަލް ބީޗާ ހަމައަށް ހިނގީ."
 event_3_date,[FILL IN],[FILL IN]
 event_3_title,[FILL IN - Event title],[FILL IN]
 event_3_desc,[FILL IN - Event description],[FILL IN]
