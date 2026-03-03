@@ -25,17 +25,101 @@ html.i18n-loading body {
     opacity: 0;
 }
 
+/* ── Dhivehi (Thaana) font & size overrides ────────────────────
+   Thaana glyphs render noticeably smaller than Latin at the same
+   font-size. We bump the base and headings so the two languages
+   feel visually equivalent.
+──────────────────────────────────────────────────────────────── */
 html[lang="dv"] body {
     font-family: "Faruma", "Noto Sans Thaana", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    font-size: 1.1rem;       /* ~16.5px vs 15px base — compensates for smaller Thaana glyphs */
+    line-height: 1.75;       /* more breathing room for Thaana script */
 }
 
-html[lang="dv"] h1,
-html[lang="dv"] h2,
-html[lang="dv"] h3,
+html[lang="dv"] h1 {
+    font-family: "Noto Sans Thaana", "Faruma", ui-sans-serif, system-ui;
+    font-size: 2.75rem !important;   /* ~41px — matches visual weight of English 3.75rem h1 */
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+html[lang="dv"] h2 {
+    font-family: "Noto Sans Thaana", "Faruma", ui-sans-serif, system-ui;
+    font-size: 2.15rem !important;   /* ~32px — matches English 2.25rem h2 */
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+html[lang="dv"] h3 {
+    font-family: "Noto Sans Thaana", "Faruma", ui-sans-serif, system-ui;
+    font-size: 1.3rem !important;
+    line-height: 1.35;
+    font-weight: 600;
+}
+
 html[lang="dv"] h4,
 html[lang="dv"] h5,
 html[lang="dv"] h6 {
-    font-family: "Noto Sans Thaana", "Faruma", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    font-family: "Noto Sans Thaana", "Faruma", ui-sans-serif, system-ui;
+    font-weight: 600;
+}
+
+/* Bold / semibold harmonisation for Dhivehi */
+html[lang="dv"] .font-semibold,
+html[lang="dv"] .font-bold,
+html[lang="dv"] .font-medium {
+    font-family: "Noto Sans Thaana", "Faruma", ui-sans-serif, system-ui;
+}
+
+html[lang="dv"] .font-semibold {
+    font-weight: 700;        /* Thaana needs heavier weight to look as bold as Latin 600 */
+}
+
+html[lang="dv"] .font-medium {
+    font-weight: 600;        /* Thaana 600 ≈ Latin 500 visual weight */
+}
+
+/* Slightly larger small text in Dhivehi */
+html[lang="dv"] .text-sm {
+    font-size: 0.95rem !important;
+}
+
+html[lang="dv"] .text-xs {
+    font-size: 0.825rem !important;
+}
+
+/* Nav text bump for Dhivehi */
+html[lang="dv"] nav a,
+html[lang="dv"] nav button,
+html[lang="dv"] nav span {
+    font-size: 0.95rem;
+}
+
+/* Hero subtitle bump */
+html[lang="dv"] .text-lg {
+    font-size: 1.2rem !important;
+    line-height: 1.7;
+}
+
+html[lang="dv"] .text-xl {
+    font-size: 1.35rem !important;
+    line-height: 1.65;
+}
+
+/* Button text in Dhivehi */
+html[lang="dv"] a[href],
+html[lang="dv"] button[type="submit"] {
+    line-height: 1.5;
+}
+
+/* ── Responsive Dhivehi heading overrides ─────────────────────── */
+@media (max-width: 768px) {
+    html[lang="dv"] h1 {
+        font-size: 2rem !important;
+    }
+    html[lang="dv"] h2 {
+        font-size: 1.7rem !important;
+    }
 }
 
 a {
