@@ -481,7 +481,7 @@
             </label>
             <label class="block">
               <span class="text-sm text-gray-700" data-i18n="visit_form_phone">Phone number</span>
-              <input name="visit_phone" type="tel" required class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black" placeholder="+960" data-i18n-placeholder="ph_phone" />
+              <input name="visit_phone" type="tel" required maxlength="8" pattern="[0-9]{7,8}" title="Enter your 7-digit Maldivian phone number" class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black" placeholder="7654321" data-i18n-placeholder="ph_phone" />
             </label>
             <label class="block">
               <span class="text-sm text-gray-700" data-i18n="visit_form_ward">Ward</span>
@@ -498,11 +498,11 @@
             </label>
             <label class="block">
               <span class="text-sm text-gray-700" data-i18n="visit_form_date">Preferred date</span>
-              <input name="visit_date" type="date" dir="ltr" class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black" />
+              <input id="visit_date_input" name="visit_date" type="date" required dir="ltr" class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black" />
             </label>
             <label class="block">
               <span class="text-sm text-gray-700" data-i18n="visit_form_attendees">Expected attendees</span>
-              <input name="visit_attendees" type="number" min="1" dir="ltr" class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black" />
+              <input name="visit_attendees" type="number" min="1" step="1" inputmode="numeric" dir="ltr" class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black" />
             </label>
             <label class="block">
               <span class="text-sm text-gray-700" data-i18n="visit_form_topics">Topics to discuss</span>
@@ -573,11 +573,11 @@
               </label>
               <label class="block">
                 <span class="text-sm text-gray-700" data-i18n="form_phone">Phone / WhatsApp</span>
-                <input dir="ltr" name="phone" type="tel" required class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black" placeholder="+960" data-i18n-placeholder="ph_phone" />
+                <input dir="ltr" name="phone" type="tel" required maxlength="8" pattern="[0-9]{7,8}" title="Enter your 7-digit Maldivian phone number" class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black" placeholder="7654321" data-i18n-placeholder="ph_phone" />
               </label>
               <label class="block">
                 <span class="text-sm text-gray-700" data-i18n="form_id_card">ID Card Number</span>
-                <input dir="ltr" name="id_card" type="text" required class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black" placeholder="A000000" data-i18n-placeholder="ph_id_card" />
+                <input dir="ltr" name="id_card" type="text" required maxlength="7" pattern="[A-Za-z][0-9]{6}" title="ID card format: one letter followed by 6 digits (e.g. A123456)" class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black" placeholder="A000000" data-i18n-placeholder="ph_id_card" />
               </label>
               <label class="block">
                 <span class="text-sm text-gray-700" data-i18n="form_ward">Ward</span>
@@ -1012,6 +1012,13 @@
     }
 
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const todayStr = new Date().toISOString().split('T')[0];
+    const tomorrowDate = new Date(); tomorrowDate.setDate(tomorrowDate.getDate() + 1);
+    const tomorrowStr = tomorrowDate.toISOString().split('T')[0];
+    const visitDateInput = document.getElementById('visit_date_input');
+    if (visitDateInput) { visitDateInput.min = todayStr; visitDateInput.value = tomorrowStr; }
+
     renderAddendumLink();
     loadLanguage();
   </script>
