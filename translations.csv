@@ -110,6 +110,7 @@ card_survey_body,Tell us what matters most to you. 5-minute anonymous survey.,ތ
 card_survey_link,Start survey,ސާރވޭ ފަށާ
 visit_form_title,Request a neighborhood visit,އަވަށު ޒިޔާރަތެއް އެދޭ
 visit_form_name,Your name,ތިޔަ ނަން
+visit_form_phone,Phone number,ފޯނު ނަންބަރު
 visit_form_ward,Ward,ވޯޑް
 visit_form_date,Preferred date,ބޭނުންވާ ތާރީޚް
 visit_form_attendees,Expected attendees,ބައިވެރިވާނެ ކަމަށް ލަފާކުރެވޭ ޢަދަދު
