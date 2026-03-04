@@ -573,7 +573,7 @@
               </label>
               <label class="block">
                 <span class="text-sm text-gray-700" data-i18n="form_id_card">ID Card Number</span>
-                <input dir="ltr" name="id_card" type="text" class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black" placeholder="A000000" data-i18n-placeholder="ph_id_card" />
+                <input dir="ltr" name="id_card" type="text" required class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black" placeholder="A000000" data-i18n-placeholder="ph_id_card" />
               </label>
               <label class="block">
                 <span class="text-sm text-gray-700" data-i18n="form_ward">Ward</span>
@@ -734,14 +734,23 @@
       const btn = form.querySelector('[type="submit"]');
       const params = new URLSearchParams();
       params.append('origin', window.location.origin);
-      params.append('Name', data.name);
-      params.append('Email', data.email);
-      params.append('Phone', data.phone);
-      params.append('IDCard', data.id_card);
-      params.append('Ward', data.ward);
-      params.append('Concern', data.concern);
-      params.append('Interest', data.interest);
+
+      // Map form field names to the parameter keys expected by the Apps Script
+      const fieldMap = {
+        name: 'Name',
+        email: 'Email',
+        phone: 'Phone',
+        id_card: 'IDCard',      // server now has its own column
+        ward: 'Ward',
+        concern: 'Concern',
+        interest: 'Interest'
+      };
+      for (const [key, value] of Object.entries(data)) {
+        const paramKey = fieldMap[key] || key;
+        params.append(paramKey, value);
+      }
       params.append('form_type', 'volunteer');
+
       btn.disabled = true; btn.style.opacity = '0.6';
       try {
         await fetch(SIGNUP_WEBAPP_URL, { method: 'POST', mode: 'no-cors', body: params });
