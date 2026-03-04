@@ -131,10 +131,10 @@ event_3_title,[FILL IN - Event title],[FILL IN]
 event_3_desc,[FILL IN - Event description],[FILL IN]
 contact_title,Contact,ގުޅޭ
 contact_intro,"For volunteering, endorsements, media inquiries, or simply to present your community issues.","ވޮލަންޓިއަރ ކުރުމަށް، ތާއީދު ދެއްވުމަށް، މީޑިއާ ސުވާލުތަކަށް، ނުވަތަ މުޖުތަމައު މައްސަލަތައް ހުށައެޅުއްވުމަށް."
-contact_email_label,Email: hingaamale@gmail.com,އީމެއިލް: hingaamale@gmail.com
-contact_phone_label,Phone/WhatsApp: 9953458,ފޯން/ވަޓްސްއެޕް: 9953458
-contact_viber_label,Twitter: @hingaamale,ޓްވިޓަރ: @hingaamale
-contact_ig_label,Instagram: @hingaamale,އިންސްޓަގްރާމް: @hingaamale
+contact_email_label,Email:,އީމެއިލް:
+contact_phone_label,Phone/WhatsApp:,ފޯން/ވަޓްސްއެޕް:
+contact_twitter_label,Twitter:,ޓްވިޓަރ:
+contact_ig_label,Instagram:,އިންސްޓަގްރާމް:
 signup_title,Join the campaign,ކެމްޕޭނާ ގުޅޭ
 signup_intro,"Be part of the founding team. We listen before we act, help us hear you out.","ފައުންޑިން ޓީމުގެ ބައެއް ކަމުގައި ވޭ. ޢަމަލު ކުރުމުގެ ކުރިން އަޅުގަނޑުމެން އަޑުއަހަން — ތިޔަ އަޑު އިއްވާ."
 form_name,Name,ނަން
@@ -146,6 +146,7 @@ form_ward_galolhu,Galolhu,ގަލޮޅު
 form_ward_machchangolhi,Machchangolhi,މައްޗަންގޮޅި
 form_ward_maafannu,Maafannu,މާފަންނު
 form_ward_hulhumale,Hulhumalé Phase 1,ހުޅުމާލެ ފޭސް 1
+form_ward_hulhumale2,Hulhumalé Phase 2,ހުޅުމާލެ ފޭސް 2
 form_ward_vilimale,Villingili,ވިލިމާލެ
 form_ward_select,Select your ward,ތިޔަ ވޯޑް އިޚްތިޔާރު ކުރައްވާ
 form_concern,What concerns you most?,އެންމެ ބޮޑު ކަންބޮޑުވުމަކީ ކޮބާ؟
