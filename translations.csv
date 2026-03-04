@@ -197,3 +197,7 @@ th_amount,Amount,ޢަދަދު
 th_total,Total,ޖުމްލަ
 loading,Loading data...,ޑޭޓާ ލޯޑުކުރެވެނީ...
 ledger_note,These records are pulled directly from our campaign finance spreadsheet.,މި ރެކޯޑުތައް ނެގެނީ ސީދާ އަޅުގަނޑުމެންގެ ކެމްޕޭން ފައިނޭންސް ސްޕްރެޑްޝީޓުން.
+sop_label,Financial S.O.P,ފައިނޭންޝަލް S.O.P
+sop_1,"Individual donations are capped at <strong class=""text-[color:var(--ink)]"">MVR 10,000 per person, per week</strong>.","އެންމެ ގިނަވެގެން މީހަކަށް، ހަފްތާއެއްގައި <strong class=""text-[color:var(--ink)]"">10 ހާސް ރުފިޔާ</strong>"
+sop_2,No unknown or unverified source of funds will be accepted.,ނޭންގޭ ފަރާތެއްގެ ފައިސާ ބަލައެއްނުގަނެވޭނެ
+sop_3,"Working people have no real savings — <strong class=""text-[color:var(--ink)]"">even MVR 20 is a lot</strong>. Every contribution is treated with the same respect and gratitude.","މަސައްކަތްތެރިންގެ މާބޮޑު ފައިސާއެއް ރައްކަލެއް ނުކުރެވޭ! <strong class=""text-[color:var(--ink)]"">އެންމެ 20 ރުފިޔާ</strong>އަކީވެސް ބޮޑު އަދަދެއް"
