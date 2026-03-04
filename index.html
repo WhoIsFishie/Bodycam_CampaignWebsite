@@ -151,13 +151,13 @@
         <p class="mt-4 text-gray-700 leading-relaxed" data-i18n="pledges_intro">Every promise has a number and a deadline.</p>
       </div>
       <div class="mt-10 space-y-4" id="platformAccordions"></div>
-      <div class="mt-10 border border-[color:var(--line)] p-6 rtl-text">
-        <p class="text-sm text-gray-700">
+      <!--  <div class="mt-10 border border-[color:var(--line)] p-6 rtl-text">
+       <p class="text-sm text-gray-700">
           <span data-i18n="pledges_pdf">Want the full plan as a PDF?</span>
           <a class="underline font-medium" href="#" onclick="event.preventDefault(); toast(t('toast_pdf_tip'));"
             data-i18n="pledges_add_download">Add download link</a>.
         </p>
-      </div>
+      </div> -->
     </div>
   </section>
 
@@ -363,7 +363,7 @@
             <a href="#get-involved" class="inline-flex items-center justify-center border border-[color:var(--ink)] bg-[color:var(--ink)] text-white px-5 py-3 font-medium hover:bg-black transition" data-i18n="manifesto_cta_involved">Get involved</a>
           </div>
         </div>
-        <div class="md:col-span-4">
+        <!-- <div class="md:col-span-4">
           <div class="border border-[color:var(--line)] p-6 rtl-text">
             <h3 class="font-semibold" data-i18n="version_title">Version</h3>
             <p class="mt-2 text-sm text-gray-700" data-i18n="version_value">v1.0 — February 2026</p>
@@ -379,7 +379,7 @@
               <p id="addendumMeta" class="mt-3 text-xs text-gray-600 ltr"></p>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -629,7 +629,7 @@
     <div class="mx-auto max-w-6xl px-6">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 rtl-row rtl-text">
         <p class="text-sm text-gray-700">&copy; <span id="year"></span> <span data-i18n="footer_brand">Hingaa Male'</span></p>
-        <p class="text-sm text-gray-600" data-i18n="footer_paid">[FILL IN] Paid for by [campaign committee name]</p>
+        <a href="ledger.html" class="text-sm text-gray-600 hover:underline" data-i18n="footer_paid">[FILL IN] Paid for by [campaign committee name]</a>
       </div>
     </div>
   </footer>
