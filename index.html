@@ -480,6 +480,10 @@
               <input name="visit_name" required class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black" />
             </label>
             <label class="block">
+              <span class="text-sm text-gray-700" data-i18n="visit_form_phone">Phone number</span>
+              <input name="visit_phone" type="tel" required class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black" placeholder="+960" data-i18n-placeholder="ph_phone" />
+            </label>
+            <label class="block">
               <span class="text-sm text-gray-700" data-i18n="visit_form_ward">Ward</span>
               <select name="visit_ward" required class="mt-1 w-full border border-[color:var(--line)] px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-black">
                 <option value="" data-i18n="form_ward_select">Select your ward</option>
@@ -771,6 +775,7 @@
       const params = new URLSearchParams();
       params.append('form_type', 'visit');
       params.append('visit_name', data.visit_name);
+      params.append('visit_phone', data.visit_phone);
       params.append('visit_ward', data.visit_ward);
       params.append('visit_date', data.visit_date);
       params.append('visit_attendees', data.visit_attendees);
