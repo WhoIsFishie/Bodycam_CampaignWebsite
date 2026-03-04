@@ -304,3 +304,11 @@ html[dir="rtl"] ol.list-decimal {
     }
 
 }
+
+/* ── Accordion button cursor ──────────────────────────────────
+   Pointer cursor for interactive accordion buttons (works in RTL & LTR)
+──────────────────────────────────────────────────────────────── */
+#platformAccordions button,
+#issuesAccordions button {
+    cursor: pointer;
+}
