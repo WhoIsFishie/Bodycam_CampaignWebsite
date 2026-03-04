@@ -5,15 +5,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ހިންގާ މާލެ — މޭޔަރ ކެމްޕޭން</title>
-  <meta name="description" content="Ahmed Aiham, the only contesting independent candidate (#1) for Male' City Mayor. Focused on everyday services and promise to put YOU first and never a party." />
+  <meta name="description" content="97,000 per km². 3.5× Manhattan. Malé deserves a mayor who works for residents, not a party." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://hingaamale.mv/" />
-  <meta property="og:title" content="Hingaa Male' — #1 Campaign Manifesto" />
-  <meta property="og:description" content="Ahmed Aiham, the only contesting independent candidate (#1) for Male' City Mayor. Focused on everyday services and promise to put YOU first and never a party." />
-  <meta property="og:image" content="[FILL IN - og-image.jpg]" />
+  <meta property="og:title" content="Hingaa Male' — Mayor Campaign" />
+  <meta property="og:description" content="97,000 per km². 3.5× Manhattan. Malé deserves a mayor who works for residents, not a party." />
+  <meta property="og:image" content="https://hingaamale.com/headshot.webp" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Hingaa Male' — #1 Campaign Manifesto" />
-  <meta name="twitter:description" content="Ahmed Aiham, the only contesting independent candidate (#1) for Male' City Mayor. Focused on everyday services and promise to put YOU first and never a party." />
+  <meta name="twitter:title" content="Hingaa Male' — Mayor Campaign" />
+  <meta name="twitter:description" content="97,000 per km². 3.5× Manhattan. Malé deserves a mayor who works for residents, not a party." />
   <link rel="canonical" href="https://hingaamale.mv/" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,7 +76,7 @@
         <div class="md:col-span-7 rtl-text">
           <p class="text-sm uppercase tracking-widest text-gray-600" data-i18n="hero_kicker">Mayor of Male' City, Maldives</p>
           <h1 class="mt-4 text-4xl md:text-6xl font-semibold leading-[1.05] tracking-tight" data-i18n-html="hero_title">
-            <span class="ltr-inline">97,000</span> per km². <span class="ltr-inline">3.5</span>× Manhattan. This is your city.
+            We deserve a mayor who puts residents first and never a party. Focused on everyday services.
           </h1>
           <p class="mt-6 text-lg md:text-xl text-gray-700 leading-relaxed" data-i18n="hero_subtitle">
             We deserve a mayor who puts residents first and never a party. Focused on everyday services: waste, public spaces, safe streets, a transparent administration, and improving YOUR daily quality of life.
@@ -105,7 +105,7 @@
       <div class="mt-8 border-t border-[color:var(--line)] pt-6 grid gap-6 text-sm sm:grid-cols-2 md:grid-cols-4 rtl-text">
         <div class="min-w-0">
           <p class="text-gray-600" data-i18n="contact_campaign_email">Campaign email</p>
-          <a class="font-medium underline break-words ltr" href="/cdn-cgi/l/email-protection#197170777e78787478757c597e74787075377a7674"><span class="__cf_email__" data-cfemail="86eeefe8e1e7e7ebe7eae3c6e1ebe7efeaa8e5e9eb">[email&#160;protected]</span></a>
+          <a class="font-medium underline break-words ltr" href="mailto:hingaamale@gmail.com">hingaamale@gmail.com</a>
         </div>
         <div class="min-w-0">
           <p class="text-gray-600" data-i18n="contact_whatsapp">WhatsApp</p>
@@ -548,7 +548,7 @@
           <h2 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="contact_title">Contact</h2>
           <p class="mt-4 text-gray-700 leading-relaxed" data-i18n="contact_intro">For volunteering, endorsements, media, or community issues.</p>
           <div class="mt-6 space-y-3 text-sm">
-            <p><span class="text-gray-600" data-i18n="contact_email_label">Email: </span><a class="underline font-medium ltr" href="/cdn-cgi/l/email-protection#7f171611181e1e121e131a3f18121e1613511c1012"><span class="__cf_email__" data-cfemail="375f5e595056565a565b5277505a565e5b1954585a">[email&#160;protected]</span></a></p>
+            <p><span class="text-gray-600" data-i18n="contact_email_label">Email: </span><a class="underline font-medium ltr" href="mailto:hingaamale@gmail.com">hingaamale@gmail.com</a></p>
             <p><span class="text-gray-600" data-i18n="contact_phone_label">Phone/WhatsApp: </span><a class="font-medium ltr" href="https://wa.me/9609953458">9953458</a></p>
             <p><span class="text-gray-600" data-i18n="contact_twitter_label">Twitter: </span><a class="underline font-medium ltr" href="https://x.com/hingaamale" target="_blank" rel="noreferrer">@hingaamale</a></p>
             <p><span class="text-gray-600" data-i18n="contact_ig_label">Instagram: </span><a class="underline font-medium ltr" href="https://www.instagram.com/hingaamale/" target="_blank" rel="noreferrer">@hingaamale</a></p>
@@ -637,7 +637,7 @@
     </div>
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     // ------- Campaign Constants -------
     const CAMPAIGN_WHATSAPP = '[FILL IN]';
     const CAMPAIGN_EMAIL = 'hingaamale@gmail.com';
@@ -990,4 +990,16 @@
       panel.classList.toggle('hidden');
       btn.setAttribute('aria-expanded', String(!isOpen));
       const label = btn.querySelector('span[aria-hidden="true"]');
-      if (label) label.textContent = isOpen ? t('accordion_
+      if (label) label.textContent = isOpen ? t('accordion_open') : t('accordion_close');
+    }
+
+    function escapeHtml(str) {
+      return String(str || '').replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#039;');
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    renderAddendumLink();
+    loadLanguage();
+  </script>
+</body>
+</html>
