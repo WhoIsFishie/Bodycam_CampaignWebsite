@@ -445,7 +445,7 @@
     <div class="mx-auto max-w-6xl px-6">
       <div class="max-w-2xl rtl-text">
         <h2 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="involved_title">Get involved</h2>
-        <p class="mt-4 text-gray-700 leading-relaxed" data-i18n="involved_intro">This campaign is built ward-by-ward across Henveiru, Galolhu, Machchangolhi, Maafannu, Hulhumalé, and Vilimalé.</p>
+        <p class="mt-4 text-gray-700 leading-relaxed" data-i18n="involved_intro">This campaign is built ward-by-ward across Henveiru, Galolhu, Machchangolhi, Maafannu, Hulhumalé, and Villingili.</p>
       </div>
       <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div class="flex flex-col border border-[color:var(--line)] p-6 rtl-text">
@@ -472,7 +472,7 @@
 
       <!-- Neighborhood Visit Request Form -->
       <div class="mt-10">
-        <details class="border border-[color:var(--line)] group">
+        <details class="border border-[color:var(--line)] group" open>
           <summary class="cursor-pointer px-6 py-4 font-semibold text-sm rtl-text" data-i18n="visit_form_title">Request a neighborhood visit</summary>
           <form class="px-6 pb-6 space-y-3" onsubmit="handleVisitRequest(event)">
             <label class="block">
@@ -820,9 +820,9 @@
 
     // ------- i18n -------
     const LANG_KEY = 'campaign_lang_v1';
-    let currentLang = 'dv';
-    document.documentElement.lang = 'dv';
-    document.documentElement.dir = 'rtl';
+    let currentLang = 'en';
+    document.documentElement.lang = 'en';
+    document.documentElement.dir = 'ltr';
     const translations = { en: {}, dv: {} };
     let pledgeItemsByLang = { en: [], dv: [] };
     let issueItemsByLang = { en: [], dv: [] };
@@ -910,7 +910,7 @@
     async function loadLanguage() {
       await Promise.all([loadTranslationsCSV(), loadPledgesCSV(), loadIssuesCSV()]);
       const saved = localStorage.getItem(LANG_KEY);
-      currentLang = (saved === 'dv' || saved === 'en') ? saved : 'dv';
+      currentLang = (saved === 'dv' || saved === 'en') ? saved : 'en';
       applyTranslations();
       document.documentElement.classList.remove('i18n-loading');
     }
