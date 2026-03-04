@@ -134,7 +134,7 @@
   <!-- Video Embed -->
   <section class="py-10 border-b border-[color:var(--line)]">
     <div class="mx-auto max-w-6xl px-6">
-      <details class="group" open>
+      <details class="group">
         <summary class="cursor-pointer text-sm font-medium underline rtl-text" data-i18n="video_title">Watch: Why this campaign</summary>
         <div class="mt-4 aspect-video">
           <iframe class="w-full h-full" src="https://www.youtube.com/embed/FWxOt_ZxEUU?si=LmJ5QZqQSCpA6diE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -487,8 +487,9 @@
                 <option value="galolhu" data-i18n="form_ward_galolhu">Galolhu</option>
                 <option value="machchangolhi" data-i18n="form_ward_machchangolhi">Machchangolhi</option>
                 <option value="maafannu" data-i18n="form_ward_maafannu">Maafannu</option>
-                <option value="hulhumale" data-i18n="form_ward_hulhumale">Hulhumalé</option>
-                <option value="vilimale" data-i18n="form_ward_vilimale">Vilimalé</option>
+                <option value="hulhumale" data-i18n="form_ward_hulhumale">Hulhumalé Phase 1</option>
+                <option value="hulhumale2" data-i18n="form_ward_hulhumale2">Hulhumalé Phase 2</option>
+                <option value="vilimale" data-i18n="form_ward_vilimale">Villingili</option>
               </select>
             </label>
             <label class="block">
@@ -547,10 +548,10 @@
           <h2 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="contact_title">Contact</h2>
           <p class="mt-4 text-gray-700 leading-relaxed" data-i18n="contact_intro">For volunteering, endorsements, media, or community issues.</p>
           <div class="mt-6 space-y-3 text-sm">
-            <p><span class="text-gray-600" data-i18n="contact_email_label">Email:</span> <a class="underline font-medium ltr" href="mailto:hingaamale@gmail.com">hingaamale@gmail.com</a></p>
-            <p><span class="text-gray-600" data-i18n="contact_phone_label">Phone/WhatsApp:</span> <span class="font-medium ltr">9953458</span></p>
-            <p><span class="text-gray-600" data-i18n="contact_viber_label">Viber:</span> <span class="font-medium ltr">[FILL IN]</span></p>
-            <p><span class="text-gray-600" data-i18n="contact_ig_label">Instagram:</span> <a class="underline font-medium ltr" href="https://www.instagram.com/hingaamale/" target="_blank" rel="noreferrer">@hingaamale</a></p>
+            <p><span class="text-gray-600" data-i18n="contact_email_label">Email: </span><a class="underline font-medium ltr" href="mailto:hingaamale@gmail.com">hingaamale@gmail.com</a></p>
+            <p><span class="text-gray-600" data-i18n="contact_phone_label">Phone/WhatsApp: </span><a class="font-medium ltr" href="https://wa.me/9609953458">9953458</a></p>
+            <p><span class="text-gray-600" data-i18n="contact_twitter_label">Twitter: </span><a class="underline font-medium ltr" href="https://x.com/hingaamale" target="_blank" rel="noreferrer">@hingaamale</a></p>
+            <p><span class="text-gray-600" data-i18n="contact_ig_label">Instagram: </span><a class="underline font-medium ltr" href="https://www.instagram.com/hingaamale/" target="_blank" rel="noreferrer">@hingaamale</a></p>
           </div>
         </div>
         <div class="md:col-span-6" id="signup">
@@ -582,8 +583,9 @@
                   <option value="galolhu" data-i18n="form_ward_galolhu">Galolhu</option>
                   <option value="machchangolhi" data-i18n="form_ward_machchangolhi">Machchangolhi</option>
                   <option value="maafannu" data-i18n="form_ward_maafannu">Maafannu</option>
-                  <option value="hulhumale" data-i18n="form_ward_hulhumale">Hulhumalé</option>
-                  <option value="vilimale" data-i18n="form_ward_vilimale">Vilimalé</option>
+                  <option value="hulhumale" data-i18n="form_ward_hulhumale">Hulhumalé Phase 1</option>
+                  <option value="hulhumale2" data-i18n="form_ward_hulhumale2">Hulhumalé Phase 2</option>
+                  <option value="vilimale" data-i18n="form_ward_vilimale">Villingili</option>
                 </select>
               </label>
               <label class="block">
@@ -894,8 +896,7 @@
     async function loadLanguage() {
       await Promise.all([loadTranslationsCSV(), loadPledgesCSV(), loadIssuesCSV()]);
       const saved = localStorage.getItem(LANG_KEY);
-      // default to English if nothing saved
-      currentLang = (saved === 'dv' || saved === 'en') ? saved : 'en';
+      currentLang = (saved === 'dv' || saved === 'en') ? saved : 'dv';
       applyTranslations();
       document.documentElement.classList.remove('i18n-loading');
     }
