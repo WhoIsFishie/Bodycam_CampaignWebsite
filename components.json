@@ -1,0 +1,23 @@
+[
+  {
+    "id": "election-cost-v2",
+    "label": "Election Cost",
+    "labelDv": "ިލެކްޝަން ކޮސްޓް",
+    "description": "Referendum fact check — one election vs. government spending",
+    "file": "components/election-cost-comparisonV2.jsx"
+  },
+  {
+    "id": "campaign-visuals",
+    "label": "Campaign Toolkit",
+    "labelDv": "ކެމްޕޭން ޓޫލްކިޓް",
+    "description": "Brand identity, data infographics, social posts, policy cards, posters",
+    "file": "components/campaign_visuals_v2.jsx"
+  },
+  {
+    "id": "male-plan",
+    "label": "The Malé Plan",
+    "labelDv": "މާލޭ ޕްލޭން",
+    "description": "Six priorities for the world's most densely populated capital",
+    "file": "components/The_Male_Plan_V2.jsx"
+  }
+]
