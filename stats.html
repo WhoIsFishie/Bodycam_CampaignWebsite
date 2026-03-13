@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="i18n-loading">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campaign Stats — Hingaa Male'</title>
+  <meta name="description" content="Live campaign statistics for the Male' City Mayor Campaign." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hingaamale.mv/stats.html" />
+  <meta property="og:title" content="Campaign Stats — Hingaa Male'" />
+  <meta property="og:description" content="Live campaign statistics — volunteers, reach, and momentum." />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Campaign Stats — Hingaa Male'" />
+
+  <link rel="canonical" href="https://hingaamale.mv/stats.html" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thaana:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/faruma" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- React + Babel (CDN — no build step needed) -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+
+  <style>
+    .stat-card { transition: box-shadow 0.15s ease; }
+    .stat-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    canvas { max-width: 100%; }
+  </style>
+</head>
+
+<body class="bg-white text-[color:var(--ink)]">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-[color:var(--line)]">
+    <div class="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between rtl-row">
+      <div class="flex items-center gap-3 rtl-row">
+        <a href="index.html#home" class="font-semibold tracking-tight text-lg" data-i18n="brand">Hingaa Male'</a>
+        <button id="langToggle" type="button" class="text-xs font-medium underline font-system"
+          onclick="toggleLanguage()" aria-label="ބަސް ބަދަލު">EN</button>
+      </div>
+
+      <div class="hidden md:flex items-center gap-6 text-sm rtl-row">
+        <a class="hover:underline" href="index.html#platform" data-i18n="nav_pledges">Pledges</a>
+        <a class="hover:underline" href="index.html#issues" data-i18n="nav_issues">Issues</a>
+        <a class="hover:underline" href="index.html#manifesto" data-i18n="nav_manifesto">Manifesto</a>
+        <a class="hover:underline" href="index.html#about" data-i18n="nav_about">Mee Kaaku?</a>
+        <a class="hover:underline" href="ledger.html" data-i18n="nav_ledger">Ledger</a>
+        <a class="hover:underline font-bold text-[color:var(--ink)]" href="stats.html" data-i18n="nav_stats">Stats</a>
+        <a class="hover:underline" href="index.html#get-involved" data-i18n="nav_get_involved">Get Involved</a>
+        <a class="hover:underline" href="index.html#contact" data-i18n="nav_contact">Contact</a>
+        <a class="inline-flex items-center justify-center border border-[color:var(--ink)] px-3 py-1.5 font-medium hover:bg-[color:var(--ink)] hover:text-white transition"
+          href="index.html#signup" data-i18n="nav_volunteer">Volunteer</a>
+      </div>
+
+      <button class="md:hidden border border-[color:var(--line)] px-3 py-2" aria-controls="mobileMenu"
+        aria-expanded="false" onclick="toggleMobileMenu()">
+        <span class="sr-only">Open menu</span>
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-[color:var(--line)] bg-white">
+      <div class="mx-auto max-w-6xl px-6 py-3 flex flex-col gap-3 text-sm">
+        <a class="hover:underline" href="index.html#platform" data-i18n="nav_pledges">Pledges</a>
+        <a class="hover:underline" href="index.html#issues" data-i18n="nav_issues">Issues</a>
+        <a class="hover:underline" href="index.html#manifesto" data-i18n="nav_manifesto">Manifesto</a>
+        <a class="hover:underline" href="index.html#about" data-i18n="nav_about">Who am I?</a>
+        <a class="hover:underline" href="ledger.html" data-i18n="nav_ledger">Ledger</a>
+        <a class="hover:underline font-bold" href="stats.html" data-i18n="nav_stats">Stats</a>
+        <a class="hover:underline" href="index.html#get-involved" data-i18n="nav_get_involved">Get involved</a>
+        <a class="hover:underline" href="index.html#contact" data-i18n="nav_contact">Contact</a>
+        <a class="inline-flex items-center justify-center border border-[color:var(--ink)] px-3 py-2 font-medium hover:bg-[color:var(--ink)] hover:text-white transition"
+          href="index.html#signup" data-i18n="nav_volunteer">Volunteer</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-6 rtl-text">
+      <p class="text-sm uppercase tracking-widest text-gray-600" data-i18n="stats_subtitle">Campaign Progress</p>
+      <h1 class="mt-4 text-3xl md:text-5xl font-semibold tracking-tight" data-i18n="stats_title">Campaign Statistics</h1>
+      <p class="mt-6 text-lg text-gray-700 leading-relaxed max-w-2xl" data-i18n="stats_intro">
+        A live snapshot of our campaign's reach, momentum, and community support.
+      </p>
+    </div>
+  </header>
+
+  <!-- React Root -->
+  <main class="pb-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <div id="stats-root">
+        <!-- Loading state before React mounts -->
+        <div class="text-center py-16 text-gray-400 text-sm uppercase tracking-widest">Loading stats...</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-[color:var(--line)] py-10">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 rtl-row rtl-text">
+        <p class="text-sm text-gray-700">&copy; <span id="year"></span> <span data-i18n="footer_brand">Hingaa Male'</span></p>
+        <p class="text-sm text-gray-500 ltr">stats.json · last updated manually</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── Vanilla JS: nav, i18n (mirrors ledger.html) ─── -->
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const btn = document.querySelector('button[aria-controls="mobileMenu"]');
+      const isHidden = menu.classList.contains('hidden');
+      menu.classList.toggle('hidden');
+      btn?.setAttribute('aria-expanded', String(isHidden));
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ── CSV Parser ──
+    function parseCSV(text) {
+      const rows = [];
+      let current = '', inQuotes = false;
+      const lines = text.split('\n');
+      for (let i = 0; i < lines.length; i++) {
+        if (inQuotes) { current += '\n' + lines[i]; } else { current = lines[i]; }
+        let quoteCount = 0;
+        for (let j = 0; j < current.length; j++) { if (current[j] === '"') quoteCount++; }
+        inQuotes = quoteCount % 2 !== 0;
+        if (!inQuotes) { rows.push(parseCSVRow(current)); current = ''; }
+      }
+      return rows;
+    }
+    function parseCSVRow(line) {
+      const fields = []; let field = '', inQ = false;
+      for (let i = 0; i < line.length; i++) {
+        const ch = line[i];
+        if (inQ) {
+          if (ch === '"') { if (i + 1 < line.length && line[i + 1] === '"') { field += '"'; i++; } else { inQ = false; } }
+          else { field += ch; }
+        } else {
+          if (ch === '"') { inQ = true; } else if (ch === ',') { fields.push(field); field = ''; } else if (ch !== '\r') { field += ch; }
+        }
+      }
+      fields.push(field); return fields;
+    }
+
+    // ── i18n ──
+    const LANG_KEY = 'campaign_lang_v1';
+    let currentLang = 'en';
+    document.documentElement.lang = 'en';
+    document.documentElement.dir = 'ltr';
+    const translations = { en: {}, dv: {} };
+
+    async function loadTranslationsCSV() {
+      try {
+        const resp = await fetch('translations.csv', { cache: 'no-cache' });
+        const text = await resp.text();
+        const rows = parseCSV(text);
+        if (rows.length < 2) throw new Error('Empty CSV');
+        const headers = rows[0];
+        const enIdx = headers.indexOf('en'), dvIdx = headers.indexOf('dv'), keyIdx = headers.indexOf('key');
+        for (let i = 1; i < rows.length; i++) {
+          const row = rows[i];
+          if (!row[keyIdx]) continue;
+          const key = row[keyIdx].trim();
+          if (enIdx >= 0 && row[enIdx] !== undefined) translations.en[key] = row[enIdx];
+          if (dvIdx >= 0 && row[dvIdx] !== undefined) translations.dv[key] = row[dvIdx];
+        }
+      } catch (e) {
+        console.warn('Could not load translations.csv:', e);
+        translations.en.brand = "Hingaa Male'";
+        translations.en.stats_title = "Campaign Statistics";
+        translations.en.stats_subtitle = "Campaign Progress";
+        translations.en.stats_intro = "A live snapshot of our campaign's reach, momentum, and community support.";
+      }
+    }
+
+    function t(key) {
+      return (translations[currentLang] && translations[currentLang][key]) || translations.en[key] || key;
+    }
+
+    const toggleBtn = document.getElementById('langToggle');
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'dv' ? 'en' : 'dv';
+      localStorage.setItem(LANG_KEY, currentLang);
+      updateLanguage();
+    }
+
+    function updateLanguage() {
+      const isDv = currentLang === 'dv';
+      document.documentElement.lang = currentLang;
+      document.documentElement.dir = isDv ? 'rtl' : 'ltr';
+      document.title = isDv
+        ? 'ކެމްޕޭން ތަފާސްހިސާބު — ހިންގާ މާލެ'
+        : "Campaign Stats — Hingaa Male'";
+      if (toggleBtn) {
+        toggleBtn.textContent = isDv ? 'EN' : 'ދިވެހި';
+        toggleBtn.className = isDv ? "text-xs font-medium underline font-system" : "text-xs font-medium underline font-thaana";
+      }
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const val = t(el.getAttribute('data-i18n'));
+        if (typeof val === 'string') el.textContent = val;
+      });
+      document.documentElement.classList.remove('i18n-loading');
+
+      // Tell React to re-render with new language
+      if (window.__statsSetLang) window.__statsSetLang(currentLang);
+    }
+
+    (async () => {
+      await loadTranslationsCSV();
+      const saved = localStorage.getItem(LANG_KEY);
+      currentLang = (saved === 'dv' || saved === 'en') ? saved : 'en';
+      updateLanguage();
+    })();
+  </script>
+
+  <!-- ─── React App (JSX via Babel Standalone) ─── -->
+  <script type="text/babel">
+    const { useState, useEffect, useRef } = React;
+
+    // ── Palette matching the site's CSS variables ──
+    const INK   = '#0b0b0b';
+    const MUTED = '#6b7280';
+    const LINE  = '#e5e7eb';
+
+    // ─────────────────────────────────────────────
+    // StatCard
+    // ─────────────────────────────────────────────
+    function StatCard({ icon, label, value, unit }) {
+      const display = typeof value === 'number'
+        ? value.toLocaleString()
+        : value;
+      return (
+        <div className="stat-card p-6 border border-[color:var(--line)] bg-white">
+          <div className="text-2xl mb-2">{icon}</div>
+          <div className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-1">{label}</div>
+          <div className="flex items-baseline gap-1">
+            <span className="text-3xl font-bold ltr">{display}</span>
+            {unit && <span className="text-sm text-gray-500 ltr">{unit}</span>}
+          </div>
+        </div>
+      );
+    }
+
+    // ─────────────────────────────────────────────
+    // BarChart (Chart.js)
+    // ─────────────────────────────────────────────
+    function BarChart({ data, lang }) {
+      const canvasRef = useRef(null);
+      const chartRef  = useRef(null);
+
+      useEffect(() => {
+        if (!data || !canvasRef.current) return;
+
+        if (chartRef.current) chartRef.current.destroy();
+
+        const labels = data.map(d => lang === 'dv' ? d.category_dv : d.category_en);
+        const counts  = data.map(d => d.count);
+
+        chartRef.current = new Chart(canvasRef.current, {
+          type: 'bar',
+          data: {
+            labels,
+            datasets: [{
+              label: lang === 'dv' ? 'ކަންތައް' : 'Issues',
+              data: counts,
+              backgroundColor: INK,
+              borderRadius: 2,
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: { display: false },
+              tooltip: { callbacks: { label: ctx => ` ${ctx.parsed.y}` } }
+            },
+            scales: {
+              x: { grid: { display: false }, ticks: { color: MUTED, font: { size: 12 } } },
+              y: {
+                beginAtZero: true,
+                ticks: { stepSize: 1, color: MUTED, font: { size: 12 } },
+                grid: { color: LINE }
+              }
+            }
+          }
+        });
+
+        return () => { if (chartRef.current) chartRef.current.destroy(); };
+      }, [data, lang]);
+
+      return <canvas ref={canvasRef} height="260" />;
+    }
+
+    // ─────────────────────────────────────────────
+    // LineChart (Chart.js)
+    // ─────────────────────────────────────────────
+    function LineChart({ data }) {
+      const canvasRef = useRef(null);
+      const chartRef  = useRef(null);
+
+      useEffect(() => {
+        if (!data || !canvasRef.current) return;
+        if (chartRef.current) chartRef.current.destroy();
+
+        chartRef.current = new Chart(canvasRef.current, {
+          type: 'line',
+          data: {
+            labels: data.map(d => d.date),
+            datasets: [{
+              label: 'Signups',
+              data: data.map(d => d.signups),
+              borderColor: INK,
+              backgroundColor: 'rgba(11,11,11,0.06)',
+              pointBackgroundColor: INK,
+              pointRadius: 5,
+              fill: true,
+              tension: 0.35,
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: { legend: { display: false } },
+            scales: {
+              x: { grid: { display: false }, ticks: { color: MUTED, font: { size: 12 } } },
+              y: {
+                beginAtZero: true,
+                ticks: { stepSize: 1, color: MUTED, font: { size: 12 } },
+                grid: { color: LINE }
+              }
+            }
+          }
+        });
+
+        return () => { if (chartRef.current) chartRef.current.destroy(); };
+      }, [data]);
+
+      return <canvas ref={canvasRef} height="200" />;
+    }
+
+    // ─────────────────────────────────────────────
+    // ActivityTable
+    // ─────────────────────────────────────────────
+    function ActivityTable({ data }) {
+      if (!data || data.length === 0) {
+        return (
+          <p className="text-sm text-gray-400 py-4">No activity recorded yet.</p>
+        );
+      }
+      return (
+        <div className="border border-[color:var(--line)] overflow-hidden">
+          <table className="w-full text-sm text-left">
+            <thead className="bg-gray-50 text-gray-500 text-xs uppercase tracking-widest border-b border-[color:var(--line)]">
+              <tr>
+                <th className="px-5 py-3">Date</th>
+                <th className="px-5 py-3">Type</th>
+                <th className="px-5 py-3">Detail</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[color:var(--line)]">
+              {data.map((row, i) => (
+                <tr key={i} className="hover:bg-gray-50">
+                  <td className="px-5 py-3 text-gray-500 ltr whitespace-nowrap">{row.date}</td>
+                  <td className="px-5 py-3 font-medium">{row.type}</td>
+                  <td className="px-5 py-3 text-gray-600">{row.detail}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+    }
+
+    // ─────────────────────────────────────────────
+    // Section wrapper
+    // ─────────────────────────────────────────────
+    function Section({ title, children }) {
+      return (
+        <section className="mb-14">
+          <h2 className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-5 border-b border-[color:var(--line)] pb-3">
+            {title}
+          </h2>
+          {children}
+        </section>
+      );
+    }
+
+    // ─────────────────────────────────────────────
+    // Main App
+    // ─────────────────────────────────────────────
+    function StatsApp() {
+      const [data, setData]     = useState(null);
+      const [error, setError]   = useState(null);
+      const [lang, setLang]     = useState('en');
+
+      // Expose setLang so the vanilla i18n toggle can notify React
+      useEffect(() => {
+        window.__statsSetLang = setLang;
+        return () => { delete window.__statsSetLang; };
+      }, []);
+
+      useEffect(() => {
+        fetch('stats.json')
+          .then(r => { if (!r.ok) throw new Error('Failed to fetch stats.json'); return r.json(); })
+          .then(setData)
+          .catch(e => setError(e.message));
+      }, []);
+
+      if (error) {
+        return (
+          <div className="py-12 text-center text-red-600 text-sm">{error}</div>
+        );
+      }
+
+      if (!data) {
+        return (
+          <div className="py-12 text-center text-gray-400 text-xs uppercase tracking-widest">Loading…</div>
+        );
+      }
+
+      const isLangDv = lang === 'dv';
+
+      return (
+        <div>
+          {/* Summary Cards */}
+          <Section title={isLangDv ? 'ޚުލާސާ' : 'At a Glance'}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {data.summary.map((s, i) => (
+                <StatCard
+                  key={i}
+                  icon={s.icon}
+                  label={isLangDv ? s.label_dv : s.label_en}
+                  value={s.value}
+                  unit={s.unit}
+                />
+              ))}
+            </div>
+          </Section>
+
+          {/* Volunteer Signups Over Time */}
+          <Section title={isLangDv ? 'ވޮލަންޓިއަރ ސިގްނަޕްސް' : 'Volunteer Signups Over Time'}>
+            <div className="border border-[color:var(--line)] p-5 bg-white">
+              <LineChart data={data.timeline} />
+            </div>
+          </Section>
+
+          {/* Issue Breakdown */}
+          <Section title={isLangDv ? 'މައްސަލަ ތަފާސްހިސާބު' : 'Issue Category Breakdown'}>
+            <div className="border border-[color:var(--line)] p-5 bg-white">
+              <BarChart data={data.breakdown} lang={lang} />
+            </div>
+          </Section>
+
+          {/* Recent Activity */}
+          <Section title={isLangDv ? 'ފަހުގެ ހަރަކާތްތައް' : 'Recent Activity'}>
+            <ActivityTable data={data.recentActivity} />
+          </Section>
+        </div>
+      );
+    }
+
+    // Mount
+    const root = ReactDOM.createRoot(document.getElementById('stats-root'));
+    root.render(<StatsApp />);
+  </script>
+
+</body>
+</html>

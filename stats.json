@@ -1,0 +1,27 @@
+{
+  "summary": [
+    { "label_en": "Volunteers", "label_dv": "ވޮލަންޓިއަރ", "value": 0, "unit": "", "icon": "👥" },
+    { "label_en": "Wards Reached", "label_dv": "ދާއިރާ", "value": 0, "unit": "/ 11", "icon": "📍" },
+    { "label_en": "Pledges Made", "label_dv": "ވައްދުތައް", "value": 0, "unit": "", "icon": "📋" },
+    { "label_en": "Funds Raised", "label_dv": "ފައިސާ", "value": 0, "unit": "MVR", "icon": "💰" }
+  ],
+  "timeline": [
+    { "date": "Jan", "signups": 0 },
+    { "date": "Feb", "signups": 0 },
+    { "date": "Mar", "signups": 0 },
+    { "date": "Apr", "signups": 0 },
+    { "date": "May", "signups": 0 },
+    { "date": "Jun", "signups": 0 }
+  ],
+  "breakdown": [
+    { "category_en": "Housing",       "category_dv": "ބޯހިޔާ",     "count": 0 },
+    { "category_en": "Environment",   "category_dv": "ތިމާވެށި",    "count": 0 },
+    { "category_en": "Economy",       "category_dv": "އިގްތިސާދު",  "count": 0 },
+    { "category_en": "Youth",         "category_dv": "ޒުވާނުން",    "count": 0 },
+    { "category_en": "Infrastructure","category_dv": "އިންތިޒާމް",  "count": 0 },
+    { "category_en": "Other",         "category_dv": "އިތުރު",      "count": 0 }
+  ],
+  "recentActivity": [
+    { "date": "2026-03-14", "type": "Campaign Launch", "detail": "Campaign website went live" }
+  ]
+}
